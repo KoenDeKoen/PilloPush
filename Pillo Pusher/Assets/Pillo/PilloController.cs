@@ -21,6 +21,7 @@ public class PilloController : MonoBehaviour
 	// Do not change this code
 	void Start()
 	{
+		DontDestroyOnLoad (gameObject);
 		if (m_receiver == null)
 			m_receiver = new PilloReceiver();
 		m_receiver.Connect();

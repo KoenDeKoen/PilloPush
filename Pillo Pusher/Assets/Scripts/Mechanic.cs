@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Pillo;
 
 public class Mechanic : MonoBehaviour {
 
@@ -12,7 +13,8 @@ public class Mechanic : MonoBehaviour {
 	private bool p1pressed;
 	private bool p2pressed;
 	private bool hasjumped;
-
+	float pct1;
+	float pct2;
 	void Start () 
 	{
 		p1pressing = false;
@@ -22,56 +24,62 @@ public class Mechanic : MonoBehaviour {
 		hasjumped = false;
 		state = 1;
 		nextpos = new Vector3 (40, 0, 0);
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
+		//pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
 		checkPresses ();
 	}
 
 	private void checkPresses()
 	{
-		if(Input.GetKeyDown("a"))
+		if(Input.GetKeyDown("a"))// || pct1 > 0.2)
 		{
 			p1pressing = true;
 			p1pressed = false;
+			Debug.Log(1);
 		}
 
-		if(Input.GetKeyDown("d"))
+		if(Input.GetKeyDown("d"))// || pct2 > 0.2)
 		{
 			p2pressing = true;
 			p2pressed = false;
+			Debug.Log(2);
 		}
 
-		if(Input.GetKeyUp("a") && p1pressing)
+		if((Input.GetKeyUp("a") && p1pressing))// ||(pct1 == 0 && p1pressing))
 		{
 			p1pressed = true;
 			hasjumped = false;
 			p1pressing = false;
+			Debug.Log(3);
 		}
 
-		if(Input.GetKeyUp("d") && p2pressing)
+		if((Input.GetKeyUp("d") && p2pressing))// || (pct2 == 0 && p2pressing))
 		{
 			p2pressed = true;
 			hasjumped = false;
 			p2pressing = false;
+			Debug.Log(4);
 		}
-
 
 		if(p1pressing && p2pressing)
 		{
 			//JUMP
 			if(!hasjumped)
 			{
+				Debug.Log(5);
 				charactermover.jumpCharacter();
 				hasjumped=true;
 			}
 		}
 
-		if(p1pressed && !p2pressed)
+		if((p1pressed && !p2pressed))
 		{
-			Debug.Log("ehhh");
 			if(state > 0)
 			{
 				state--;
@@ -91,9 +99,8 @@ public class Mechanic : MonoBehaviour {
 			p1pressed = false;
 		}
 
-		if(p2pressed && !p1pressed)
+		if((p2pressed && !p1pressed))
 		{
-			Debug.Log("ehhh2");
 			if(state < 2)
 			{
 				state++;
