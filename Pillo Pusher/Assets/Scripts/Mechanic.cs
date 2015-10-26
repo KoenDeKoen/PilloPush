@@ -13,6 +13,8 @@ public class Mechanic : MonoBehaviour {
 	private bool p1pressed;
 	private bool p2pressed;
 	private bool hasjumped;
+	public GameObject pillo1feedback;
+	public GameObject pillo2feedback;
 	float pct1;
 	float pct2;
 	void Start () 
@@ -31,48 +33,46 @@ public class Mechanic : MonoBehaviour {
 	void Update () 
 	{
 		pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
-		//pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
+		pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
 		checkPresses ();
 	}
 
 	private void checkPresses()
 	{
-		if(Input.GetKeyDown("a"))// || pct1 > 0.2)
+		if(Input.GetKeyDown("a") || pct1 >= 0.5)
 		{
 			p1pressing = true;
 			p1pressed = false;
-			Debug.Log(1);
+			pillo1feedback.GetComponent<Renderer>().material.color = Color.green;
 		}
 
-		if(Input.GetKeyDown("d"))// || pct2 > 0.2)
+		if(Input.GetKeyDown("d") || pct2 >= 0.5)
 		{
 			p2pressing = true;
 			p2pressed = false;
-			Debug.Log(2);
+			pillo2feedback.GetComponent<Renderer>().material.color = Color.green;
 		}
 
-		if((Input.GetKeyUp("a") && p1pressing))// ||(pct1 == 0 && p1pressing))
+		if((Input.GetKeyUp("a") && p1pressing) ||(pct1 <= 0.2 && p1pressing))
 		{
 			p1pressed = true;
 			hasjumped = false;
 			p1pressing = false;
-			Debug.Log(3);
+			pillo1feedback.GetComponent<Renderer>().material.color = Color.red;
 		}
 
-		if((Input.GetKeyUp("d") && p2pressing))// || (pct2 == 0 && p2pressing))
+		if((Input.GetKeyUp("d") && p2pressing) || (pct2 <= 0.2 && p2pressing))
 		{
 			p2pressed = true;
 			hasjumped = false;
 			p2pressing = false;
-			Debug.Log(4);
+			pillo2feedback.GetComponent<Renderer>().material.color = Color.red;
 		}
 
 		if(p1pressing && p2pressing)
 		{
-			//JUMP
 			if(!hasjumped)
 			{
-				Debug.Log(5);
 				charactermover.jumpCharacter();
 				hasjumped=true;
 			}
