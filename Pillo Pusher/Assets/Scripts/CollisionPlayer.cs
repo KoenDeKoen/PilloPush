@@ -5,7 +5,7 @@ public class CollisionPlayer : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col){
 		if(col.gameObject.tag == "object"){
-			Application.LoadLevel("Intro");
+			Application.LoadLevel("Game");
 		}
 	}
 }
