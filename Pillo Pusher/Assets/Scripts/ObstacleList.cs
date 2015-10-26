@@ -5,15 +5,15 @@ using System.Collections.Generic;
 public class ObstacleList : MonoBehaviour {
 
 	private List<GameObject> obstacles;
-	private List<Vector3> posObstacles;
+	private List<float> posObstacles;
 	
 	public GameObject obj1;
 	public GameObject obj2;
 	public GameObject obj3;
 	
-	private Vector3 pos1 = new Vector3(-100f,1.1f,3);
-	private Vector3 pos2 = new Vector3(-100f,1.1f,0);
-	private Vector3 pos3 = new Vector3(-100f,1.1f,-3);
+	private float pos1 = 3f;
+	private float pos2 = 0f;
+	private float pos3 = -3f;
 	
 	// Use this for initialization
 	public void Init()
@@ -23,7 +23,7 @@ public class ObstacleList : MonoBehaviour {
 		obstacles.Add (obj2);
 		obstacles.Add (obj3);
 		
-		posObstacles = new List<Vector3> ();
+		posObstacles = new List<float> ();
 		posObstacles.Add (pos1);
 		posObstacles.Add (pos2);
 		posObstacles.Add (pos3);
@@ -34,7 +34,7 @@ public class ObstacleList : MonoBehaviour {
 		return obstacles;
 	}
 	
-	public List<Vector3> returnPosObstacles()
+	public List<float> returnPosObstacles()
 	{
 		return posObstacles;
 	}

@@ -6,7 +6,7 @@ public class ObstacleSpawn : MonoBehaviour {
 	public ObstacleList obl;
 	public bool ritme;
 	public float time = 1f;
-	//public Vector3 velocity = new Vector3(5,0,0);
+	public GameObject parent;
 	
 	// Use this for initialization
 	void Start () {
@@ -15,7 +15,17 @@ public class ObstacleSpawn : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
+		ObjectSpawner(parent);
+	}
+
+	public void ObjectSpawner(GameObject parentground)
+	{
+		int typeObstacle = 0;
+		typeObstacle = Random.Range(0, 2);
+		Vector3 position = new Vector3(parent.transform.position.x, parent.transform.position.y + (float)0.5f, obl.returnPosObstacles()[typeObstacle]);
+
 		time -= Time.deltaTime; 
 		
 		if(time <= 0f){
@@ -23,13 +33,9 @@ public class ObstacleSpawn : MonoBehaviour {
 		}
 		
 		if(ritme){
-			int typeObstacle = 0;
-			typeObstacle = Random.Range(0, obl.returnObstacles().Count);
-			GameObject obstacle = Instantiate(obl.returnObstacles()[typeObstacle], obl.returnPosObstacles()[typeObstacle], Quaternion.identity) as GameObject;
-			//obstacle.transform.position += velocity * Time.deltaTime;
-			obstacle.AddComponent<Rigidbody>();
-			obstacle.GetComponent<Rigidbody>().velocity = new Vector3(25,0,0);
-			obstacle.GetComponent<Rigidbody>().useGravity = false;
+			GameObject obstacle = Instantiate(obl.returnObstacles()[typeObstacle], position, Quaternion.identity) as GameObject;
+			obstacle.transform.parent = parentground.transform;
+			obstacle.transform.localPosition = position;
 			time = 1f;
 			ritme = false;
 		}
