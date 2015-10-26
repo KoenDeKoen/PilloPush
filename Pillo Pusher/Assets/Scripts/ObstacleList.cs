@@ -39,4 +39,8 @@ public class ObstacleList : MonoBehaviour {
 		return posObstacles;
 	}
 
+	public void removeObstacle(GameObject obs)
+	{
+		obstacles.Remove(obs);
+	}
 }

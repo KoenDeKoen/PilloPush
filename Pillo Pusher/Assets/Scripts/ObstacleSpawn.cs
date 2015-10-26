@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ObstacleSpawn : MonoBehaviour {
 
@@ -18,13 +19,14 @@ public class ObstacleSpawn : MonoBehaviour {
 	void Update ()
 	{
 		ObjectSpawner(parent);
+		ObstacleDespawn ();
 	}
 
 	public void ObjectSpawner(GameObject parentground)
 	{
 		int typeObstacle = 0;
-		typeObstacle = Random.Range(0, 2);
-		Vector3 position = new Vector3(parent.transform.position.x, parent.transform.position.y + (float)0.5f, obl.returnPosObstacles()[typeObstacle]);
+		typeObstacle = Random.Range(0, obl.returnObstacles().Count);
+		Vector3 position = new Vector3(-425f, parent.transform.position.y + (float)1f, obl.returnPosObstacles()[typeObstacle]);
 
 		time -= Time.deltaTime; 
 		
@@ -35,9 +37,21 @@ public class ObstacleSpawn : MonoBehaviour {
 		if(ritme){
 			GameObject obstacle = Instantiate(obl.returnObstacles()[typeObstacle], position, Quaternion.identity) as GameObject;
 			obstacle.transform.parent = parentground.transform;
-			obstacle.transform.localPosition = position;
 			time = 1f;
 			ritme = false;
+		}
+	}
+
+	private void ObstacleDespawn()
+	{
+		for(int i = 0; i < obl.returnObstacles().Count; i++)
+		{
+			if(obl.returnObstacles()[i].transform.position.x >= 40)
+			{
+				GameObject removeO = obl.returnObstacles()[i];
+				obl.removeObstacle(removeO);
+				Destroy(removeO);
+			}
 		}
 	}
 }
