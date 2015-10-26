@@ -31,27 +31,29 @@ public class Mechanic : MonoBehaviour {
 	void Update () 
 	{
 		pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
-		//pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
+		pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
+		Debug.Log (pct2);
+		Debug.Log (pct1);
 		checkPresses ();
 	}
 
 	private void checkPresses()
 	{
-		if(Input.GetKeyDown("a"))// || pct1 > 0.2)
+		if(Input.GetKeyDown("a") || pct1 >= 0.5)
 		{
 			p1pressing = true;
 			p1pressed = false;
 			Debug.Log(1);
 		}
 
-		if(Input.GetKeyDown("d"))// || pct2 > 0.2)
+		if(Input.GetKeyDown("d") || pct2 >= 0.5)
 		{
 			p2pressing = true;
 			p2pressed = false;
 			Debug.Log(2);
 		}
 
-		if((Input.GetKeyUp("a") && p1pressing))// ||(pct1 == 0 && p1pressing))
+		if((Input.GetKeyUp("a") && p1pressing) ||(pct1 <= 0.2 && p1pressing))
 		{
 			p1pressed = true;
 			hasjumped = false;
@@ -59,7 +61,7 @@ public class Mechanic : MonoBehaviour {
 			Debug.Log(3);
 		}
 
-		if((Input.GetKeyUp("d") && p2pressing))// || (pct2 == 0 && p2pressing))
+		if((Input.GetKeyUp("d") && p2pressing) || (pct2 <= 0.2 && p2pressing))
 		{
 			p2pressed = true;
 			hasjumped = false;
