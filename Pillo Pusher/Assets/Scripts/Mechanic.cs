@@ -53,7 +53,7 @@ public class Mechanic : MonoBehaviour {
 			pillo2feedback.GetComponent<Renderer>().material.color = Color.green;
 		}
 
-		if((Input.GetKeyUp("a") && p1pressing) ||(pct1 <= 0.2 && p1pressing))
+		if((Input.GetKeyUp("a")||pct1 <= 0.2) && p1pressing)
 		{
 			p1pressed = true;
 			hasjumped = false;
@@ -61,7 +61,7 @@ public class Mechanic : MonoBehaviour {
 			pillo1feedback.GetComponent<Renderer>().material.color = Color.red;
 		}
 
-		if((Input.GetKeyUp("d") && p2pressing) || (pct2 <= 0.2 && p2pressing))
+		if((Input.GetKeyUp("d") || pct2 <= 0.2) && p2pressing)
 		{
 			p2pressed = true;
 			hasjumped = false;
@@ -69,16 +69,18 @@ public class Mechanic : MonoBehaviour {
 			pillo2feedback.GetComponent<Renderer>().material.color = Color.red;
 		}
 
-		if(p1pressing && p2pressing)
+		if(p1pressing && p2pressing && !charactermover.isJumping())
 		{
 			if(!hasjumped)
 			{
 				charactermover.jumpCharacter();
-				hasjumped=true;
+				hasjumped = true;
 			}
+			p1pressed = false;
+			p2pressed = false;
 		}
 
-		if((p1pressed && !p2pressed))
+		if((p1pressed && !p2pressed))// && !charactermover.isJumping())
 		{
 			if(state > 0)
 			{
@@ -99,7 +101,7 @@ public class Mechanic : MonoBehaviour {
 			p1pressed = false;
 		}
 
-		if((p2pressed && !p1pressed))
+		if((p2pressed && !p1pressed))// && !charactermover.isJumping())
 		{
 			if(state < 2)
 			{
