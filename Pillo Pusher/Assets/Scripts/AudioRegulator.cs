@@ -40,7 +40,7 @@ public class AudioRegulator : MonoBehaviour {
 		{
 			audioplayer.pitch = 1.50F;
 		}
-		if(scorekeeper.returnScore() >= 1150)
+		if(scorekeeper.returnScore() >= 150)
 		{
 			audioplayer.pitch = 1.60F;
 		}
