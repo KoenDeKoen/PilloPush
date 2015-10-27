@@ -8,6 +8,7 @@ public class SpawnFloor : MonoBehaviour {
 	private GameObject lastspawnedfloor;
 	public GameObject floorprefab;
 	public GameObject parent;
+	public GameOverPanel gameoverpanel;
 
 	void Start () 
 	{
@@ -19,7 +20,10 @@ public class SpawnFloor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		checkForNextSpawn ();
+		if(!gameoverpanel.isGameOver())
+		{
+			checkForNextSpawn ();
+		}
 		//Debug.Log (lastspawnedfloor.transform.position.x);
 	}
 

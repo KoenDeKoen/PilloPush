@@ -41,12 +41,12 @@ public class MoveCharacter : MonoBehaviour {
 		{
 			if(jump)
 			{
-				Debug.Log("Jump: " + pos.y + " " + pos.z);
+				//Debug.Log("Jump: " + pos.y + " " + pos.z);
 				character.transform.position = new Vector3(pos.x, Mathf.Lerp(character.transform.position.y, pos.y, lerptime), character.transform.position.z); 
 			}
 			else
 			{
-				Debug.Log("Non jump: " + pos.y + " " + pos.z);
+				//Debug.Log("Non jump: " + pos.y + " " + pos.z);
 				character.transform.position = new Vector3(pos.x, character.transform.position.y, Mathf.Lerp(character.transform.position.z, pos.z, lerptime));
 			}
 

@@ -7,6 +7,7 @@ public class MoveGround : MonoBehaviour {
 	public GameObject parent;
 	private bool hastolerp;
 	private Vector3 nextpos;
+	public GameOverPanel gameoverpanel;
 	void Start () 
 	{
 		hastolerp = true;
@@ -17,7 +18,7 @@ public class MoveGround : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(hastolerp)
+		if(hastolerp && !gameoverpanel.isGameOver())
 		{
 			nextpos.x += 0.5F;
 			parent.transform.position = Vector3.Lerp(parent.transform.position, nextpos, Time.deltaTime * 1);                                                                       

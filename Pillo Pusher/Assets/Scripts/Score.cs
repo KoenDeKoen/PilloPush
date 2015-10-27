@@ -6,6 +6,7 @@ public class Score : MonoBehaviour {
 	// Use this for initialization
 	private float score;
 	private bool calcscore;
+
 	void Start () 
 	{
 		score = 0;
@@ -19,7 +20,7 @@ public class Score : MonoBehaviour {
 		{
 			addScore();
 		}
-		Debug.Log (score);
+		//Debug.Log (score);
 	}
 
 	private void addScore()
@@ -29,6 +30,11 @@ public class Score : MonoBehaviour {
 
 	public void setEnd(bool end)
 	{
-		calcscore = end;
+		calcscore = !end;
+	}
+
+	public float returnScore()
+	{
+		return score;
 	}
 }

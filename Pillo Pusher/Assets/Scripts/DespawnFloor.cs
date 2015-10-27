@@ -6,6 +6,7 @@ public class DespawnFloor : MonoBehaviour
 
 	// Use this for initialization
 	public SpawnedFloors floors;
+	public GameOverPanel gameoverpanel;
 	void Start () 
 	{
 	
@@ -14,7 +15,10 @@ public class DespawnFloor : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		checkForDespawn ();
+		if(!gameoverpanel.isGameOver())
+		{
+			checkForDespawn ();
+		}
 	}
 
 	private void checkForDespawn()

@@ -17,6 +17,7 @@ public class Mechanic : MonoBehaviour {
 	public GameObject pillo2feedback;
 	float pct1;
 	float pct2;
+	public GameOverPanel gameoverpanel;
 	void Start () 
 	{
 		p1pressing = false;
@@ -32,9 +33,12 @@ public class Mechanic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
-		pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
-		checkPresses ();
+		if (!gameoverpanel.isGameOver ()) 
+		{
+			pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
+			pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
+			checkPresses ();
+		}
 	}
 
 	private void checkPresses()

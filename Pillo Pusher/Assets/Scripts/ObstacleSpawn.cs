@@ -8,6 +8,7 @@ public class ObstacleSpawn : MonoBehaviour {
 	public bool ritme;
 	public float time = 1f;
 	public GameObject parent;
+	public GameOverPanel gameoverpanel;
 	
 	// Use this for initialization
 	void Start () {
@@ -18,8 +19,11 @@ public class ObstacleSpawn : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		ObjectSpawner(parent);
-		ObstacleDespawn ();
+		if(!gameoverpanel.isGameOver())
+		{
+			ObjectSpawner(parent);
+			ObstacleDespawn ();
+		}
 	}
 
 	public void ObjectSpawner(GameObject parentground)

@@ -3,9 +3,13 @@ using System.Collections;
 
 public class CollisionPlayer : MonoBehaviour {
 
-	void OnCollisionEnter(Collision col){
-		if(col.gameObject.tag == "object"){
-			Application.LoadLevel("Game");
+	public GameOverPanel gameoverpanel;
+
+	void OnCollisionEnter(Collision col)
+	{
+		if(col.gameObject.tag == "object")
+		{
+			gameoverpanel.displayScore();
 		}
 	}
 }
