@@ -11,10 +11,13 @@ public class CharacterSelect : MonoBehaviour {
 
 	bool leftR;
 	bool rightR;
+	bool pressedL;
+	bool pressedR;
 
-	public float degreesPerSecond = 45f;
+	float delay = 2f;
+	
+	private float degreesPerSecond = 60f;
 	private float totalRotation = 0;
-	private float time = 3f;
 
 	//float pct1;
 	//float pct2;
@@ -31,12 +34,14 @@ public class CharacterSelect : MonoBehaviour {
 		//pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
 		//pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
 
-		if(Input.GetKey("a")){
+		if(Input.GetKeyUp("a"))
+		{
 			leftR = true;
 			rightR = false;
 		}
 
-		if(Input.GetKey("d")){
+		if(Input.GetKeyUp("d"))
+		{
 			leftR = false;
 			rightR = true;
 		}
@@ -54,6 +59,8 @@ public class CharacterSelect : MonoBehaviour {
 
 	void RotateLeft ()
 	{
+		delay -= Time.deltaTime;
+
 		float currentAngle = rotateParent.transform.rotation.eulerAngles.y;
 		rotateParent.transform.rotation = Quaternion.AngleAxis(currentAngle + (Time.deltaTime * degreesPerSecond), Vector3.up);
 		totalRotation += Time.deltaTime * degreesPerSecond;
@@ -63,6 +70,8 @@ public class CharacterSelect : MonoBehaviour {
 
 	void RotateRight ()
 	{
+		delay -= Time.deltaTime;
+
 		float currentAngle = rotateParent.transform.rotation.eulerAngles.y;
 		rotateParent.transform.rotation = Quaternion.AngleAxis(currentAngle - (Time.deltaTime * degreesPerSecond), Vector3.up);
 		totalRotation += Time.deltaTime * degreesPerSecond;
@@ -72,10 +81,11 @@ public class CharacterSelect : MonoBehaviour {
 
 	void StopRotation(float angle)
 	{
-		if(angle >= 0f && angle <= 1f || angle >= 179f && angle <= 181f)
+		if(angle >= 0f && angle <= 1f && delay <= 0f || angle >= 179f && angle <= 180f && delay <= 0f)
 		{
 			leftR = false;
 			rightR = false;
+			delay = 2f;
 		}
 	}
 }
