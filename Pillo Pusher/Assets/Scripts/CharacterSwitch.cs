@@ -11,7 +11,6 @@ public class CharacterSwitch : MonoBehaviour {
 	{
 		player.GetComponent<MeshFilter>().mesh = selectedcharacter.getCharacter().GetComponent<MeshFilter>().sharedMesh;
 		player.GetComponent<MeshRenderer>().material = selectedcharacter.getCharacter().GetComponent<MeshRenderer>().sharedMaterial;
-		player.AddComponent<>
 	}
 
 	// Update is called once per frame
