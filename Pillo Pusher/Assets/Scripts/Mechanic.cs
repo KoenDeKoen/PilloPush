@@ -49,15 +49,8 @@ public class Mechanic : MonoBehaviour {
 			p1pressed = false;
 			pillo1feedback.GetComponent<Renderer>().material.color = Color.green;
 		}
-
-		if(Input.GetKeyDown("d") || pct2 >= 0.5)
-		{
-			p2pressing = true;
-			p2pressed = false;
-			pillo2feedback.GetComponent<Renderer>().material.color = Color.green;
-		}
-
-		if((Input.GetKeyUp("a")||pct1 <= 0.2) && p1pressing)
+		else
+			if((Input.GetKeyUp("a")||pct1 <= 0.2) && p1pressing)
 		{
 			p1pressed = true;
 			hasjumped = false;
@@ -65,6 +58,13 @@ public class Mechanic : MonoBehaviour {
 			pillo1feedback.GetComponent<Renderer>().material.color = Color.red;
 		}
 
+		if(Input.GetKeyDown("d") || pct2 >= 0.5)
+		{
+			p2pressing = true;
+			p2pressed = false;
+			pillo2feedback.GetComponent<Renderer>().material.color = Color.green;
+		}
+		else
 		if((Input.GetKeyUp("d") || pct2 <= 0.2) && p2pressing)
 		{
 			p2pressed = true;

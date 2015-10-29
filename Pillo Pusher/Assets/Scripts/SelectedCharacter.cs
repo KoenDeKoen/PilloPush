@@ -9,7 +9,7 @@ public class SelectedCharacter : MonoBehaviour {
 	public GameObject girl;
 	void Start () 
 	{
-		character = null;
+		//character = null;
 	}
 	
 	// Update is called once per frame

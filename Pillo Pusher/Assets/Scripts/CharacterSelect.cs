@@ -36,7 +36,7 @@ public class CharacterSelect : MonoBehaviour {
 	void Update (){
 		//pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
 		//pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
-		if(Input.GetKeyDown("a") && Input.GetKeyDown("d"))
+		if(Input.GetKey("a") && Input.GetKey("d"))
 		{
 			Application.LoadLevel("Game");
 		}
@@ -52,8 +52,6 @@ public class CharacterSelect : MonoBehaviour {
 			leftR = false;
 			rightR = true;
 		}
-
-
 
 		if(leftR)
 		{
