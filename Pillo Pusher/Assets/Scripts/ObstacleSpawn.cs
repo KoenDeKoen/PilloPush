@@ -32,7 +32,7 @@ public class ObstacleSpawn : MonoBehaviour {
 		typeObstacle = Random.Range(0, obl.returnObstacles().Count);
 		Vector3 position = new Vector3(-425f, parent.transform.position.y + (float)1f, obl.returnPosObstacles()[typeObstacle]);
 
-		time -= Time.deltaTime; 
+		time -= Time.deltaTime * 1.2f; 
 		
 		if(time <= 0f){
 			ritme = true;

@@ -11,8 +11,7 @@ public class SelectedCharacter : MonoBehaviour {
 	{
 		//character = null;
 	}
-	
-	// Update is called once per frame
+
 	void Update () 
 	{
 	
