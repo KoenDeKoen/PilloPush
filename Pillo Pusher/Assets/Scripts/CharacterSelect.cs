@@ -15,15 +15,15 @@ public class CharacterSelect : MonoBehaviour {
 	bool rightR;
 	bool pressedL;
 	bool pressedR;
-
-	float delay = 2f;
+	
 	int state;
 	
 	private float degreesPerSecond = 60f;
 	private float totalRotation = 0;
 
-	//float pct1;
-	//float pct2;
+	float delay = 2f;
+	float pct1;
+	float pct2;
 
 	// Use this for initialization
 	void Start ()
@@ -34,23 +34,36 @@ public class CharacterSelect : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update (){
-		//pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
-		//pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
-		if(Input.GetKey("a") && Input.GetKey("d"))
+		pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
+		pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
+
+		if(Input.GetKey("a") && Input.GetKey("d")|| pct1 >= 0.5 && pct2 >= 0.5)
 		{
 			Application.LoadLevel("Game");
 		}
 
-		if(Input.GetKeyUp("a"))
+		if(Input.GetKeyDown("a")|| pct1 >= 0.5)
+		{
+			pressedL = true;
+		}
+		
+		if(Input.GetKeyDown("d")|| pct2 >= 0.5)
+		{
+			pressedR = true;
+		}
+
+		if((Input.GetKeyUp("a")|| pct1 <= 0.2) && pressedL)
 		{
 			leftR = true;
 			rightR = false;
+			pressedL = false;
 		}
 
-		if(Input.GetKeyUp("d"))
+		if((Input.GetKeyUp("d")|| pct2 <= 0.2) && pressedR)
 		{
 			leftR = false;
 			rightR = true;
+			pressedR = false;
 		}
 
 		if(leftR)
