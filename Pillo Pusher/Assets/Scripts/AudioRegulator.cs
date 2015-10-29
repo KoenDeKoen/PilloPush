@@ -2,47 +2,42 @@
 using System.Collections;
 
 public class AudioRegulator : MonoBehaviour {
-
-	// Use this for initialization
+	
 	public AudioSource audioplayer;
 	public Score scorekeeper;
+	private float scoreinterval;
+	private float pitch;
+	private float multiplier;
+	private bool maxpitchreached;
+
 	void Start () 
 	{
-		
+		maxpitchreached = false;
+		multiplier = 1f;
+		scoreinterval = 25f;
+		pitch = 0.9f;
+		audioplayer.pitch = pitch;
 	}
-	
-	// Update is called once per frame
+
 	void Update () 
 	{
-		checkForHigherPitch ();
-		Debug.Log (scorekeeper.returnScore ());
+		if(!maxpitchreached)
+		{
+			checkForHigherPitch ();
+		}
+		//Debug.Log (scoreinterval * multiplier);
 	}
 
 	private void checkForHigherPitch()
 	{
-		if(scorekeeper.returnScore() >= 25)
+		if(scorekeeper.returnScore() >= scoreinterval * multiplier)
 		{
-			audioplayer.pitch = 1.10F;
+			audioplayer.pitch = pitch += 0.10F;
+			multiplier += 1f;
 		}
-		if(scorekeeper.returnScore() >= 50)
+		if(scoreinterval * multiplier >= scoreinterval * 12)
 		{
-			audioplayer.pitch = 1.20F;
-		}
-		if(scorekeeper.returnScore() >= 75)
-		{
-			audioplayer.pitch = 1.30F;
-		}
-		if(scorekeeper.returnScore() >= 100)
-		{
-			audioplayer.pitch = 1.40F;
-		}
-		if(scorekeeper.returnScore() >= 125)
-		{
-			audioplayer.pitch = 1.50F;
-		}
-		if(scorekeeper.returnScore() >= 150)
-		{
-			audioplayer.pitch = 1.60F;
+			maxpitchreached = true;
 		}
 	}
 }

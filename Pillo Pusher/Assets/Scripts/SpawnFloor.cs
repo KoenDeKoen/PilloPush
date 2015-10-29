@@ -9,12 +9,13 @@ public class SpawnFloor : MonoBehaviour {
 	public GameObject floorprefab;
 	public GameObject parent;
 	public GameOverPanel gameoverpanel;
+	public Material spawnmat;
 
 	void Start () 
 	{
 		floors.Init ();
 		lastspawnedfloor = null;
-		spawnFloor (new Vector3(0,0,0));
+		spawnFloor (new Vector3(40,0,0));
 	}
 	
 	// Update is called once per frame
@@ -32,13 +33,14 @@ public class SpawnFloor : MonoBehaviour {
 		GameObject floor;
 		floor = Instantiate (floorprefab, new Vector3 (pos.x, -0.50F, 0), Quaternion.identity) as GameObject;
 		floor.transform.parent = parent.transform;
+		floor.GetComponent<Renderer> ().material = spawnmat;
 		floors.addFloor (floor);
 		lastspawnedfloor = floor;
 	}
 
 	private void checkForNextSpawn()
 	{
-		if(lastspawnedfloor.transform.position.x >= 200F)
+		if(lastspawnedfloor.transform.position.x >= -50F)
 		{
 			spawnFloor(new Vector3(lastspawnedfloor.transform.position.x-lastspawnedfloor.GetComponent<Renderer>().bounds.size.x,0,0));
 		}
