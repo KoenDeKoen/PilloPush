@@ -21,7 +21,7 @@ public class CharacterSwitch : MonoBehaviour {
 	void Update () {
 		if(cs.boySelected == true)
 		{
-			Debug.Log()
+			//Debug.Log();
 			player.GetComponent<MeshFilter>().mesh = boyMesh;
 		}
 
