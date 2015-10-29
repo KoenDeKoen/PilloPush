@@ -2,32 +2,20 @@
 using System.Collections;
 
 public class CharacterSwitch : MonoBehaviour {
-
-	public CharacterSelect cs;
+	
 	public GameObject player;
+	public SelectedCharacter selectedcharacter;
 
-	public GameObject boy;
-	public GameObject girl;
 
-	Mesh boyMesh;
-	Mesh girlMesh;
-
-	void Start () {
-		boyMesh = boy.GetComponent<MeshFilter>().mesh;
-		girlMesh = girl.GetComponent<MeshFilter>().mesh;
+	void Start () 
+	{
+		player.GetComponent<MeshFilter>().mesh = selectedcharacter.getCharacter().GetComponent<MeshFilter>().sharedMesh;
+		player.GetComponent<MeshRenderer>().material = selectedcharacter.getCharacter().GetComponent<MeshRenderer>().sharedMaterial;
+		player.AddComponent<>
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if(cs.boySelected == true)
-		{
-			//Debug.Log();
-			player.GetComponent<MeshFilter>().mesh = boyMesh;
-		}
-
-		if(cs.girlSelected == true)
-		{
-			player.GetComponent<MeshFilter>().mesh = girlMesh;
-		}
+	
 	}
 }

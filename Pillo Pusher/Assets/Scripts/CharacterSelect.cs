@@ -5,6 +5,8 @@ using Pillo;
 
 public class CharacterSelect : MonoBehaviour {
 
+	public SelectedCharacter selectedcharacter;
+
 	public GameObject rotateParent;
 	public GameObject girl;
 	public GameObject boy;
@@ -13,9 +15,6 @@ public class CharacterSelect : MonoBehaviour {
 	bool rightR;
 	bool pressedL;
 	bool pressedR;
-
-	public bool boySelected;
-	public bool girlSelected;
 
 	float delay = 2f;
 	int state;
@@ -37,6 +36,10 @@ public class CharacterSelect : MonoBehaviour {
 	void Update (){
 		//pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
 		//pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
+		if(Input.GetKeyDown("a") && Input.GetKeyDown("d"))
+		{
+			Application.LoadLevel("Game");
+		}
 
 		if(Input.GetKeyUp("a"))
 		{
@@ -50,10 +53,7 @@ public class CharacterSelect : MonoBehaviour {
 			rightR = true;
 		}
 
-		if(Input.GetKeyDown("a") && Input.GetKeyDown("d"))
-		{
-			Application.LoadLevel("Game");
-		}
+
 
 		if(leftR)
 		{
@@ -68,16 +68,10 @@ public class CharacterSelect : MonoBehaviour {
 		switch(state)
 		{
 		case 0:
-			Debug.Log("girl");
-			girlSelected = true;
-			boySelected = false;
-			//character girl
+			selectedcharacter.isGirl();
 			break;
 		case 1:
-			//character boy
-			Debug.Log("boy");
-			girlSelected = false;
-			boySelected = true;
+			selectedcharacter.isBoy();
 			break;
 		}
 	}
