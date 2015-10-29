@@ -14,7 +14,11 @@ public class CharacterSelect : MonoBehaviour {
 	bool pressedL;
 	bool pressedR;
 
+	public bool boySelected;
+	public bool girlSelected;
+
 	float delay = 2f;
+	int state;
 	
 	private float degreesPerSecond = 60f;
 	private float totalRotation = 0;
@@ -46,6 +50,11 @@ public class CharacterSelect : MonoBehaviour {
 			rightR = true;
 		}
 
+		if(Input.GetKeyDown("a") && Input.GetKeyDown("d"))
+		{
+			Application.LoadLevel("Game");
+		}
+
 		if(leftR)
 		{
 			RotateLeft ();
@@ -54,6 +63,22 @@ public class CharacterSelect : MonoBehaviour {
 		if(rightR)
 		{
 			RotateRight ();
+		}
+
+		switch(state)
+		{
+		case 0:
+			Debug.Log("girl");
+			girlSelected = true;
+			boySelected = false;
+			//character girl
+			break;
+		case 1:
+			//character boy
+			Debug.Log("boy");
+			girlSelected = false;
+			boySelected = true;
+			break;
 		}
 	}
 
@@ -86,6 +111,16 @@ public class CharacterSelect : MonoBehaviour {
 			leftR = false;
 			rightR = false;
 			delay = 2f;
+		}
+
+		if(angle >= 0f && angle <= 1f)
+		{
+			state = 0;
+		}
+
+		if(angle >= 179f && angle <= 180f)
+		{
+			state = 1;
 		}
 	}
 }
