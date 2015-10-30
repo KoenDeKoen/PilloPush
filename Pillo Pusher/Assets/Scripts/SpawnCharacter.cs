@@ -9,9 +9,11 @@ public class SpawnCharacter : MonoBehaviour
 	public SelectedCharacter selectedcharacter;
 	private GameObject character;
 	public GameOverPanel gameoverpanel;
+	public MainMenuMusic mainmenumusic;
 
 	public void Init () 
 	{
+		mainmenumusic.stopMusic ();
 		character = Instantiate (selectedcharacter.getCharacter (), new Vector3(40,selectedcharacter.getCharacter().transform.position.y,0), Quaternion.identity) as GameObject;
 		character.AddComponent<CollisionPlayer> ();
 		character.GetComponent<CollisionPlayer> ().gameoverpanel = gameoverpanel;
