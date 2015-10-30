@@ -9,8 +9,8 @@ public class CharacterSwitch : MonoBehaviour {
 
 	void Start () 
 	{
-		player.GetComponent<MeshFilter>().mesh = selectedcharacter.getCharacter().GetComponent<MeshFilter>().sharedMesh;
-		player.GetComponent<MeshRenderer>().material = selectedcharacter.getCharacter().GetComponent<MeshRenderer>().sharedMaterial;
+		//player.GetComponent<MeshFilter>().mesh = selectedcharacter.getCharacter().GetComponent<MeshFilter>().sharedMesh;
+		//player.GetComponent<MeshRenderer>().material = selectedcharacter.getCharacter().GetComponent<MeshRenderer>().sharedMaterial;
 	}
 
 	// Update is called once per frame

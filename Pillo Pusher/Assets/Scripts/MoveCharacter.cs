@@ -9,10 +9,13 @@ public class MoveCharacter : MonoBehaviour {
 	private float lerptime;
 	private bool jump;
 	private float jumptimer;
+	public SpawnCharacter spawnedcharacter;
 
 	void Start () 
 	{
-		pos = new Vector3 (40, 0, 0);
+		spawnedcharacter.Init ();
+		character = spawnedcharacter.returnCharacter ();
+		pos = new Vector3 (40, spawnedcharacter.returnCharacter().transform.position.y, spawnedcharacter.returnCharacter().transform.position.z);
 		jump = false;
 		jumptimer = 1F;
 	}
@@ -55,28 +58,6 @@ public class MoveCharacter : MonoBehaviour {
 		{
 			character.transform.position = new Vector3(pos.x, pos.y, pos.z);
 		}
-		/*if(lerptime >= 0)
-		{
-			lerptime -= Time.deltaTime;
-			if(jump)
-			{
-				jumptimer -= Time.deltaTime;
-				if(jumptimer <= 0.5F)
-				{
-					pos.y = 0;
-				}
-				character.transform.position = Vector3.Lerp(character.transform.position, new Vector3(character.transform.position.x,pos.y,character.transform.position.z), Time.deltaTime * 3);
-			}
-			else
-			{
-				character.transform.position = Vector3.Lerp(character.transform.position, new Vector3(character.transform.position.x,character.transform.position.y,pos.z), Time.deltaTime * 3);
-			}
-		}
-		else
-		{
-			character.transform.position = pos;
-			jump = false;
-		}*/
 	}
 
 	public void setNextPos(Vector3 position)
