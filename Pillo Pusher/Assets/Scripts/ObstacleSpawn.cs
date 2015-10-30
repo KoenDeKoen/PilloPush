@@ -11,7 +11,8 @@ public class ObstacleSpawn : MonoBehaviour {
 	public GameOverPanel gameoverpanel;
 	
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		obl.Init();
 		ritme = false;
 	}
@@ -30,7 +31,7 @@ public class ObstacleSpawn : MonoBehaviour {
 	{
 		int typeObstacle = 0;
 		typeObstacle = Random.Range(0, obl.returnObstacles().Count);
-		Vector3 position = new Vector3(-425f, parent.transform.position.y + (float)1f, obl.returnPosObstacles()[typeObstacle]);
+		Vector3 position = new Vector3(-260f, parent.transform.position.y + (float)1f, obl.returnPosObstacles()[typeObstacle]);
 
 		time -= Time.deltaTime * 1.2f; 
 		
