@@ -6,7 +6,8 @@ public class ObstacleList : MonoBehaviour {
 
 	private List<GameObject> obstacles;
 	private List<float> posObstacles;
-	
+	private List<float> startPos;
+
 	public GameObject obj1;
 	public GameObject obj2;
 	public GameObject obj3;
@@ -14,6 +15,9 @@ public class ObstacleList : MonoBehaviour {
 	private float pos1 = 3f;
 	private float pos2 = 0f;
 	private float pos3 = -3f;
+
+	private float start1 = -250f;
+	private float start2 = 45f;
 	
 	// Use this for initialization
 	public void Init()
@@ -27,6 +31,10 @@ public class ObstacleList : MonoBehaviour {
 		posObstacles.Add (pos1);
 		posObstacles.Add (pos2);
 		posObstacles.Add (pos3);
+
+		startPos = new List<float> ();
+		startPos.Add (start1);
+		startPos.Add (start2);
 	}
 	
 	public List<GameObject> returnObstacles()
@@ -39,8 +47,13 @@ public class ObstacleList : MonoBehaviour {
 		return posObstacles;
 	}
 
-	public void removeObstacle(GameObject obs)
+	public List<float> returnStartPos()
+	{
+		return startPos;
+	}
+
+	/*public void removeObstacle(GameObject obs)
 	{
 		obstacles.Remove(obs);
-	}
+	}*/
 }

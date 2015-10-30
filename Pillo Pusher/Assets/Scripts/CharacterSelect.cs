@@ -21,7 +21,7 @@ public class CharacterSelect : MonoBehaviour {
 	private float degreesPerSecond = 60f;
 	private float totalRotation = 0;
 
-	float delay = 2f;
+	float delay = 1f;
 	float pct1;
 	float pct2;
 
@@ -115,7 +115,7 @@ public class CharacterSelect : MonoBehaviour {
 		{
 			leftR = false;
 			rightR = false;
-			delay = 2f;
+			delay = 1f;
 		}
 
 		if(angle >= 0f && angle <= 1f)
