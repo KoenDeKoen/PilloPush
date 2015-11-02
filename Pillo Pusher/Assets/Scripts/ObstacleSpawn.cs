@@ -33,22 +33,26 @@ public class ObstacleSpawn : MonoBehaviour {
 		int newStartPos = 0;
 		int typeObstacle1 = 0;
 		int typeObstacle2 = 0;
+		int objplacepos1 = Random.Range (0, obl.returnPosObstacles ().Count);
+		int objplacepos2 = Random.Range (0, obl.returnPosObstacles ().Count);
 
 		newStartPos = Random.Range(0, obl.returnStartPos().Count);
 		typeObstacle1 = Random.Range(0, obl.returnObstacles().Count);
 		typeObstacle2 = Random.Range(0, obl.returnObstacles().Count);
 
-		if(typeObstacle1 == typeObstacle2)
+		if(objplacepos1 == objplacepos2)
 		{
-			typeObstacle2++;
-			if(typeObstacle2 >= 3)
+			Debug.Log("hoi");
+			objplacepos2++;
+			if(objplacepos2 >= 3)
 			{
-				typeObstacle2 = 0;
+				Debug.Log("hoi2");
+				objplacepos2 = 0;
 			}
 		}
 
-		Vector3 pos1 = new Vector3(startPos, obl.returnObstacles()[typeObstacle1].transform.position.y, obl.returnPosObstacles()[typeObstacle1]);
-		Vector3 pos2 = new Vector3(obl.returnStartPos()[newStartPos], obl.returnObstacles()[typeObstacle2].transform.position.y, obl.returnPosObstacles()[typeObstacle2]);
+		Vector3 pos1 = new Vector3(startPos, obl.returnObstacles()[typeObstacle1].transform.position.y, obl.returnPosObstacles()[objplacepos1]);
+		Vector3 pos2 = new Vector3(obl.returnStartPos()[newStartPos], obl.returnObstacles()[typeObstacle2].transform.position.y, obl.returnPosObstacles()[objplacepos2]);
 
 		time -= Time.deltaTime * 0.65f; 
 		
