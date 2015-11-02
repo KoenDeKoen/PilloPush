@@ -20,7 +20,7 @@ public class MoveCharacter : MonoBehaviour {
 		jumptimer = 1F;
 	}
 	
-	// Update is called once per frame
+	// Update is called o nce per frame
 	void Update () 
 	{
 		if(jump)
@@ -36,10 +36,12 @@ public class MoveCharacter : MonoBehaviour {
 				}
 			}
 		}
+		//player speed switch lane
 		if(!jump)
 		{
-			lerptime += Time.deltaTime / 2F;
+			lerptime += Time.deltaTime / 0.5F;
 		}
+		//player stays on z.pos after jump
 		if(lerptime < 1F)
 		{
 			if(jump)
