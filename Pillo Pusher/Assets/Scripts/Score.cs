@@ -20,7 +20,6 @@ public class Score : MonoBehaviour {
 		{
 			addScore();
 		}
-		//Debug.Log (score);
 	}
 
 	private void addScore()

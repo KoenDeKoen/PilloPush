@@ -47,8 +47,8 @@ public class ObstacleSpawn : MonoBehaviour {
 			}
 		}
 
-		Vector3 pos1 = new Vector3(startPos, parent.transform.position.y + (float)1f, obl.returnPosObstacles()[typeObstacle1]);
-		Vector3 pos2 = new Vector3(obl.returnStartPos()[newStartPos], parent.transform.position.y + (float)1f, obl.returnPosObstacles()[typeObstacle2]);
+		Vector3 pos1 = new Vector3(startPos, obl.returnObstacles()[typeObstacle1].transform.position.y, obl.returnPosObstacles()[typeObstacle1]);
+		Vector3 pos2 = new Vector3(obl.returnStartPos()[newStartPos], obl.returnObstacles()[typeObstacle2].transform.position.y, obl.returnPosObstacles()[typeObstacle2]);
 
 		time -= Time.deltaTime * 0.65f; 
 		
@@ -57,10 +57,13 @@ public class ObstacleSpawn : MonoBehaviour {
 		}
 		
 		if(ritme){
-			GameObject obstacle = Instantiate(obl.returnObstacles()[typeObstacle1], pos1, Quaternion.identity) as GameObject;
+			GameObject obstacle = Instantiate(obl.returnObstacles()[typeObstacle1]) as GameObject;
+			obstacle.transform.position = pos1;//pos1, Quaternion.Euler(new Vector3(obl.returnObstacles()[typeObstacle1].transform.rotation.x, obl.returnObstacles()[typeObstacle1].transform.rotation.y, obl.returnObstacles()[typeObstacle1].transform.rotation.z))) as GameObject;
 			obstacle.transform.parent = parentground.transform;
 
-			GameObject obstacle2 = Instantiate(obl.returnObstacles()[typeObstacle2], pos2, Quaternion.identity) as GameObject;
+			//GameObject obstacle2 = Instantiate(obl.returnObstacles()[typeObstacle2], pos2, Quaternion.Euler(new Vector3(obl.returnObstacles()[typeObstacle2].transform.rotation.x, obl.returnObstacles()[typeObstacle2].transform.rotation.y, obl.returnObstacles()[typeObstacle2].transform.rotation.z))) as GameObject;
+			GameObject obstacle2 = Instantiate(obl.returnObstacles()[typeObstacle2]) as GameObject;
+			obstacle2.transform.position = pos2;
 			obstacle2.transform.parent = parentground.transform;
 
 			time = 1f;
@@ -69,17 +72,4 @@ public class ObstacleSpawn : MonoBehaviour {
 
 
 	}
-
-	/*private void ObstacleDespawn()
-	{
-		for(int i = 0; i < obl.returnObstacles().Count; i++)
-		{
-			if(obl.returnObstacles()[i].transform.position.x >= 40)
-			{
-				GameObject removeO = obl.returnObstacles()[i];
-				obl.removeObstacle(removeO);
-				Destroy(removeO);
-			}
-		}
-	}*/
 }
