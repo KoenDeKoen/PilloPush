@@ -42,10 +42,11 @@ public class Leaderboard : MonoBehaviour {
 
 	public void updateScoreText(Text scoretext, Text scoretext2,Text scoretext3)
 	{
+		//achieved the highscore of
 		updateScores ();
-		scoretext.text = "1st place: " + name1stplace + "achieved the highscore of " + firstplace;
-		scoretext2.text = "2nd place: " + name2ndplace + "scored " + secondplace;
-		scoretext3.text = "3rd place: " + name3rdplace + "scored " + thirdplace;
+		scoretext.text = "1st place: " + name1stplace + " scored " + firstplace;
+		scoretext2.text = "2nd place: " + name2ndplace + " scored " + secondplace;
+		scoretext3.text = "3rd place: " + name3rdplace + " scored " + thirdplace;
 	}
 
 	private void updateScores()
@@ -65,18 +66,21 @@ public class Leaderboard : MonoBehaviour {
 		{
 			firstplace = newscore;
 			PlayerPrefs.SetInt(firstkey, firstplace);
+			PlayerPrefs.Save();
 			return 1;
 		}
 		else if(newscore > secondplace)
 		{
 			secondplace = newscore;
 			PlayerPrefs.SetInt(secondkey, secondplace);
+			PlayerPrefs.Save();
 			return 2;
 		}
 		else if(newscore > thirdplace)
 		{
 			thirdplace = newscore;
 			PlayerPrefs.SetInt(thirdkey, thirdplace);
+			PlayerPrefs.Save();
 			return 3;
 		}
 		else
