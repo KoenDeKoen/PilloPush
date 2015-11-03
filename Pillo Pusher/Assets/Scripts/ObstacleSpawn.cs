@@ -3,13 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class ObstacleSpawn : MonoBehaviour {
-
-	public ObstacleList obl;
+	
 	public bool ritme;
 	public float time = 1f;
+	public float speed = 0.5f;
+	public float clock = 0f;
+	public float round = 10f;
+	public float multi = 1f;
+
 	float startPos = -250f;
+	
 	public GameObject parent;
+
 	public GameOverPanel gameoverpanel;
+	public ObstacleList obl;
+	public Score score;
 	
 	// Use this for initialization
 	void Start () 
@@ -26,6 +34,7 @@ public class ObstacleSpawn : MonoBehaviour {
 			ObjectSpawner(parent);
 			//ObstacleDespawn ();
 		}
+		clock += Time.deltaTime;
 	}
 
 	public void ObjectSpawner(GameObject parentground)
@@ -54,7 +63,29 @@ public class ObstacleSpawn : MonoBehaviour {
 		Vector3 pos1 = new Vector3(startPos, obl.returnObstacles()[typeObstacle1].transform.position.y, obl.returnPosObstacles()[objplacepos1]);
 		Vector3 pos2 = new Vector3(obl.returnStartPos()[newStartPos], obl.returnObstacles()[typeObstacle2].transform.position.y, obl.returnPosObstacles()[objplacepos2]);
 
-		time -= Time.deltaTime * 0.65f; 
+		time -= Time.deltaTime * speed;
+
+		if(clock >= round * multi)
+		{
+			speed += 0.1f;
+			multi += 1f;
+		}
+
+		/*switch((int)clock)
+		{
+		case 10:
+			speed = 0.6f;
+			break;
+		case 20:
+			speed = 0.7f;
+			break;
+		case 30:
+			speed = 0.8f;
+			break;
+		case 40:
+			speed = 0.9f;
+			break;
+		}*/
 		
 		if(time <= 0f){
 			ritme = true;
