@@ -22,12 +22,19 @@ public class Leaderboard : MonoBehaviour {
 	void Start () 
 	{
 		updateScores ();
+		PlayerPrefs.DeleteKey (firstkey);
 		firstkey = "1st";
 		secondkey = "2nd";
 		thirdkey = "3rd";
 		name1stkey = "n1st";
 		name2ndkey = "n2nd";
 		name3rdkey = "n3rd";
+		/*PlayerPrefs.DeleteKey (firstkey);
+		PlayerPrefs.DeleteKey (secondkey);
+		PlayerPrefs.DeleteKey (thirdkey);
+		PlayerPrefs.DeleteKey (name1stkey);
+		PlayerPrefs.DeleteKey (name2ndkey);
+		PlayerPrefs.DeleteKey (name3rdkey);*/
 	}
 
 	public List<int> returnScores()
@@ -54,39 +61,68 @@ public class Leaderboard : MonoBehaviour {
 		firstplace = PlayerPrefs.GetInt (firstkey, 0);
 		secondplace = PlayerPrefs.GetInt (secondkey, 0);
 		thirdplace = PlayerPrefs.GetInt (thirdkey, 0);
-		name1stplace = PlayerPrefs.GetString (name1stplace, "Bot");
-		name2ndplace = PlayerPrefs.GetString (name2ndplace, "Bot");
-		name3rdplace = PlayerPrefs.GetString (name3rdplace, "Bot");
+		name1stplace = PlayerPrefs.GetString (name1stkey, "???");
+		name2ndplace = PlayerPrefs.GetString (name2ndkey, "???");
+		name3rdplace = PlayerPrefs.GetString (name3rdkey, "???");
 	}
 
 	public int checkForNewLeaderboardScore(int newscore)
 	{
 		updateScores ();
+		int place = 0;
 		if(newscore > firstplace)
 		{
+			int oldfirst = firstplace;
+			string old1stname = name1stplace;
 			firstplace = newscore;
 			PlayerPrefs.SetInt(firstkey, firstplace);
+			if(oldfirst > secondplace)
+			{
+				string old2ndname = name2ndplace;
+				name2ndplace = old1stname;
+				PlayerPrefs.SetString(name2ndkey, name2ndplace);
+				int oldsecond = secondplace;
+				secondplace = oldfirst;
+				PlayerPrefs.SetInt(secondkey, secondplace);
+				if(oldsecond > thirdplace)
+				{
+					name3rdplace = old2ndname;
+					PlayerPrefs.SetString(name3rdkey, name3rdplace);
+					thirdplace = oldsecond;
+					PlayerPrefs.SetInt(thirdkey, thirdplace);
+				}
+			}
 			PlayerPrefs.Save();
-			return 1;
+			place = 1;
 		}
 		else if(newscore > secondplace)
 		{
+			string old2ndname = name2ndplace;
+			int oldsecond = secondplace;
 			secondplace = newscore;
 			PlayerPrefs.SetInt(secondkey, secondplace);
+			if(oldsecond > thirdplace)
+			{
+				name3rdplace = old2ndname;
+				PlayerPrefs.SetString(name3rdkey, name3rdplace);
+				thirdplace = oldsecond;
+				PlayerPrefs.SetInt(thirdkey, thirdplace);
+			}
 			PlayerPrefs.Save();
-			return 2;
+			place = 2;
 		}
 		else if(newscore > thirdplace)
 		{
 			thirdplace = newscore;
 			PlayerPrefs.SetInt(thirdkey, thirdplace);
 			PlayerPrefs.Save();
-			return 3;
+			place = 3;
 		}
 		else
 		{
-			return 0;
+			place = 0;
 		}
+		return place;
 	}
 
 	public void inputName(int place,string name)
@@ -94,16 +130,19 @@ public class Leaderboard : MonoBehaviour {
 		switch(place)
 		{
 		case 1:
+			Debug.Log (name + "1");
 			name1stplace = name;
 			PlayerPrefs.SetString(name1stkey, name1stplace);
 			break;
 
 		case 2:
+			Debug.Log (name + "2");
 			name2ndplace = name;
 			PlayerPrefs.SetString(name2ndkey, name2ndplace);
 			break;
 
 		case 3:
+			Debug.Log (name + "3");
 			name3rdplace = name;
 			PlayerPrefs.SetString(name3rdkey, name3rdplace);
 			break;

@@ -42,11 +42,11 @@ public class ObstacleSpawn : MonoBehaviour {
 
 		if(objplacepos1 == objplacepos2)
 		{
-			Debug.Log("hoi");
+			//Debug.Log("hoi");
 			objplacepos2++;
 			if(objplacepos2 >= 3)
 			{
-				Debug.Log("hoi2");
+				//Debug.Log("hoi2");
 				objplacepos2 = 0;
 			}
 		}

@@ -7,10 +7,10 @@ public class CollisionPlayer : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col)
 	{
-		Debug.Log ("huehue");
+		//Debug.Log ("huehue");
 		if(col.gameObject.tag == "object")
 		{
-			Debug.Log ("huehuejaja");
+			//Debug.Log ("huehuejaja");
 			gameoverpanel.displayScore();
 		}
 	}

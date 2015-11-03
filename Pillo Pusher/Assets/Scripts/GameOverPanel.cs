@@ -10,11 +10,13 @@ public class GameOverPanel : MonoBehaviour {
 	public Score scorekeep;
 	public GameObject panel;
 	private bool gameover;
+	public GameObject inputbox;
 
 	public Leaderboard lb;
 	public Text score1;
 	public Text score2;
 	public Text score3;
+	private int place;
 
 	void Start () 
 	{
@@ -24,29 +26,27 @@ public class GameOverPanel : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(gameover)
+		if(gameover && place == 0)
 		{
 			checkForRetry ();
 		}
+		if(gameover && place > 0)
+		{
+			checkForNameEnter();
+		}
+		//Debug.Log ("ehhh");
 	}
 
 	public void displayScore()
 	{
-		//scoretext.text = (((int)scorekeep.returnScore ()) * 10).ToString();
-		//score1.text = (lb.returnScores ()).ToString();
-		//score2.text = (lb.returnScores ()).ToString();
-		//score3.text = (lb.returnScores ()).ToString();
-
-		lb.checkForNewLeaderboardScore((int)scorekeep.returnScore() * 10);
+		place = lb.checkForNewLeaderboardScore((int)scorekeep.returnScore() * 10);
 		lb.updateScoreText(score1, score2, score3);
-		int newPlace = lb.checkForNewLeaderboardScore((int)scorekeep.returnScore());
-		string name = "killer";
-
-		lb.inputName(newPlace, name);
+		//place = lb.checkForNewLeaderboardScore((int)scorekeep.returnScore());
 
 		scorekeep.setEnd (true);
 		panel.SetActive (true);
 		gameover = true;
+		Debug.Log (place);
 	}
 
 	private void checkForRetry()
@@ -63,5 +63,17 @@ public class GameOverPanel : MonoBehaviour {
 	public bool isGameOver()
 	{
 		return gameover;
+	}
+
+	private void checkForNameEnter()
+	{
+		inputbox.transform.parent.gameObject.SetActive (true);
+		if(Input.GetKeyDown("return"))
+		{
+			lb.inputName(place,inputbox.GetComponent<Text>().text);
+			inputbox.transform.parent.gameObject.SetActive(false);
+			lb.updateScoreText(score1, score2, score3);
+			place = 0;
+		}
 	}
 }
