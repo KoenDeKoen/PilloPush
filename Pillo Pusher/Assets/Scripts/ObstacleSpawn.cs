@@ -4,8 +4,10 @@ using System.Collections.Generic;
 
 public class ObstacleSpawn : MonoBehaviour {
 	
-	public bool ritme;
-	public float time = 1f;
+	public bool ritmeObject;
+	public bool ritmePowerup;
+	public float timeObject = 1f;
+	public float timePowerup = 10f;
 	public float speed = 0.5f;
 	public float clock = 0f;
 	public float round = 10f;
@@ -17,13 +19,15 @@ public class ObstacleSpawn : MonoBehaviour {
 
 	public GameOverPanel gameoverpanel;
 	public ObstacleList obl;
-	public Score score;
+	public PowerupList pwl;
 	
 	// Use this for initialization
 	void Start () 
 	{
 		obl.Init();
-		ritme = false;
+		pwl.Init();
+		ritmeObject = false;
+		ritmePowerup = false;
 	}
 	
 	// Update is called once per frame
@@ -32,38 +36,47 @@ public class ObstacleSpawn : MonoBehaviour {
 		if(!gameoverpanel.isGameOver())
 		{
 			ObjectSpawner(parent);
-			//ObstacleDespawn ();
 		}
 		clock += Time.deltaTime;
 	}
 
 	public void ObjectSpawner(GameObject parentground)
 	{
-		int newStartPos = 0;
-		int typeObstacle1 = 0;
-		int typeObstacle2 = 0;
-		int objplacepos1 = Random.Range (0, obl.returnPosObstacles ().Count);
-		int objplacepos2 = Random.Range (0, obl.returnPosObstacles ().Count);
+		int typeObstacle1 = Random.Range(0, obl.returnObstacles().Count);
+		int typeObstacle2 = Random.Range(0, obl.returnObstacles().Count);
 
-		newStartPos = Random.Range(0, obl.returnStartPos().Count);
-		typeObstacle1 = Random.Range(0, obl.returnObstacles().Count);
-		typeObstacle2 = Random.Range(0, obl.returnObstacles().Count);
+		int objPlacePos1 = Random.Range (0, obl.returnPosObstacles ().Count);
+		int objPlacePos2 = Random.Range (0, obl.returnPosObstacles ().Count);
 
-		if(objplacepos1 == objplacepos2)
+		int pwlType = Random.Range (0, pwl.returnPowerups ().Count);
+		int pwlPlacePos = Random.Range (0, obl.returnPosObstacles ().Count);
+
+		int newStartPos = Random.Range(0, obl.returnStartPos().Count);
+
+		if(objPlacePos1 == objPlacePos2)
 		{
-			//Debug.Log("hoi");
-			objplacepos2++;
-			if(objplacepos2 >= 3)
+			objPlacePos2++;
+			if(objPlacePos2 >= 3)
 			{
-				//Debug.Log("hoi2");
-				objplacepos2 = 0;
+				objPlacePos2 = 0;
 			}
 		}
 
-		Vector3 pos1 = new Vector3(startPos, obl.returnObstacles()[typeObstacle1].transform.position.y, obl.returnPosObstacles()[objplacepos1]);
-		Vector3 pos2 = new Vector3(obl.returnStartPos()[newStartPos], obl.returnObstacles()[typeObstacle2].transform.position.y, obl.returnPosObstacles()[objplacepos2]);
+		if(pwlPlacePos == objPlacePos1 && pwlPlacePos == objPlacePos2)
+		{
+			pwlPlacePos++;
+			if(pwlPlacePos >= 3)
+			{
+				pwlPlacePos = 0;
+			}
+		}
 
-		time -= Time.deltaTime * speed;
+		Vector3 pos1 = new Vector3(startPos, obl.returnObstacles()[typeObstacle1].transform.position.y, obl.returnPosObstacles()[objPlacePos1]);
+		Vector3 pos2 = new Vector3(obl.returnStartPos()[newStartPos], obl.returnObstacles()[typeObstacle2].transform.position.y, obl.returnPosObstacles()[objPlacePos2]);
+		Vector3 pos3 = new Vector3(startPos, pwl.returnPowerups()[pwlType].transform.position.y, obl.returnPosObstacles()[pwlPlacePos]);
+
+		timeObject -= Time.deltaTime * speed;
+		timePowerup -= Time.deltaTime * speed;
 
 		if(clock >= round * multi)
 		{
@@ -71,40 +84,36 @@ public class ObstacleSpawn : MonoBehaviour {
 			multi += 1f;
 		}
 
-		/*switch((int)clock)
-		{
-		case 10:
-			speed = 0.6f;
-			break;
-		case 20:
-			speed = 0.7f;
-			break;
-		case 30:
-			speed = 0.8f;
-			break;
-		case 40:
-			speed = 0.9f;
-			break;
-		}*/
-		
-		if(time <= 0f){
-			ritme = true;
+		if(timeObject <= 0f){
+			ritmeObject = true;
 		}
 		
-		if(ritme){
+		if(ritmeObject){
 			GameObject obstacle = Instantiate(obl.returnObstacles()[typeObstacle1]) as GameObject;
-			obstacle.transform.position = pos1;//pos1, Quaternion.Euler(new Vector3(obl.returnObstacles()[typeObstacle1].transform.rotation.x, obl.returnObstacles()[typeObstacle1].transform.rotation.y, obl.returnObstacles()[typeObstacle1].transform.rotation.z))) as GameObject;
+			obstacle.transform.position = pos1;
 			obstacle.transform.parent = parentground.transform;
 
-			//GameObject obstacle2 = Instantiate(obl.returnObstacles()[typeObstacle2], pos2, Quaternion.Euler(new Vector3(obl.returnObstacles()[typeObstacle2].transform.rotation.x, obl.returnObstacles()[typeObstacle2].transform.rotation.y, obl.returnObstacles()[typeObstacle2].transform.rotation.z))) as GameObject;
 			GameObject obstacle2 = Instantiate(obl.returnObstacles()[typeObstacle2]) as GameObject;
 			obstacle2.transform.position = pos2;
 			obstacle2.transform.parent = parentground.transform;
 
-			time = 1f;
-			ritme = false;
+			timeObject = 1f;
+			ritmeObject = false;
 		}
 
+		if(timePowerup <= 0f)
+		{
+			ritmePowerup = true;
+		}
 
+		if(ritmePowerup)
+		{
+			GameObject powerup = Instantiate(pwl.returnPowerups()[pwlType]) as GameObject;
+			powerup.transform.position = pos3;
+			powerup.transform.parent = parentground.transform;
+
+			timePowerup = 10f;
+			ritmePowerup = false;
+		}
 	}
 }

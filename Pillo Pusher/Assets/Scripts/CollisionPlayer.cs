@@ -13,5 +13,11 @@ public class CollisionPlayer : MonoBehaviour {
 			//Debug.Log ("huehuejaja");
 			gameoverpanel.displayScore();
 		}
+
+		//Debug.Log ("huehue");
+		if(col.gameObject.tag == "slow")
+		{
+			Debug.Log ("slow down");
+		}
 	}
 }
