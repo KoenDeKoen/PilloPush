@@ -13,7 +13,7 @@ public class QuickScript : MonoBehaviour {
 	{
 		if(Input.GetKeyDown("s"))
 		{
-			Application.LoadLevel("CharacterSelect");
+			Application.LoadLevel("Menu");
 		}
 	}
 }
