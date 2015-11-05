@@ -18,9 +18,12 @@ public class Leaderboard : MonoBehaviour {
 	private string name1stplace;
 	private string name2ndplace;
 	private string name3rdplace;
+    private string playername;
+    private bool namedone;
 
 	void Start () 
 	{
+        namedone = false;
 		updateScores ();
 		PlayerPrefs.DeleteKey (firstkey);
 		firstkey = "1st";
@@ -148,4 +151,39 @@ public class Leaderboard : MonoBehaviour {
 			break;
 		}
 	}
+
+    public void buildName()
+    {
+        Event e = Event.current;
+        if (e.isKey && !namedone)
+        {
+            if (e.type == EventType.KeyDown && e.keyCode.ToString() != "None" && e.keyCode.ToString().Length == 1)
+            {
+                Debug.Log(e.keyCode.ToString());
+                playername += e.keyCode.ToString();
+            }
+            if (e.type == EventType.KeyDown && e.keyCode.ToString() != "None" && e.keyCode.ToString() == "Backspace")
+            {
+                playername = playername.Substring(0, playername.Length - 1);
+            }
+            if (e.type == EventType.KeyDown && e.keyCode.ToString() != "None" && e.keyCode.ToString() == "Space")
+            {
+                playername = playername + " ";
+            }
+            if (e.type == EventType.KeyDown && e.keyCode.ToString() != "None" && e.keyCode.ToString() == "Return")
+            {
+                namedone = true;
+            }
+        }
+    }
+
+    public string getName()
+    {
+        return playername;
+    }
+
+    public bool getNameDone()
+    {
+        return namedone;
+    }
 }

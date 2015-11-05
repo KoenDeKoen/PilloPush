@@ -10,7 +10,7 @@ public class GameOverPanel : MonoBehaviour {
 	public Score scorekeep;
 	public GameObject panel;
 	private bool gameover;
-	public GameObject inputbox;
+	public GameObject inputtext;
 
 	public Leaderboard lb;
 	public Text score1;
@@ -26,13 +26,14 @@ public class GameOverPanel : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(gameover && place == 0)
+		if((gameover && place == 0) || (gameover && lb.getNameDone()))
 		{
 			checkForRetry ();
 		}
-		if(gameover && place > 0)
+		if(gameover && place > 0 && !lb.getNameDone())
 		{
-			checkForNameEnter();
+            lb.buildName();
+            inputtext.GetComponent<Text>().text = lb.getName();
 		}
 		//Debug.Log ("ehhh");
 	}
@@ -65,15 +66,14 @@ public class GameOverPanel : MonoBehaviour {
 		return gameover;
 	}
 
-	private void checkForNameEnter()
+	/*private void checkForNameEnter()
 	{
-		inputbox.transform.parent.gameObject.SetActive (true);
+        inputtext.SetActive(true);
 		if(Input.GetKeyDown("return"))
 		{
-			lb.inputName(place,inputbox.GetComponent<Text>().text);
-			inputbox.transform.parent.gameObject.SetActive(false);
+            inputtext.GetComponent<Text>().text = lb.getName();
 			lb.updateScoreText(score1, score2, score3);
 			place = 0;
 		}
-	}
+	}*/
 }
