@@ -28,26 +28,36 @@ public class GameOverPanel : MonoBehaviour {
 	{
 		if((gameover && place == 0) || (gameover && lb.getNameDone()))
 		{
-			checkForRetry ();
+            panel.SetActive(true);
+            lb.inputName(place, lb.getName());
+            inputtext.SetActive(false);
+            lb.updateScoreText(score1, score2, score3);
+            checkForRetry ();
 		}
 		if(gameover && place > 0 && !lb.getNameDone())
 		{
+            panel.SetActive(true);
+            inputtext.SetActive(true);
+		}
+	}
+
+    void OnGUI()
+    {
+        if (gameover && place > 0 && !lb.getNameDone())
+        {
             lb.buildName();
             inputtext.GetComponent<Text>().text = lb.getName();
-		}
-		//Debug.Log ("ehhh");
-	}
+            
+        }
+    }
 
 	public void displayScore()
 	{
 		place = lb.checkForNewLeaderboardScore((int)scorekeep.returnScore() * 10);
 		lb.updateScoreText(score1, score2, score3);
-		//place = lb.checkForNewLeaderboardScore((int)scorekeep.returnScore());
-
 		scorekeep.setEnd (true);
 		panel.SetActive (true);
 		gameover = true;
-		Debug.Log (place);
 	}
 
 	private void checkForRetry()
@@ -65,15 +75,4 @@ public class GameOverPanel : MonoBehaviour {
 	{
 		return gameover;
 	}
-
-	/*private void checkForNameEnter()
-	{
-        inputtext.SetActive(true);
-		if(Input.GetKeyDown("return"))
-		{
-            inputtext.GetComponent<Text>().text = lb.getName();
-			lb.updateScoreText(score1, score2, score3);
-			place = 0;
-		}
-	}*/
 }

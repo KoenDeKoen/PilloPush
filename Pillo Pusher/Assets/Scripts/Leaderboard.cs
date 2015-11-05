@@ -24,6 +24,7 @@ public class Leaderboard : MonoBehaviour {
 	void Start () 
 	{
         namedone = false;
+        playername = "";
 		updateScores ();
 		PlayerPrefs.DeleteKey (firstkey);
 		firstkey = "1st";
@@ -32,12 +33,8 @@ public class Leaderboard : MonoBehaviour {
 		name1stkey = "n1st";
 		name2ndkey = "n2nd";
 		name3rdkey = "n3rd";
-		/*PlayerPrefs.DeleteKey (firstkey);
-		PlayerPrefs.DeleteKey (secondkey);
-		PlayerPrefs.DeleteKey (thirdkey);
-		PlayerPrefs.DeleteKey (name1stkey);
-		PlayerPrefs.DeleteKey (name2ndkey);
-		PlayerPrefs.DeleteKey (name3rdkey);*/
+        //PlayerPrefs.DeleteAll();
+	
 	}
 
 	public List<int> returnScores()
@@ -79,7 +76,18 @@ public class Leaderboard : MonoBehaviour {
 			string old1stname = name1stplace;
 			firstplace = newscore;
 			PlayerPrefs.SetInt(firstkey, firstplace);
-			if(oldfirst > secondplace)
+            int oldsecond = secondplace;
+            string old2ndname = name2ndplace;
+            name2ndplace = old1stname;
+            secondplace = oldfirst;
+            PlayerPrefs.SetInt(secondkey, secondplace);
+            PlayerPrefs.SetString(name2ndkey, name2ndplace);
+            name3rdplace = old2ndname;
+            thirdplace = oldsecond;
+            PlayerPrefs.SetInt(thirdkey, thirdplace);
+            PlayerPrefs.SetString(name3rdkey, name3rdplace);
+
+			/*if(oldfirst > secondplace)
 			{
 				string old2ndname = name2ndplace;
 				name2ndplace = old1stname;
@@ -94,7 +102,7 @@ public class Leaderboard : MonoBehaviour {
 					thirdplace = oldsecond;
 					PlayerPrefs.SetInt(thirdkey, thirdplace);
 				}
-			}
+			}*/
 			PlayerPrefs.Save();
 			place = 1;
 		}
@@ -104,13 +112,17 @@ public class Leaderboard : MonoBehaviour {
 			int oldsecond = secondplace;
 			secondplace = newscore;
 			PlayerPrefs.SetInt(secondkey, secondplace);
-			if(oldsecond > thirdplace)
+            name3rdplace = old2ndname;
+            thirdplace = oldsecond;
+            PlayerPrefs.SetInt(thirdkey, thirdplace);
+            PlayerPrefs.SetString(name3rdkey, name3rdplace);
+			/*if(oldsecond > thirdplace)
 			{
 				name3rdplace = old2ndname;
 				PlayerPrefs.SetString(name3rdkey, name3rdplace);
 				thirdplace = oldsecond;
 				PlayerPrefs.SetInt(thirdkey, thirdplace);
-			}
+			}*/
 			PlayerPrefs.Save();
 			place = 2;
 		}
@@ -153,13 +165,12 @@ public class Leaderboard : MonoBehaviour {
 	}
 
     public void buildName()
-    {
+    {       
         Event e = Event.current;
-        if (e.isKey && !namedone)
+        if (e != null && e.isKey && !namedone)
         {
             if (e.type == EventType.KeyDown && e.keyCode.ToString() != "None" && e.keyCode.ToString().Length == 1)
             {
-                Debug.Log(e.keyCode.ToString());
                 playername += e.keyCode.ToString();
             }
             if (e.type == EventType.KeyDown && e.keyCode.ToString() != "None" && e.keyCode.ToString() == "Backspace")
