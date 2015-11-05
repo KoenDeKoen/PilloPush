@@ -19,7 +19,7 @@ public class SpawnCharacter : MonoBehaviour
 		character.GetComponent<CollisionPlayer> ().gameoverpanel = gameoverpanel;
 		//character = selectedcharacter.getCharacter ();
 		//character.transform.position = new Vector3 (40, 0, 0);
-		maincamera.transform.parent = character.transform;
+		maincamera.transform.SetParent(character.transform);
 		//maincamera.transform.localPosition = new Vector3 (4.5f, maincamera.transform.localPosition.y, maincamera.transform.localPosition.z);
 	}
 	

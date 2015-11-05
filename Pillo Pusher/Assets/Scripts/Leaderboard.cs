@@ -86,23 +86,6 @@ public class Leaderboard : MonoBehaviour {
             thirdplace = oldsecond;
             PlayerPrefs.SetInt(thirdkey, thirdplace);
             PlayerPrefs.SetString(name3rdkey, name3rdplace);
-
-			/*if(oldfirst > secondplace)
-			{
-				string old2ndname = name2ndplace;
-				name2ndplace = old1stname;
-				PlayerPrefs.SetString(name2ndkey, name2ndplace);
-				int oldsecond = secondplace;
-				secondplace = oldfirst;
-				PlayerPrefs.SetInt(secondkey, secondplace);
-				if(oldsecond > thirdplace)
-				{
-					name3rdplace = old2ndname;
-					PlayerPrefs.SetString(name3rdkey, name3rdplace);
-					thirdplace = oldsecond;
-					PlayerPrefs.SetInt(thirdkey, thirdplace);
-				}
-			}*/
 			PlayerPrefs.Save();
 			place = 1;
 		}
@@ -116,13 +99,6 @@ public class Leaderboard : MonoBehaviour {
             thirdplace = oldsecond;
             PlayerPrefs.SetInt(thirdkey, thirdplace);
             PlayerPrefs.SetString(name3rdkey, name3rdplace);
-			/*if(oldsecond > thirdplace)
-			{
-				name3rdplace = old2ndname;
-				PlayerPrefs.SetString(name3rdkey, name3rdplace);
-				thirdplace = oldsecond;
-				PlayerPrefs.SetInt(thirdkey, thirdplace);
-			}*/
 			PlayerPrefs.Save();
 			place = 2;
 		}
@@ -145,19 +121,16 @@ public class Leaderboard : MonoBehaviour {
 		switch(place)
 		{
 		case 1:
-			Debug.Log (name + "1");
 			name1stplace = name;
 			PlayerPrefs.SetString(name1stkey, name1stplace);
 			break;
 
 		case 2:
-			Debug.Log (name + "2");
 			name2ndplace = name;
 			PlayerPrefs.SetString(name2ndkey, name2ndplace);
 			break;
 
 		case 3:
-			Debug.Log (name + "3");
 			name3rdplace = name;
 			PlayerPrefs.SetString(name3rdkey, name3rdplace);
 			break;
@@ -175,7 +148,10 @@ public class Leaderboard : MonoBehaviour {
             }
             if (e.type == EventType.KeyDown && e.keyCode.ToString() != "None" && e.keyCode.ToString() == "Backspace")
             {
-                playername = playername.Substring(0, playername.Length - 1);
+                if (playername.Length - 1 >= 0)
+                {
+                    playername = playername.Substring(0, playername.Length - 1);
+                }
             }
             if (e.type == EventType.KeyDown && e.keyCode.ToString() != "None" && e.keyCode.ToString() == "Space")
             {

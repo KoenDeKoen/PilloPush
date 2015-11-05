@@ -11,6 +11,7 @@ public class GameOverPanel : MonoBehaviour {
 	public GameObject panel;
 	private bool gameover;
 	public GameObject inputtext;
+    public GameObject infotext;
 
 	public Leaderboard lb;
 	public Text score1;
@@ -31,12 +32,14 @@ public class GameOverPanel : MonoBehaviour {
             panel.SetActive(true);
             lb.inputName(place, lb.getName());
             inputtext.SetActive(false);
+            infotext.SetActive(false);
             lb.updateScoreText(score1, score2, score3);
             checkForRetry ();
 		}
 		if(gameover && place > 0 && !lb.getNameDone())
 		{
             panel.SetActive(true);
+            infotext.SetActive(true);
             inputtext.SetActive(true);
 		}
 	}
