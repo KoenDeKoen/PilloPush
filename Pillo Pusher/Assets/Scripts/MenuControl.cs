@@ -91,6 +91,7 @@ public class MenuControl : MonoBehaviour
             waitupyo = false;
             haspressed1 = true;
             oneispressing = false;
+            time = 1;
             
         }
         if ((twoispressing || waitupyo) && (/*pct2 <= 0.01 ||*/ Input.GetKeyUp("d")))
@@ -99,6 +100,7 @@ public class MenuControl : MonoBehaviour
             waitupyo = false;
             haspressed2 = true;
             twoispressing = false;
+            time = 1;
             
         }
 
