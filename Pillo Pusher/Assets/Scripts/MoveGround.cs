@@ -8,8 +8,7 @@ public class MoveGround : MonoBehaviour {
 	private bool hastolerp;
 	private Vector3 nextpos;
 	public GameOverPanel gameoverpanel;
-
-	float speed = 0.5f;
+	float speed;
 
 	void Start () 
 	{
