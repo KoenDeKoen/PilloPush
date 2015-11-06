@@ -93,7 +93,7 @@ public class MenuControl : MonoBehaviour
             //HighscorePanel.SetActive(false);
             //Debug.Log("dd " + waitupyo);
         }
-        if ((oneispressing /*|| waitupyo*/) && (pct1 <= 0.01 || Input.GetKeyUp("a")))
+        if ((oneispressing /*|| waitupyo*/) && (/*pct1 <= 0.01 ||*/ Input.GetKeyUp("a")))
         {
             //Debug.Log("au " + waitupyo);
             //waitupyo = false;
@@ -102,7 +102,7 @@ public class MenuControl : MonoBehaviour
             time = 1;
             
         }
-        if ((twoispressing /*|| waitupyo*/) && (pct2 <= 0.01 || Input.GetKeyUp("d")))
+        if ((twoispressing /*|| waitupyo*/) && (/*pct2 <= 0.01 ||*/ Input.GetKeyUp("d")))
         {
             //Debug.Log("du " + waitupyo);
             //waitupyo = false;
