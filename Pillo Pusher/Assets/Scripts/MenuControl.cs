@@ -29,11 +29,11 @@ public class MenuControl : MonoBehaviour
     private bool twoispressing;
     private bool inmodeselect;
     private bool waitupyo;
-    private bool inhighscore;
+   //private bool inhighscore;
     // Use this for initialization
     void Start ()
     {
-        inhighscore = false;
+       // inhighscore = false;
         waitupyo = false;
         inmodeselect = false;
         time = 1;
