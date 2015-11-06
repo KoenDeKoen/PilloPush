@@ -14,6 +14,10 @@ public class MenuControl : MonoBehaviour
     public GameObject Normalmodebtn;
     public GameObject Easymodebtn;
 
+    public GameObject HighscorePanel;
+
+    public MenuHighscore menuhighscore;
+
     private Vector3 position;
     private bool haspressed1;
     private bool haspressed2;
@@ -25,9 +29,11 @@ public class MenuControl : MonoBehaviour
     private bool twoispressing;
     private bool inmodeselect;
     private bool waitupyo;
+    private bool inhighscore;
     // Use this for initialization
     void Start ()
     {
+        inhighscore = false;
         waitupyo = false;
         inmodeselect = false;
         time = 1;
@@ -77,31 +83,39 @@ public class MenuControl : MonoBehaviour
         {
             haspressed1 = false;
             oneispressing = true;
+            //HighscorePanel.SetActive(false);
             //Debug.Log("ad " + waitupyo);
         }
         if (!haspressed2 && !twoispressing && ! waitupyo && (pct2 >= 0.05 || Input.GetKey("d")))
         {
             haspressed2 = false;
             twoispressing = true;
+            //HighscorePanel.SetActive(false);
             //Debug.Log("dd " + waitupyo);
         }
-        if ((oneispressing || waitupyo) && (/*pct1 <= 0.01 ||*/ Input.GetKeyUp("a")))
+        if ((oneispressing /*|| waitupyo*/) && (/*pct1 <= 0.01 ||*/ Input.GetKeyUp("a")))
         {
             //Debug.Log("au " + waitupyo);
-            waitupyo = false;
+            //waitupyo = false;
             haspressed1 = true;
             oneispressing = false;
             time = 1;
             
         }
-        if ((twoispressing || waitupyo) && (/*pct2 <= 0.01 ||*/ Input.GetKeyUp("d")))
+        if ((twoispressing /*|| waitupyo*/) && (/*pct2 <= 0.01 ||*/ Input.GetKeyUp("d")))
         {
             //Debug.Log("du " + waitupyo);
-            waitupyo = false;
+            //waitupyo = false;
             haspressed2 = true;
             twoispressing = false;
             time = 1;
-            
+           // HighscorePanel.SetActive(false);
+        }
+
+        if (!oneispressing && !twoispressing)
+        {
+            waitupyo = false;
+            //HighscorePanel.SetActive(false);
         }
 
         if (oneispressing && twoispressing)
@@ -266,11 +280,11 @@ public class MenuControl : MonoBehaviour
 
     private void selectButton()
     {
+        time = 1;
+        //oneispressing = false;
+        //twoispressing = false;
         if (inmodeselect)
         {
-            time = 1;
-            oneispressing = false;
-            twoispressing = false;
             if (turnstate == 0)
             {
                 Application.LoadLevel("CharacterSelect");
@@ -281,11 +295,7 @@ public class MenuControl : MonoBehaviour
             }
         }
         else 
-        {
-            inmodeselect = true;
-            time = 1;
-            oneispressing = false;
-            twoispressing = false;
+        {  
             waitupyo = true;
             if (turnstate == 0)
             {
@@ -298,6 +308,7 @@ public class MenuControl : MonoBehaviour
             if (turnstate == 2)
             {
                 //start
+                inmodeselect = true;
                 Normalmodebtn.transform.parent.gameObject.SetActive(true);
                 Startbtn.transform.parent.gameObject.SetActive(false);
                 turnstate = 0;
@@ -308,7 +319,10 @@ public class MenuControl : MonoBehaviour
             }
             if (turnstate == 4)
             {
-                //highscores
+                //HighscorePanel.SetActive(true);
+                //menuhighscore.printHighscore();
+                //inhighscore = true;
+                Application.LoadLevel("Highscore");
             }
             if (turnstate == 5)
             {

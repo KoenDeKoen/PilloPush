@@ -57,7 +57,7 @@ public class Mechanic : MonoBehaviour {
 
 	private void checkPresses()
 	{
-		if(Input.GetKeyDown("a") || pct1 >= 0.5)
+		if(Input.GetKeyDown("a") || pct1 >= 0.05)
 		{
 			p1pressing = true;
 			p1pressed = false;
@@ -66,7 +66,7 @@ public class Mechanic : MonoBehaviour {
 			speaker1.SetInteger("SwitchState", 1);
 		}
 		else
-			if((Input.GetKeyUp("a")||pct1 <= 0.2) && p1pressing)
+			if((Input.GetKeyUp("a")||pct1 <= 0.01) && p1pressing)
 		{
 			p1pressed = true;
 			hasjumped = false;
@@ -76,7 +76,7 @@ public class Mechanic : MonoBehaviour {
 			speaker1.SetInteger("SwitchState", 0);
 		}
 
-		if(Input.GetKeyDown("d") || pct2 >= 0.5)
+		if(Input.GetKeyDown("d") || pct2 >= 0.05)
 		{
 			p2pressing = true;
 			p2pressed = false;
@@ -85,7 +85,7 @@ public class Mechanic : MonoBehaviour {
 			speaker2.SetInteger("SwitchState", 1);
 		}
 		else
-		if((Input.GetKeyUp("d") || pct2 <= 0.2) && p2pressing)
+		if((Input.GetKeyUp("d") || pct2 <= 0.01) && p2pressing)
 		{
 			p2pressed = true;
 			hasjumped = false;
