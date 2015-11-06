@@ -49,7 +49,7 @@ public class ObstacleSpawn : MonoBehaviour {
 		int objPlacePos2 = Random.Range (0, obl.returnPosObstacles ().Count);
 
 		int pwlType = Random.Range (0, pwl.returnPowerups ().Count);
-		int pwlPlacePos = Random.Range (0, obl.returnPosObstacles ().Count);
+		int pwlPlacePos = 0;//Random.Range (0, obl.returnPosObstacles ().Count);
 
 		int newStartPos = Random.Range(0, obl.returnStartPos().Count);
 
@@ -62,7 +62,7 @@ public class ObstacleSpawn : MonoBehaviour {
 			}
 		}
 
-		if(pwlPlacePos == objPlacePos1 && pwlPlacePos == objPlacePos2)
+		if(pwlPlacePos == objPlacePos1)
 		{
 			pwlPlacePos++;
 			if(pwlPlacePos >= 3)
@@ -70,6 +70,16 @@ public class ObstacleSpawn : MonoBehaviour {
 				pwlPlacePos = 0;
 			}
 		}
+
+		if(pwlPlacePos == objPlacePos2)
+		{
+			pwlPlacePos++;
+			if(pwlPlacePos >= 3)
+			{
+				pwlPlacePos = 0;
+			}
+		}
+
 
 		Vector3 pos1 = new Vector3(startPos, obl.returnObstacles()[typeObstacle1].transform.position.y, obl.returnPosObstacles()[objPlacePos1]);
 		Vector3 pos2 = new Vector3(obl.returnStartPos()[newStartPos], obl.returnObstacles()[typeObstacle2].transform.position.y, obl.returnPosObstacles()[objPlacePos2]);
