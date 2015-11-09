@@ -17,6 +17,7 @@ public class SpawnCharacter : MonoBehaviour
 		character = Instantiate (selectedcharacter.getCharacter (), new Vector3(40,selectedcharacter.getCharacter().transform.position.y,0), Quaternion.identity) as GameObject;
 		character.AddComponent<CollisionPlayer> ();
 		character.GetComponent<CollisionPlayer> ().gameoverpanel = gameoverpanel;
+        
 		//character = selectedcharacter.getCharacter ();
 		//character.transform.position = new Vector3 (40, 0, 0);
 		maincamera.transform.SetParent(character.transform);
