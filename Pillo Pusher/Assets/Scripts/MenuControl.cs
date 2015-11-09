@@ -14,6 +14,8 @@ public class MenuControl : MonoBehaviour
     public GameObject Normalmodebtn;
     public GameObject Easymodebtn;
 
+    public ModeSelect modeselect;
+
     private Vector3 position;
     private bool haspressed1;
     private bool haspressed2;
@@ -25,11 +27,13 @@ public class MenuControl : MonoBehaviour
     private bool twoispressing;
     private bool inmodeselect;
     private bool waitupyo;
+    private bool devmode;
    //private bool inhighscore;
     // Use this for initialization
     void Start ()
     {
-       // inhighscore = false;
+        // inhighscore = false;
+        devmode = false;
         waitupyo = false;
         inmodeselect = false;
         time = 1;
@@ -75,48 +79,69 @@ public class MenuControl : MonoBehaviour
         float pct1 = PilloController.GetSensor(Pillo.PilloID.Pillo1);
         float pct2 = PilloController.GetSensor(Pillo.PilloID.Pillo2);
 
-        if (!haspressed1 && !oneispressing && !waitupyo && (pct1 >= 0.05 || Input.GetKey("a")))
+        if (Input.GetKeyDown("t"))
         {
-            haspressed1 = false;
-            oneispressing = true;
-            //HighscorePanel.SetActive(false);
-            //Debug.Log("ad " + waitupyo);
-        }
-        if (!haspressed2 && !twoispressing && !waitupyo && (pct2 >= 0.05 || Input.GetKey("d")))
-        {
-            haspressed2 = false;
-            twoispressing = true;
-            //HighscorePanel.SetActive(false);
-            //Debug.Log("dd " + waitupyo);
-        }
-        if ((oneispressing || waitupyo) && (pct1 <= 0 || Input.GetKeyUp("a")))
-        {
-            //Debug.Log("au " + waitupyo);
-            waitupyo = false;
-            haspressed1 = true;
-            oneispressing = false;
-            time = 1;
-            
-        }
-        if ((twoispressing || waitupyo) && (pct2 <= 0 || Input.GetKeyUp("d")))
-        {
-            //Debug.Log("du " + waitupyo);
-            waitupyo = false;
-            haspressed2 = true;
-            twoispressing = false;
-            time = 1;
-           // HighscorePanel.SetActive(false);
+            devmode = true;
         }
 
-        /*if (!oneispressing && !twoispressing)
+        if (devmode)
         {
-            waitupyo = false;
-            //HighscorePanel.SetActive(false);
-        }*/
+            if (!waitupyo && (pct1 >= 0.05 || Input.GetKey("a")))
+            {
+                haspressed1 = false;
+                oneispressing = true;
+            }
+            if (!waitupyo && (pct2 >= 0.05 || Input.GetKey("d")))
+            {
+                haspressed2 = false;
+                twoispressing = true;
+            }
+            if ((oneispressing || waitupyo) && Input.GetKeyUp("a"))
+            {
+                waitupyo = false;
+                haspressed1 = true;
+                oneispressing = false;
+                time = 1;
+            }
+            if ((twoispressing || waitupyo) && Input.GetKeyUp("d"))
+            {
+                waitupyo = false;
+                haspressed2 = true;
+                twoispressing = false;
+                time = 1;
+            }
+        }
+
+        if (!devmode)
+        {
+            if (!haspressed1 && !oneispressing && !waitupyo && pct1 >= 0.05)
+            {
+                haspressed1 = false;
+                oneispressing = true;
+            }
+            if(!haspressed2 && !twoispressing && !waitupyo && pct2 >= 0.05)
+            {
+                haspressed2 = false;
+                twoispressing = true;
+            }
+            if((oneispressing || waitupyo) && pct1 <= 0)
+            {
+                waitupyo = false;
+                haspressed1 = true;
+                oneispressing = false;
+                time = 1;
+            }
+            if ((twoispressing || waitupyo) && pct2 <= 0)
+            {
+                waitupyo = false;
+                haspressed2 = true;
+                twoispressing = false;
+                time = 1;
+            }
+        }
 
         if (oneispressing && twoispressing)
         {
-            //Debug.Log(time);
             time -= Time.deltaTime;
             if (time <= 0)
             {
@@ -126,6 +151,7 @@ public class MenuControl : MonoBehaviour
 
         else if (haspressed1)
         {
+            
             turnButtonsDown();
             changePosition();
             haspressed1 = false;
@@ -133,6 +159,7 @@ public class MenuControl : MonoBehaviour
         }
         else if (haspressed2)
         {
+            
             turnButtonsUp();
             changePosition();
             haspressed1 = false;
@@ -285,11 +312,13 @@ public class MenuControl : MonoBehaviour
         {
             if (turnstate == 0)
             {
+                modeselect.setMode(1);
                 Application.LoadLevel("CharacterSelect");
             }
             if (turnstate == 1)
             {
-                Application.LoadLevel("GrannyMode");
+                modeselect.setMode(2);
+                Application.LoadLevel("CharacterSelect");
             }
         }
         else 

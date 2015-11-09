@@ -40,7 +40,6 @@ public class MenuHighscore : MonoBehaviour {
 
         if ((pct1 <= 0 && pct2 <= 0) || (Input.GetKeyUp("a") || Input.GetKeyUp("d")))
         {
-            Debug.Log("wtf");
             presscounter++;
         }
     }

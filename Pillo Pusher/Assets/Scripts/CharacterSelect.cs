@@ -6,6 +6,7 @@ using Pillo;
 public class CharacterSelect : MonoBehaviour {
 
 	public SelectedCharacter selectedcharacter;
+    public ModeSelect modeselect;
 
 	public GameObject rotateParent;
 	public GameObject girl;
@@ -39,7 +40,14 @@ public class CharacterSelect : MonoBehaviour {
 
 		if(Input.GetKey("a") && Input.GetKey("d")|| pct1 >= 0.5 && pct2 >= 0.5)
 		{
-			Application.LoadLevel("Game");
+            if (modeselect.getMode() == 1)
+            {
+                Application.LoadLevel("Game");
+            }
+            if (modeselect.getMode() == 2)
+            {
+                Application.LoadLevel("GrannyMode");
+            }
 		}
 
 		if(Input.GetKeyDown("a")|| pct1 >= 0.5)
