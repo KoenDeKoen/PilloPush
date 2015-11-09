@@ -4,16 +4,28 @@ using System.Collections;
 public class CollisionPlayer : MonoBehaviour {
 
 	public GameOverPanel gameoverpanel;
+    //public Lives lives;
 
+    private int lives;
 	private float realTime;
+
+    void Start()
+    {
+        lives = 3;
+    }
 
 	void OnCollisionEnter(Collision col)
 	{
 		//Debug.Log ("huehue");
 		if(col.gameObject.tag == "object")
 		{
-			//Debug.Log ("huehuejaja");
-			gameoverpanel.displayScore();
+            //Debug.Log ("huehuejaja");
+            lives--;
+            if (lives <= 0)
+            {
+                gameoverpanel.displayScore();
+            }
+			
 		}
 
 		//Debug.Log ("huehue");
