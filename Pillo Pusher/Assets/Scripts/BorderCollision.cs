@@ -9,5 +9,10 @@ public class BorderCollision : MonoBehaviour
 		{
 			Destroy(col.gameObject);
 		}
+
+		if(col.gameObject.tag == "slow")
+		{
+			Destroy(col.gameObject);
+		}
 	}
 }

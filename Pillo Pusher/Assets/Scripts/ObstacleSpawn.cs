@@ -6,8 +6,8 @@ public class ObstacleSpawn : MonoBehaviour {
 	
 	public bool ritmeObject;
 	public bool ritmePowerup;
-	public float timeObject = 1f;
-	public float timePowerup = 10f;
+	float timeObject = 1f;
+	float timePowerup = 9.5f;
 	public float speed = 0.5f;
 	public float clock = 0f;
 	public float round = 10f;
@@ -20,12 +20,14 @@ public class ObstacleSpawn : MonoBehaviour {
 	public GameOverPanel gameoverpanel;
 	public ObstacleList obl;
 	public PowerupList pwl;
+	public ObjectPosistionList objpos;
 	
 	// Use this for initialization
 	void Start () 
 	{
 		obl.Init();
 		pwl.Init();
+		objpos.Init();
 		ritmeObject = false;
 		ritmePowerup = false;
 	}
@@ -45,54 +47,55 @@ public class ObstacleSpawn : MonoBehaviour {
 		int typeObstacle1 = Random.Range(0, obl.returnObstacles().Count);
 		int typeObstacle2 = Random.Range(0, obl.returnObstacles().Count);
 
-		int objPlacePos1 = Random.Range (0, obl.returnPosObstacles ().Count);
-		int objPlacePos2 = Random.Range (0, obl.returnPosObstacles ().Count);
+		int objPlacePos1 = Random.Range (0, objpos.returnPosObjects().Count);
+		int objPlacePos2 = 0;//Random.Range (0, obl.returnPosObstacles ().Count);
 
 		int pwlType = Random.Range (0, pwl.returnPowerups ().Count);
-		int pwlPlacePos = 0;//Random.Range (0, obl.returnPosObstacles ().Count);
+		int pwlPlacePos = 0;
 
 		int newStartPos = Random.Range(0, obl.returnStartPos().Count);
 
+		/*
 		if(objPlacePos1 == objPlacePos2)
 		{
 			objPlacePos2++;
 			if(objPlacePos2 >= 3)
 			{
 				objPlacePos2 = 0;
+				objPlacePos2++;
 			}
-		}
+		}*/
 
-		if(pwlPlacePos == objPlacePos1)
-		{
-			pwlPlacePos++;
-			if(pwlPlacePos >= 3)
+		for(int i = 0; i < objpos.returnPosObjects().Count; i++){
+			if(i != objPlacePos1)
 			{
-				pwlPlacePos = 0;
+				objPlacePos2 = i;
 			}
 		}
 
-		if(pwlPlacePos == objPlacePos2)
-		{
-			pwlPlacePos++;
-			if(pwlPlacePos >= 3)
+		for(int k = 0; k < objpos.returnPosObjects().Count; k++){
+			if(k == objPlacePos1)continue;
+			if(k == objPlacePos2)continue;
+			if(k != objPlacePos1)
 			{
-				pwlPlacePos = 0;
+				pwlPlacePos = k;
 			}
 		}
 
+		Vector3 pos1 = new Vector3(startPos, obl.returnObstacles()[typeObstacle1].transform.position.y, objpos.returnPosObjects()[objPlacePos1]);
 
-		Vector3 pos1 = new Vector3(startPos, obl.returnObstacles()[typeObstacle1].transform.position.y, obl.returnPosObstacles()[objPlacePos1]);
-		Vector3 pos2 = new Vector3(obl.returnStartPos()[newStartPos], obl.returnObstacles()[typeObstacle2].transform.position.y, obl.returnPosObstacles()[objPlacePos2]);
-		Vector3 pos3 = new Vector3(startPos, pwl.returnPowerups()[pwlType].transform.position.y, obl.returnPosObstacles()[pwlPlacePos]);
+		Vector3 pos2 = new Vector3(obl.returnStartPos()[newStartPos], obl.returnObstacles()[typeObstacle2].transform.position.y, objpos.returnPosObjects()[objPlacePos2]);
 
-		timeObject -= Time.deltaTime * speed;
-		timePowerup -= Time.deltaTime * speed;
+		Vector3 pos3 = new Vector3(startPos, pwl.returnPowerups()[pwlType].transform.position.y, objpos.returnPosObjects()[pwlPlacePos]);
 
 		if(clock >= round * multi)
 		{
 			speed += 0.1f;
 			multi += 1f;
 		}
+
+		timeObject -= Time.deltaTime * speed;
+		timePowerup -= Time.deltaTime * speed;
 
 		if(timeObject <= 0f){
 			ritmeObject = true;
@@ -122,7 +125,7 @@ public class ObstacleSpawn : MonoBehaviour {
 			powerup.transform.position = pos3;
 			powerup.transform.parent = parentground.transform;
 
-			timePowerup = 10f;
+			timePowerup = 9.5f;
 			ritmePowerup = false;
 		}
 	}
