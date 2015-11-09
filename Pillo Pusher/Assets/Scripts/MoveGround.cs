@@ -8,25 +8,35 @@ public class MoveGround : MonoBehaviour {
 	private bool hastolerp;
 	private Vector3 nextpos;
 	public GameOverPanel gameoverpanel;
+	public Score scoreTracker;
+
 	float speed;
+	float scoreinterval;
+	float multi;
 
 	void Start () 
 	{
 		hastolerp = true;
 		nextpos = new Vector3 (0,0,0);
 		nextpos = parent.transform.position;
-		speed = 0.5f;
+		speed = 0.3f;
+		scoreinterval = 25f;
+		multi = 1f;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		speed += Time.deltaTime * 0.005f;
+		if(scoreTracker.returnScore() >= scoreinterval * multi)
+		{
+			speed += 0.2f;
+			multi += 1;
+		}
 
 		if(hastolerp && !gameoverpanel.isGameOver())
 		{
 			nextpos.x += speed;
-			parent.transform.position = Vector3.Lerp(parent.transform.position, nextpos, Time.deltaTime * 1);                                                                       
+			parent.transform.position = Vector3.Lerp(parent.transform.position, nextpos, speed);                                                                      
 		}
 	}
 }

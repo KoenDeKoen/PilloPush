@@ -6,11 +6,11 @@ public class ObstacleSpawn : MonoBehaviour {
 	
 	public bool ritmeObject;
 	public bool ritmePowerup;
-	float timeObject = 1f;
-	float timePowerup = 9.5f;
-	public float speed = 0.5f;
-	public float clock = 0f;
-	public float round = 10f;
+	float timeObject = 3f;
+	float timePowerup = 9f;
+	public float speed = 0.0f;
+	//public float clock = 0f;
+	public float round = 25f;
 	public float multi = 1f;
 
 	float startPos = -250f;
@@ -21,6 +21,7 @@ public class ObstacleSpawn : MonoBehaviour {
 	public ObstacleList obl;
 	public PowerupList pwl;
 	public ObjectPosistionList objpos;
+	public Score scoreTracker;
 	
 	// Use this for initialization
 	void Start () 
@@ -39,7 +40,6 @@ public class ObstacleSpawn : MonoBehaviour {
 		{
 			ObjectSpawner(parent);
 		}
-		clock += Time.deltaTime;
 	}
 
 	public void ObjectSpawner(GameObject parentground)
@@ -66,14 +66,16 @@ public class ObstacleSpawn : MonoBehaviour {
 			}
 		}*/
 
-		for(int i = 0; i < objpos.returnPosObjects().Count; i++){
+		for(int i = 0; i < objpos.returnPosObjects().Count; i++)
+		{
 			if(i != objPlacePos1)
 			{
 				objPlacePos2 = i;
 			}
 		}
 
-		for(int k = 0; k < objpos.returnPosObjects().Count; k++){
+		for(int k = 0; k < objpos.returnPosObjects().Count; k++)
+		{
 			if(k == objPlacePos1)continue;
 			if(k == objPlacePos2)continue;
 			if(k != objPlacePos1)
@@ -88,14 +90,15 @@ public class ObstacleSpawn : MonoBehaviour {
 
 		Vector3 pos3 = new Vector3(startPos, pwl.returnPowerups()[pwlType].transform.position.y, objpos.returnPosObjects()[pwlPlacePos]);
 
-		if(clock >= round * multi)
+	
+		if(scoreTracker.returnScore() >= round * multi)
 		{
-			speed += 0.1f;
+			speed += 0.3f;
 			multi += 1f;
 		}
 
-		timeObject -= Time.deltaTime * speed;
-		timePowerup -= Time.deltaTime * speed;
+		timeObject -= Time.deltaTime;
+		timePowerup -= Time.deltaTime;
 
 		if(timeObject <= 0f){
 			ritmeObject = true;
@@ -110,7 +113,7 @@ public class ObstacleSpawn : MonoBehaviour {
 			obstacle2.transform.position = pos2;
 			obstacle2.transform.parent = parentground.transform;
 
-			timeObject = 1f;
+			timeObject = 3f - speed;
 			ritmeObject = false;
 		}
 
@@ -125,7 +128,7 @@ public class ObstacleSpawn : MonoBehaviour {
 			powerup.transform.position = pos3;
 			powerup.transform.parent = parentground.transform;
 
-			timePowerup = 9.5f;
+			timePowerup = 9f - speed;
 			ritmePowerup = false;
 		}
 	}
