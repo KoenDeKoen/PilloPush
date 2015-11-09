@@ -16,7 +16,7 @@ public class ObstacleList : MonoBehaviour {
 	//private float pos2 = 0f;
 	//private float pos3 = -3f;
 
-	private float start1 = -250f;
+	private float start1 = -160f;
 	private float start2 = 45f;
 	
 	// Use this for initialization

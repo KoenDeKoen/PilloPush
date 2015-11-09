@@ -6,14 +6,13 @@ public class ObstacleSpawn : MonoBehaviour {
 	
 	public bool ritmeObject;
 	public bool ritmePowerup;
-	float timeObject = 3f;
-	float timePowerup = 9f;
-	public float speed = 0.0f;
-	//public float clock = 0f;
-	public float round = 25f;
-	public float multi = 1f;
-
-	float startPos = -250f;
+	public bool maxed;
+	float timeObject;
+	float timePowerup;
+	public float speed;
+	public float round;
+	public float multi;
+	public float startPos;
 	
 	public GameObject parent;
 
@@ -31,6 +30,14 @@ public class ObstacleSpawn : MonoBehaviour {
 		objpos.Init();
 		ritmeObject = false;
 		ritmePowerup = false;
+		maxed = false;
+
+		timeObject = 2.5f;
+		timePowerup = 9f;
+		speed = 0.0f;
+		round = 25f;
+		multi = 1f;
+		startPos = -160f;
 	}
 	
 	// Update is called once per frame
@@ -54,17 +61,6 @@ public class ObstacleSpawn : MonoBehaviour {
 		int pwlPlacePos = 0;
 
 		int newStartPos = Random.Range(0, obl.returnStartPos().Count);
-
-		/*
-		if(objPlacePos1 == objPlacePos2)
-		{
-			objPlacePos2++;
-			if(objPlacePos2 >= 3)
-			{
-				objPlacePos2 = 0;
-				objPlacePos2++;
-			}
-		}*/
 
 		for(int i = 0; i < objpos.returnPosObjects().Count; i++)
 		{
@@ -90,15 +86,23 @@ public class ObstacleSpawn : MonoBehaviour {
 
 		Vector3 pos3 = new Vector3(startPos, pwl.returnPowerups()[pwlType].transform.position.y, objpos.returnPosObjects()[pwlPlacePos]);
 
-	
+
 		if(scoreTracker.returnScore() >= round * multi)
 		{
-			speed += 0.3f;
+			speed += 0.5f;
 			multi += 1f;
+		}
+
+		if(multi >= 4.0f || speed >= 1.8f)
+		{
+			speed = 1.8f;
+			multi = 4.0f;
 		}
 
 		timeObject -= Time.deltaTime;
 		timePowerup -= Time.deltaTime;
+		Debug.Log (timeObject);
+		//Debug.Log (timePowerup);
 
 		if(timeObject <= 0f){
 			ritmeObject = true;
@@ -113,7 +117,7 @@ public class ObstacleSpawn : MonoBehaviour {
 			obstacle2.transform.position = pos2;
 			obstacle2.transform.parent = parentground.transform;
 
-			timeObject = 3f - speed;
+			timeObject = 2.5f - speed;
 			ritmeObject = false;
 		}
 
