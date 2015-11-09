@@ -4,7 +4,6 @@ using System.Collections;
 public class CollisionPlayer : MonoBehaviour {
 
 	public GameOverPanel gameoverpanel;
-    //public Lives lives;
 
     private int lives;
 	private float realTime;
@@ -16,10 +15,8 @@ public class CollisionPlayer : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col)
 	{
-		//Debug.Log ("huehue");
 		if(col.gameObject.tag == "object")
 		{
-            //Debug.Log ("huehuejaja");
             lives--;
             if (lives <= 0)
             {
@@ -28,7 +25,6 @@ public class CollisionPlayer : MonoBehaviour {
 			
 		}
 
-		//Debug.Log ("huehue");
 		if(col.gameObject.tag == "slow")
 		{
 			SlowDown();
