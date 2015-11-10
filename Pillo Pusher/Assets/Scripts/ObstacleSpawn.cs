@@ -6,15 +6,17 @@ public class ObstacleSpawn : MonoBehaviour {
 	
 	public bool ritmeObject;
 	public bool ritmePowerup;
-	public bool maxed;
+	public bool placeCar;
 	float timeObject;
 	float timePowerup;
-	public float speed;
-	public float round;
-	public float multi;
-	public float startPos;
+	float timeCar;
+	float speed;
+	float round;
+	float multi;
+	float startPos;
 	
 	public GameObject parent;
+	public GameObject car;
 
 	public GameOverPanel gameoverpanel;
 	public ObstacleList obl;
@@ -30,10 +32,11 @@ public class ObstacleSpawn : MonoBehaviour {
 		objpos.Init();
 		ritmeObject = false;
 		ritmePowerup = false;
-		maxed = false;
+		placeCar = false;
 
 		timeObject = 2.5f;
 		timePowerup = 9f;
+		timeCar = 20f;
 		speed = 0.0f;
 		round = 25f;
 		multi = 1f;
@@ -55,18 +58,27 @@ public class ObstacleSpawn : MonoBehaviour {
 		int typeObstacle2 = Random.Range(0, obl.returnObstacles().Count);
 
 		int objPlacePos1 = Random.Range (0, objpos.returnPosObjects().Count);
-		int objPlacePos2 = 0;//Random.Range (0, obl.returnPosObstacles ().Count);
+		int objPlacePos2 = 0;
 
 		int pwlType = Random.Range (0, pwl.returnPowerups ().Count);
 		int pwlPlacePos = 0;
 
 		int newStartPos = Random.Range(0, obl.returnStartPos().Count);
 
-		for(int i = 0; i < objpos.returnPosObjects().Count; i++)
+		/*for(int i = 0; i < objpos.returnPosObjects().Count; i++)
 		{
 			if(i != objPlacePos1)
 			{
 				objPlacePos2 = i;
+			}
+		}*/
+
+		if(objPlacePos1 == objPlacePos2)
+		{
+			objPlacePos2++;
+			if(objPlacePos2 >= 3)
+			{
+				objPlacePos2 = 0;
 			}
 		}
 
@@ -86,6 +98,8 @@ public class ObstacleSpawn : MonoBehaviour {
 
 		Vector3 pos3 = new Vector3(startPos, pwl.returnPowerups()[pwlType].transform.position.y, objpos.returnPosObjects()[pwlPlacePos]);
 
+		Vector3 pos4 = new Vector3(startPos, -0.45f, 0f);
+
 
 		if(scoreTracker.returnScore() >= round * multi)
 		{
@@ -101,22 +115,42 @@ public class ObstacleSpawn : MonoBehaviour {
 
 		timeObject -= Time.deltaTime;
 		timePowerup -= Time.deltaTime;
+		timeCar -= Time.deltaTime;
 
-		if(timeObject <= 0f){
+		if(timeCar <= 0)
+		{
+			placeCar = true;
+		}
+
+		if(timeObject <= 0f)
+		{
 			ritmeObject = true;
 		}
 		
 		if(ritmeObject){
-			GameObject obstacle = Instantiate(obl.returnObstacles()[typeObstacle1]) as GameObject;
-			obstacle.transform.position = pos1;
-			obstacle.transform.parent = parentground.transform;
+			if(!placeCar){
+				GameObject obstacle = Instantiate(obl.returnObstacles()[typeObstacle1]) as GameObject;
+				obstacle.transform.position = pos1;
+				obstacle.transform.parent = parentground.transform;
 
-			GameObject obstacle2 = Instantiate(obl.returnObstacles()[typeObstacle2]) as GameObject;
-			obstacle2.transform.position = pos2;
-			obstacle2.transform.parent = parentground.transform;
+				GameObject obstacle2 = Instantiate(obl.returnObstacles()[typeObstacle2]) as GameObject;
+				obstacle2.transform.position = pos2;
+				obstacle2.transform.parent = parentground.transform;
 
-			timeObject = 2.5f - speed;
-			ritmeObject = false;
+				timeObject = 2.5f - speed;
+				ritmeObject = false;
+			}
+
+			if(placeCar){
+				GameObject obstacle3 = Instantiate(car) as GameObject;
+				obstacle3.transform.position = pos4;
+				obstacle3.transform.parent = parentground.transform;
+
+				timeCar = 20f - speed;
+				timeObject = 2.5f - speed;
+				placeCar = false;
+				ritmeObject = false;
+			}
 		}
 
 		if(timePowerup <= 0f)
