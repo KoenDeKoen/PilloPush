@@ -7,6 +7,7 @@ public class CharacterSelect : MonoBehaviour {
 
 	public SelectedCharacter selectedcharacter;
     public ModeSelect modeselect;
+	public FaderIn fadein;
 
 	public GameObject rotateParent;
 	public GameObject girl;
@@ -16,7 +17,8 @@ public class CharacterSelect : MonoBehaviour {
 	bool rightR;
 	bool pressedL;
 	bool pressedR;
-	
+	bool fade;
+
 	int state;
 	
 	private float degreesPerSecond = 60f;
@@ -31,6 +33,7 @@ public class CharacterSelect : MonoBehaviour {
 	{
 		leftR = false;
 		rightR = false;
+		fade = false;
 	}
 	
 	// Update is called once per frame
@@ -38,16 +41,29 @@ public class CharacterSelect : MonoBehaviour {
 		pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
 		pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
 
+		if(fade)
+		{
+			if (modeselect.getMode() == 1)
+			{
+				if(fadein.fadeIn())
+				{
+					Application.LoadLevel("Game");
+				}			
+			}
+			if (modeselect.getMode() == 2)
+			{
+				if(fadein.fadeIn())
+				{
+					Application.LoadLevel("GrannyMode");
+				}
+			}
+		}
+
+		else
+		{
 		if(Input.GetKey("a") && Input.GetKey("d")|| pct1 >= 0.5 && pct2 >= 0.5)
 		{
-            if (modeselect.getMode() == 1)
-            {
-                Application.LoadLevel("Game");
-            }
-            if (modeselect.getMode() == 2)
-            {
-                Application.LoadLevel("GrannyMode");
-            }
+			fade = true;
 		}
 
 		if(Input.GetKeyDown("a")|| pct1 >= 0.5)
@@ -92,6 +108,7 @@ public class CharacterSelect : MonoBehaviour {
 		case 1:
 			selectedcharacter.isBoy();
 			break;
+		}
 		}
 	}
 
