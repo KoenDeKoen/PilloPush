@@ -30,6 +30,11 @@ public class CollisionPlayer : MonoBehaviour {
 			LosLife();
 		}
 
+		if(col.gameObject.tag == "Light")
+		{
+			LosLife();
+		}
+
 		if(col.gameObject.tag == "slow")
 		{
 			//SlowDown();
