@@ -19,7 +19,7 @@ public class MoveGround : MonoBehaviour {
 		hastolerp = true;
 		nextpos = new Vector3 (0,0,0);
 		nextpos = parent.transform.position;
-		speed = 0.3f;
+		speed = 0.4f;
 		scoreinterval = 25f;
 		multi = 1f;
 	}

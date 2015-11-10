@@ -89,20 +89,18 @@ public class ObstacleSpawn : MonoBehaviour {
 
 		if(scoreTracker.returnScore() >= round * multi)
 		{
-			speed += 0.5f;
+			speed += 0.35f;
 			multi += 1f;
 		}
 
-		if(multi >= 4.0f || speed >= 1.8f)
+		if(multi >= 6.0f || speed >= 1.5f)
 		{
-			speed = 1.8f;
-			multi = 4.0f;
+			speed = 1.5f;
+			multi = 6.0f;
 		}
 
 		timeObject -= Time.deltaTime;
 		timePowerup -= Time.deltaTime;
-		Debug.Log (timeObject);
-		//Debug.Log (timePowerup);
 
 		if(timeObject <= 0f){
 			ritmeObject = true;
@@ -132,7 +130,7 @@ public class ObstacleSpawn : MonoBehaviour {
 			powerup.transform.position = pos3;
 			powerup.transform.parent = parentground.transform;
 
-			timePowerup = 9f - speed;
+			timePowerup = 10f - speed;
 			ritmePowerup = false;
 		}
 	}
