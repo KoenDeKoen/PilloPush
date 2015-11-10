@@ -1,0 +1,154 @@
+﻿using UnityEngine;
+using System.Collections;
+using Pillo;
+
+public class GrannyMechanic : MonoBehaviour
+{
+
+    // Use this for initialization
+    private int state;
+    private Vector3 nextpos;
+
+    public MoveCharacter charactermover;
+    public GameOverPanel gameoverpanel;
+    //public SpeakerFeedback speakerFeedback;
+
+    public Animator speaker1;
+    public Animator speaker2;
+
+    //private bool p1pressing;
+    //private bool p2pressing;
+    private bool p1pressed;
+    private bool p2pressed;
+    // private bool hasjumped;
+    private bool devmode;
+
+    //public GameObject pillo1feedback;
+    //public GameObject pillo2feedback;
+
+    float pct1;
+    float pct2;
+
+    void Start()
+    {
+        //  p1pressing = false;
+        //   p2pressing = false;
+        devmode = false;
+        p1pressed = false;
+        p2pressed = false;
+      //  hasjumped = false;
+        state = 1;
+        nextpos = new Vector3(40, 0, 0);
+
+        //speakerFeedback.SpeakerLeftIdle();
+        //speakerFeedback.SpeakerRightIdle();
+
+        speaker1.SetInteger("SwitchState", 0);
+        speaker2.SetInteger("SwitchState", 0);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!gameoverpanel.isGameOver())
+        {
+            pct1 = PilloController.GetSensor(Pillo.PilloID.Pillo1);
+            pct2 = PilloController.GetSensor(Pillo.PilloID.Pillo2);
+            checkPresses();
+        }
+    }
+
+    private void checkPresses()
+    {
+        if (Input.GetKey("d") && Input.GetKey("e") && Input.GetKey("v"))
+        {
+            devmode = true;
+        }
+
+        if (devmode)
+        {
+            if (Input.GetKeyDown("a"))
+            {
+                p1pressed = true;
+                speaker1.SetInteger("SwitchState", 1);
+            }
+            if (Input.GetKeyUp("a"))
+            {
+                speaker1.SetInteger("SwitchState", 0);
+            }
+            if (Input.GetKeyDown("d"))
+            {
+                p2pressed = true;
+                speaker2.SetInteger("SwitchState", 1);
+            }
+            if (Input.GetKeyUp("d"))
+            {
+                speaker2.SetInteger("SwitchState", 0);
+            }
+        }
+        if (!devmode)
+        {
+            if (pct1 >= 0.05)
+            {
+                p1pressed = true;
+                speaker1.SetInteger("SwitchState", 1);
+            }
+            if (pct1 <= 0.01)
+            {
+                speaker1.SetInteger("SwitchState", 0);
+            }
+            if (pct2 >= 0.05)
+            {
+                p2pressed = true;
+                speaker2.SetInteger("SwitchState", 1);
+            }
+            if (pct2 <= 0.01)
+            {
+                speaker2.SetInteger("SwitchState", 0);
+            }
+        }
+
+        if (p1pressed)
+        {
+            if (state > 0)
+            {
+                state--;
+            }
+            switch (state)
+            {
+                case 0:
+                    nextpos.z = -3;
+                    charactermover.setNextPos(nextpos);
+                    break;
+
+                case 1:
+                    nextpos.z = 0;
+                    charactermover.setNextPos(nextpos);
+                    break;
+            }
+            p1pressed = false;
+            //speaker1.SetInteger("SwitchState", 0);
+        }
+        if (p2pressed)
+        {
+            if (state < 2)
+            {
+                state++;
+            }
+            switch (state)
+            {
+                case 1:
+                    nextpos.z = 0;
+                    charactermover.setNextPos(nextpos);
+                    break;
+
+                case 2:
+                    nextpos.z = 3;
+                    charactermover.setNextPos(nextpos);
+                    break;
+            }
+            p2pressed = false;
+           // speaker2.SetInteger("SwitchState", 0);
+        }
+    }
+}

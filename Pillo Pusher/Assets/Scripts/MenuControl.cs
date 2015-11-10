@@ -79,7 +79,7 @@ public class MenuControl : MonoBehaviour
         float pct1 = PilloController.GetSensor(Pillo.PilloID.Pillo1);
         float pct2 = PilloController.GetSensor(Pillo.PilloID.Pillo2);
 
-        if (Input.GetKeyDown("t"))
+        if (Input.GetKey("d") && Input.GetKey("e") && Input.GetKey("v"))
         {
             devmode = true;
         }

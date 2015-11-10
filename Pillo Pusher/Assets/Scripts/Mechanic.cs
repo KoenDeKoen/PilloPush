@@ -21,8 +21,8 @@ public class Mechanic : MonoBehaviour {
 	private bool p2pressed;
 	private bool hasjumped;
 
-	public GameObject pillo1feedback;
-	public GameObject pillo2feedback;
+	//public GameObject pillo1feedback;
+	//public GameObject pillo2feedback;
 
 	float pct1;
 	float pct2;
@@ -61,7 +61,7 @@ public class Mechanic : MonoBehaviour {
 		{
 			p1pressing = true;
 			p1pressed = false;
-			pillo1feedback.GetComponent<Renderer>().material.color = Color.green;
+			//pillo1feedback.GetComponent<Renderer>().material.color = Color.green;
 			//speakerFeedback.SpeakerLeftShake();
 			speaker1.SetInteger("SwitchState", 1);
 		}
@@ -71,7 +71,7 @@ public class Mechanic : MonoBehaviour {
 			p1pressed = true;
 			hasjumped = false;
 			p1pressing = false;
-			pillo1feedback.GetComponent<Renderer>().material.color = Color.red;
+			//pillo1feedback.GetComponent<Renderer>().material.color = Color.red;
 			//speakerFeedback.SpeakerLeftIdle();
 			speaker1.SetInteger("SwitchState", 0);
 		}
@@ -80,7 +80,7 @@ public class Mechanic : MonoBehaviour {
 		{
 			p2pressing = true;
 			p2pressed = false;
-			pillo2feedback.GetComponent<Renderer>().material.color = Color.green;
+			//pillo2feedback.GetComponent<Renderer>().material.color = Color.green;
 			//speakerFeedback.SpeakerRightShake();
 			speaker2.SetInteger("SwitchState", 1);
 		}
@@ -90,7 +90,7 @@ public class Mechanic : MonoBehaviour {
 			p2pressed = true;
 			hasjumped = false;
 			p2pressing = false;
-			pillo2feedback.GetComponent<Renderer>().material.color = Color.red;
+			//pillo2feedback.GetComponent<Renderer>().material.color = Color.red;
 			//speakerFeedback.SpeakerRightIdle();
 			speaker2.SetInteger("SwitchState", 0);
 		}
