@@ -14,5 +14,25 @@ public class BorderCollision : MonoBehaviour
 		{
 			Destroy(col.gameObject);
 		}
+
+		if(col.gameObject.tag == "Car")
+		{
+			Destroy(col.gameObject);
+		}
+		
+		if(col.gameObject.tag == "Bar")
+		{
+			Destroy(col.gameObject);
+		}
+
+		if(col.gameObject.tag == "Light")
+		{
+			Destroy(col.gameObject);
+		}
+
+		if(col.gameObject.tag == "Bal")
+		{
+			Destroy(col.gameObject);
+		}
 	}
 }

@@ -10,6 +10,7 @@ public class ObstacleList : MonoBehaviour {
 
 	public GameObject obj1;
 	public GameObject obj2;
+	public GameObject obj3;
 	
 	//private float pos1 = 3f;
 	//private float pos2 = 0f;
@@ -24,6 +25,7 @@ public class ObstacleList : MonoBehaviour {
 		obstacles = new List<GameObject> ();
 		obstacles.Add (obj1);
 		obstacles.Add (obj2);
+		obstacles.Add (obj3);
 		
 		//posObstacles = new List<float> ();
 		//posObstacles.Add (pos1);
