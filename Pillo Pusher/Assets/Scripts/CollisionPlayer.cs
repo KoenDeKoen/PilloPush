@@ -17,12 +17,17 @@ public class CollisionPlayer : MonoBehaviour {
 	{
 		if(col.gameObject.tag == "object")
 		{
-            lives--;
-            if (lives <= 0)
-            {
-                gameoverpanel.displayScore();
-            }
-			
+			LosLife();
+		}
+
+		if(col.gameObject.tag == "Car")
+		{
+			LosLife();
+		}
+
+		if(col.gameObject.tag == "Bar")
+		{
+			LosLife();
 		}
 
 		if(col.gameObject.tag == "slow")
@@ -45,6 +50,15 @@ public class CollisionPlayer : MonoBehaviour {
 		if(realTime >= 5.0f)
 		{
 			Time.timeScale = 1.0f;
+		}
+	}
+
+	void LosLife()
+	{
+		lives--;
+		if (lives <= 0)
+		{
+			gameoverpanel.displayScore();
 		}
 	}
 }
