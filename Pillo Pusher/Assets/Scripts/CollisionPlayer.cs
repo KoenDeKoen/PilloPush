@@ -15,11 +15,6 @@ public class CollisionPlayer : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col)
 	{
-		if(col.gameObject.tag == "object")
-		{
-			LosLife();
-		}
-
 		if(col.gameObject.tag == "Car")
 		{
 			LosLife();
@@ -31,6 +26,11 @@ public class CollisionPlayer : MonoBehaviour {
 		}
 
 		if(col.gameObject.tag == "Light")
+		{
+			LosLife();
+		}
+
+		if(col.gameObject.tag == "Bal")
 		{
 			LosLife();
 		}
