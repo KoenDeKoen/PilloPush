@@ -1,0 +1,1481 @@
+fileFormatVersion: 2
+guid: 62396aafc8239ce4789b1b1eec4081d9
+timeCreated: 1447146387
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: HeadJ
+    100002: HeadTipJ
+    100004: JawJ
+    100006: JawTipJ
+    100008: lAnkleJ
+    100010: lBallJ
+    100012: lClavicleJ
+    100014: lElbowJ
+    100016: lForearmJ
+    100018: lHipJ
+    100020: lIndex1J
+    100022: lIndex2J
+    100024: lIndex3J
+    100026: lIndexTipJ
+    100028: lKneeJ
+    100030: lMiddle1J
+    100032: lMiddle2J
+    100034: lMiddle3J
+    100036: lMiddleTipJ
+    100038: lPinkie1J
+    100040: lPinkie2J
+    100042: lPinkie3J
+    100044: lPinkieTipJ
+    100046: lRing1J
+    100048: lRing2J
+    100050: lRing3J
+    100052: lRingTipJ
+    100054: lShoulderJ
+    100056: lThumb1J
+    100058: lThumb2J
+    100060: lThumb3J
+    100062: lThumbTipJ
+    100064: lToeJ
+    100066: lWristJ
+    100068: MainC
+    100070: MainHipJ
+    100072: Male1
+    100074: //RootNode
+    100076: Male1 1
+    100078: mouth
+    100080: NeckJ
+    100082: rAnkleJ
+    100084: rBallJ
+    100086: rClavicleJ
+    100088: rElbowJ
+    100090: rForearmJ
+    100092: rHipJ
+    100094: rIndex1J
+    100096: rIndex2J
+    100098: rIndex3J
+    100100: rIndexTipJ
+    100102: rKneeJ
+    100104: rMiddle1J
+    100106: rMiddle2J
+    100108: rMiddle3J
+    100110: rMiddleTipJ
+    100112: ROOTJ
+    100114: rPinkie1J
+    100116: rPinkie2J
+    100118: rPinkie3J
+    100120: rPinkieTipJ
+    100122: rRing1J
+    100124: rRing2J
+    100126: rRing3J
+    100128: rRingTipJ
+    100130: rShoulderJ
+    100132: rThumb1J
+    100134: rThumb2J
+    100136: rThumb3J
+    100138: rThumbTipJ
+    100140: rToeJ
+    100142: rWristJ
+    100144: Spine01J
+    100146: Spine02J
+    100148: Spine03J
+    100150: Spine04J
+    400000: HeadJ
+    400002: HeadTipJ
+    400004: JawJ
+    400006: JawTipJ
+    400008: lAnkleJ
+    400010: lBallJ
+    400012: lClavicleJ
+    400014: lElbowJ
+    400016: lForearmJ
+    400018: lHipJ
+    400020: lIndex1J
+    400022: lIndex2J
+    400024: lIndex3J
+    400026: lIndexTipJ
+    400028: lKneeJ
+    400030: lMiddle1J
+    400032: lMiddle2J
+    400034: lMiddle3J
+    400036: lMiddleTipJ
+    400038: lPinkie1J
+    400040: lPinkie2J
+    400042: lPinkie3J
+    400044: lPinkieTipJ
+    400046: lRing1J
+    400048: lRing2J
+    400050: lRing3J
+    400052: lRingTipJ
+    400054: lShoulderJ
+    400056: lThumb1J
+    400058: lThumb2J
+    400060: lThumb3J
+    400062: lThumbTipJ
+    400064: lToeJ
+    400066: lWristJ
+    400068: MainC
+    400070: MainHipJ
+    400072: Male1
+    400074: //RootNode
+    400076: Male1 1
+    400078: mouth
+    400080: NeckJ
+    400082: rAnkleJ
+    400084: rBallJ
+    400086: rClavicleJ
+    400088: rElbowJ
+    400090: rForearmJ
+    400092: rHipJ
+    400094: rIndex1J
+    400096: rIndex2J
+    400098: rIndex3J
+    400100: rIndexTipJ
+    400102: rKneeJ
+    400104: rMiddle1J
+    400106: rMiddle2J
+    400108: rMiddle3J
+    400110: rMiddleTipJ
+    400112: ROOTJ
+    400114: rPinkie1J
+    400116: rPinkie2J
+    400118: rPinkie3J
+    400120: rPinkieTipJ
+    400122: rRing1J
+    400124: rRing2J
+    400126: rRing3J
+    400128: rRingTipJ
+    400130: rShoulderJ
+    400132: rThumb1J
+    400134: rThumb2J
+    400136: rThumb3J
+    400138: rThumbTipJ
+    400140: rToeJ
+    400142: rWristJ
+    400144: Spine01J
+    400146: Spine02J
+    400148: Spine03J
+    400150: Spine04J
+    4300000: mouth
+    4300002: Male1
+    7400000: Idle1
+    7400002: Dash_R1
+    7400004: Dash_L1
+    7400006: Dash_Jump1
+    7400008: Hit1
+    7400010: Gameover1
+    7400012: Dance1
+    9500000: //RootNode
+    13700000: Male1 1
+    13700002: mouth
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle1
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MainC
+        weight: 1
+      - path: MainC/ROOTJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ/lToeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ/rToeJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J/lIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J/lMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J/lPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J/lRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J/lThumbTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/HeadTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ/JawTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J/rIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J/rMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J/rPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J/rRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J/rThumbTipJ
+        weight: 1
+      - path: Male1
+        weight: 1
+      - path: Male1/Male1 1
+        weight: 1
+      - path: Male1/mouth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dash_R1
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 62
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MainC
+        weight: 1
+      - path: MainC/ROOTJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ/lToeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ/rToeJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J/lIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J/lMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J/lPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J/lRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J/lThumbTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/HeadTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ/JawTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J/rIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J/rMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J/rPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J/rRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J/rThumbTipJ
+        weight: 1
+      - path: Male1
+        weight: 1
+      - path: Male1/Male1 1
+        weight: 1
+      - path: Male1/mouth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dash_L1
+      takeName: Take 001
+      firstFrame: 64
+      lastFrame: 76
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MainC
+        weight: 1
+      - path: MainC/ROOTJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ/lToeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ/rToeJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J/lIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J/lMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J/lPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J/lRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J/lThumbTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/HeadTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ/JawTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J/rIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J/rMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J/rPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J/rRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J/rThumbTipJ
+        weight: 1
+      - path: Male1
+        weight: 1
+      - path: Male1/Male1 1
+        weight: 1
+      - path: Male1/mouth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dash_Jump1
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 128
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MainC
+        weight: 1
+      - path: MainC/ROOTJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ/lToeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ/rToeJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J/lIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J/lMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J/lPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J/lRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J/lThumbTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/HeadTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ/JawTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J/rIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J/rMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J/rPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J/rRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J/rThumbTipJ
+        weight: 1
+      - path: Male1
+        weight: 1
+      - path: Male1/Male1 1
+        weight: 1
+      - path: Male1/mouth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Hit1
+      takeName: Take 001
+      firstFrame: 130
+      lastFrame: 166
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MainC
+        weight: 1
+      - path: MainC/ROOTJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ/lToeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ/rToeJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J/lIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J/lMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J/lPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J/lRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J/lThumbTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/HeadTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ/JawTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J/rIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J/rMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J/rPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J/rRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J/rThumbTipJ
+        weight: 1
+      - path: Male1
+        weight: 1
+      - path: Male1/Male1 1
+        weight: 1
+      - path: Male1/mouth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Gameover1
+      takeName: Take 001
+      firstFrame: 170
+      lastFrame: 206
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MainC
+        weight: 1
+      - path: MainC/ROOTJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ/lToeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ/rToeJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J/lIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J/lMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J/lPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J/lRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J/lThumbTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/HeadTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ/JawTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J/rIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J/rMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J/rPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J/rRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J/rThumbTipJ
+        weight: 1
+      - path: Male1
+        weight: 1
+      - path: Male1/Male1 1
+        weight: 1
+      - path: Male1/mouth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dance1
+      takeName: Take 001
+      firstFrame: 210
+      lastFrame: 280
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MainC
+        weight: 1
+      - path: MainC/ROOTJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/lHipJ/lKneeJ/lAnkleJ/lBallJ/lToeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ
+        weight: 1
+      - path: MainC/ROOTJ/MainHipJ/rHipJ/rKneeJ/rAnkleJ/rBallJ/rToeJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lIndex1J/lIndex2J/lIndex3J/lIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lMiddle1J/lMiddle2J/lMiddle3J/lMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lPinkie1J/lPinkie2J/lPinkie3J/lPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lRing1J/lRing2J/lRing3J/lRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/lClavicleJ/lShoulderJ/lElbowJ/lWristJ/lThumb1J/lThumb2J/lThumb3J/lThumbTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/HeadTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/NeckJ/HeadJ/JawJ/JawTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rForearmJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rIndex1J/rIndex2J/rIndex3J/rIndexTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rMiddle1J/rMiddle2J/rMiddle3J/rMiddleTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rPinkie1J/rPinkie2J/rPinkie3J/rPinkieTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rRing1J/rRing2J/rRing3J/rRingTipJ
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J
+        weight: 1
+      - path: MainC/ROOTJ/Spine01J/Spine02J/Spine03J/Spine04J/rClavicleJ/rShoulderJ/rElbowJ/rWristJ/rThumb1J/rThumb2J/rThumb3J/rThumbTipJ
+        weight: 1
+      - path: Male1
+        weight: 1
+      - path: Male1/Male1 1
+        weight: 1
+      - path: Male1/mouth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
