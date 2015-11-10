@@ -20,6 +20,7 @@ public class Mechanic : MonoBehaviour {
 	private bool p1pressed;
 	private bool p2pressed;
 	private bool hasjumped;
+    private bool devmode;
 
 	//public GameObject pillo1feedback;
 	//public GameObject pillo2feedback;
@@ -29,6 +30,7 @@ public class Mechanic : MonoBehaviour {
 	
 	void Start () 
 	{
+        devmode = false;
 		p1pressing = false;
 		p2pressing = false;
 		p1pressed = false;
@@ -57,43 +59,70 @@ public class Mechanic : MonoBehaviour {
 
 	private void checkPresses()
 	{
-		if(Input.GetKeyDown("a") || pct1 >= 0.05)
-		{
-			p1pressing = true;
-			p1pressed = false;
-			//pillo1feedback.GetComponent<Renderer>().material.color = Color.green;
-			//speakerFeedback.SpeakerLeftShake();
-			speaker1.SetInteger("SwitchState", 1);
-		}
-		else
-			if((Input.GetKeyUp("a")||pct1 <= 0.01) && p1pressing)
-		{
-			p1pressed = true;
-			hasjumped = false;
-			p1pressing = false;
-			//pillo1feedback.GetComponent<Renderer>().material.color = Color.red;
-			//speakerFeedback.SpeakerLeftIdle();
-			speaker1.SetInteger("SwitchState", 0);
-		}
+        if (Input.GetKey("d") && Input.GetKey("e") && Input.GetKey("v"))
+        {
+            devmode = true;
+        }
 
-		if(Input.GetKeyDown("d") || pct2 >= 0.05)
-		{
-			p2pressing = true;
-			p2pressed = false;
-			//pillo2feedback.GetComponent<Renderer>().material.color = Color.green;
-			//speakerFeedback.SpeakerRightShake();
-			speaker2.SetInteger("SwitchState", 1);
-		}
-		else
-		if((Input.GetKeyUp("d") || pct2 <= 0.01) && p2pressing)
-		{
-			p2pressed = true;
-			hasjumped = false;
-			p2pressing = false;
-			//pillo2feedback.GetComponent<Renderer>().material.color = Color.red;
-			//speakerFeedback.SpeakerRightIdle();
-			speaker2.SetInteger("SwitchState", 0);
-		}
+        if (devmode)
+        {
+            if (Input.GetKeyDown("a"))
+            {
+                p1pressing = true;
+                p1pressed = false;
+                speaker1.SetInteger("SwitchState", 1);
+            }
+            if (Input.GetKeyUp("a") && p1pressing)
+            {
+                p1pressed = true;
+                hasjumped = false;
+                p1pressing = false;
+                speaker1.SetInteger("SwitchState", 0);
+            }
+            if (Input.GetKeyDown("d"))
+            {
+                p2pressing = true;
+                p2pressed = false;
+                speaker2.SetInteger("SwitchState", 1);
+            }
+            if (Input.GetKeyUp("d") && p2pressing)
+            {
+                p2pressed = true;
+                hasjumped = false;
+                p2pressing = false;
+                speaker2.SetInteger("SwitchState", 0);
+            }
+        }
+
+        if (!devmode)
+        {
+            if (pct1 >= 0.05)
+            {
+                p1pressing = true;
+                p1pressed = false;
+                speaker1.SetInteger("SwitchState", 1);
+            }
+            if (pct1 <= 0.01 && p1pressing)
+            {
+                p1pressed = true;
+                hasjumped = false;
+                p1pressing = false;
+                speaker1.SetInteger("SwitchState", 0);
+            }
+            if (pct2 >= 0.05)
+            {
+                p2pressing = true;
+                p2pressed = false;
+                speaker2.SetInteger("SwitchState", 1);
+            }
+            if (pct2 <= 0.01 && p2pressing)
+            {
+                p2pressed = true;
+                hasjumped = false;
+                p2pressing = false;
+                speaker2.SetInteger("SwitchState", 0);
+            }
+        }
 
 		if(p1pressing && p2pressing && !charactermover.isJumping())
 		{
