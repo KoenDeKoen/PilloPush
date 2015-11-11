@@ -7,9 +7,13 @@ public class CollisionPlayer : MonoBehaviour {
 
     private int lives;
 	private float realTime;
+    private Animator charanimator;
+    private Mechanic mc;
 
     void Start()
     {
+        mc = FindObjectOfType<Mechanic>();
+        charanimator = FindObjectOfType<CollisionPlayer>().gameObject.GetComponentInChildren<Animator>();
         lives = 3;
     }
 
@@ -18,22 +22,22 @@ public class CollisionPlayer : MonoBehaviour {
 		if(col.gameObject.tag == "Car")
 		{
 			LosLife();
-		}
+        }
 
 		if(col.gameObject.tag == "Bar")
 		{
 			LosLife();
-		}
+        }
 
 		if(col.gameObject.tag == "Light")
 		{
 			LosLife();
-		}
+        }
 
 		if(col.gameObject.tag == "Bal")
 		{
 			LosLife();
-		}
+        }
 
 		if(col.gameObject.tag == "slow")
 		{
@@ -41,6 +45,8 @@ public class CollisionPlayer : MonoBehaviour {
 			Debug.Log ("slow");
 			Destroy(col.gameObject);
 		}
+        
+        
 	}
 
 	void SlowDown()
@@ -63,7 +69,14 @@ public class CollisionPlayer : MonoBehaviour {
 		lives--;
 		if (lives <= 0)
 		{
+            charanimator.SetInteger("State", 6);
+            mc.animstate = "Gameover1";
 			gameoverpanel.displayScore();
 		}
+        else
+        {
+            charanimator.SetInteger("State", 5);
+            mc.animstate = "Hit1";
+        }
 	}
 }

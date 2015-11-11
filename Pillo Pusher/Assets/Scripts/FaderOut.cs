@@ -37,7 +37,7 @@ public class FaderOut : MonoBehaviour {
 			done = true;
 		}
 		alpha = 1-time/delay;
-		Debug.Log (alpha);
+		//Debug.Log (alpha);
 		image.GetComponent<Image>().color = colors;
 	}
 }

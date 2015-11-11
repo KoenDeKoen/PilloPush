@@ -14,6 +14,8 @@ public class Mechanic : MonoBehaviour {
 
 	public Animator speaker1;
 	public Animator speaker2;
+    private Animator maleanimator;
+
 
 	private bool p1pressing;
 	private bool p2pressing;
@@ -21,6 +23,7 @@ public class Mechanic : MonoBehaviour {
 	private bool p2pressed;
 	private bool hasjumped;
     private bool devmode;
+    public string animstate;
 
 	//public GameObject pillo1feedback;
 	//public GameObject pillo2feedback;
@@ -30,6 +33,9 @@ public class Mechanic : MonoBehaviour {
 	
 	void Start () 
 	{
+        animstate = "Idle1";
+        maleanimator = FindObjectOfType<CollisionPlayer>().gameObject.GetComponentInChildren<Animator>();
+        maleanimator.SetInteger("State", 0);
         devmode = false;
 		p1pressing = false;
 		p2pressing = false;
@@ -49,12 +55,23 @@ public class Mechanic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (!gameoverpanel.isGameOver ()) 
+        //Debug.Log(animstate);
+        
+        
+        if (!gameoverpanel.isGameOver ()) 
 		{
-			pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
+            //maleanimator.SetInteger("State", 0);
+            
+            if (animstate != "Idle1" && maleanimator.GetCurrentAnimatorStateInfo(0).IsName(animstate))
+            {
+              Debug.Log(animstate);
+              maleanimator.SetInteger("State", 0);
+              animstate = "Idle1";
+            }
+            pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
 			pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
-			checkPresses ();
-		}
+			checkPresses (); 
+        }
 	}
 
 	private void checkPresses()
@@ -124,12 +141,14 @@ public class Mechanic : MonoBehaviour {
             }
         }
 
-		if(p1pressing && p2pressing && !charactermover.isJumping())
+		if(p1pressing && p2pressing)// && !charactermover.isJumping())
 		{
 			if(!hasjumped)
 			{
 				charactermover.jumpCharacter();
-				hasjumped = true;
+                animstate = "Dash_Jump1";
+                maleanimator.SetInteger("State", 3);
+                hasjumped = true;
 			}
 			p1pressed = false;
 			p2pressed = false;
@@ -139,7 +158,9 @@ public class Mechanic : MonoBehaviour {
 		{
 			if(state > 0)
 			{
-				state--;
+                animstate = "Dash_L1";
+                maleanimator.SetInteger("State", 4);
+                state--;
 			}
 			switch(state)
 			{
@@ -160,7 +181,9 @@ public class Mechanic : MonoBehaviour {
 		{
 			if(state < 2)
 			{
-				state++;
+                animstate = "Dash_R1";
+                maleanimator.SetInteger("State", 2);
+                state++;
 			}
 			switch(state)
 			{

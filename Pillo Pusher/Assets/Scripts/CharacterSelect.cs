@@ -12,6 +12,7 @@ public class CharacterSelect : MonoBehaviour {
 	public GameObject rotateParent;
 	public GameObject girl;
 	public GameObject boy;
+    //private Animator maleanimator;
 
 	bool leftR;
 	bool rightR;
@@ -31,6 +32,8 @@ public class CharacterSelect : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+        GameObject.Find("MaleAnimatedPrefab").GetComponentInChildren<Animator>().SetInteger("State", 1);
+       // maleanimator.SetInteger("State", 1);
 		leftR = false;
 		rightR = false;
 		fade = false;
