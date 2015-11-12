@@ -114,6 +114,7 @@ public class MenuControl : MonoBehaviour
 
         if (!devmode)
         {
+            //Debug.Log(pct1);
             if (!haspressed1 && !oneispressing && !waitupyo && pct1 >= 0.05)
             {
                 haspressed1 = false;

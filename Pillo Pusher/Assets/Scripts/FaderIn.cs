@@ -24,7 +24,7 @@ public class FaderIn : MonoBehaviour {
 			return true;
 		}
 		alpha += 0.01F;
-		Debug.Log (time);
+		//Debug.Log (time);
 		image.GetComponent<Image>().color = colors;
 		return false;
 	}

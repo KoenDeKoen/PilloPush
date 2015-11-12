@@ -24,6 +24,8 @@ public class CharacterSelect : MonoBehaviour {
 	
 	private float degreesPerSecond = 60f;
 	private float totalRotation = 0;
+    private int presscounter;
+    private bool cancontinue;
 
 	float delay = 1f;
 	float pct1;
@@ -32,6 +34,8 @@ public class CharacterSelect : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+        cancontinue = false;
+        presscounter = 0;
         GameObject.Find("MaleAnimatedPrefab").GetComponentInChildren<Animator>().SetInteger("State", 1);
        // maleanimator.SetInteger("State", 1);
 		leftR = false;
@@ -44,75 +48,88 @@ public class CharacterSelect : MonoBehaviour {
 		pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
 		pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
 
-		if(fade)
-		{
-			if (modeselect.getMode() == 1)
-			{
-				if(fadein.fadeIn())
-				{
-					Application.LoadLevel("Game");
-				}			
-			}
-			if (modeselect.getMode() == 2)
-			{
-				if(fadein.fadeIn())
-				{
-					Application.LoadLevel("GrannyMode");
-				}
-			}
-		}
+        if ((pct1 <= 0 && pct2 <= 0) || (Input.GetKeyUp("a") || Input.GetKeyUp("d")))
+        {
+            presscounter++;
+        }
 
-		else
-		{
-		if(Input.GetKey("a") && Input.GetKey("d")|| pct1 >= 0.5 && pct2 >= 0.5)
-		{
-			fade = true;
-		}
+        if (((pct1 >= 0.05 || pct2 >= 0.05) || (Input.GetKeyDown("a") || Input.GetKeyDown("d"))) && presscounter >= 2)
+        {
+            cancontinue = true;
+        }
 
-		if(Input.GetKeyDown("a")|| pct1 >= 0.5)
-		{
-			pressedL = true;
-		}
-		
-		if(Input.GetKeyDown("d")|| pct2 >= 0.5)
-		{
-			pressedR = true;
-		}
+        if (cancontinue)
+        {
+            if (fade)
+            {
+                if (modeselect.getMode() == 1)
+                {
+                    if (fadein.fadeIn())
+                    {
+                        Application.LoadLevel("Game");
+                    }
+                }
+                if (modeselect.getMode() == 2)
+                {
+                    if (fadein.fadeIn())
+                    {
+                        Application.LoadLevel("GrannyMode");
+                    }
+                }
+            }
 
-		if((Input.GetKeyUp("a")|| pct1 <= 0.2) && pressedL)
-		{
-			leftR = true;
-			rightR = false;
-			pressedL = false;
-		}
+            else
+            {
+                if (Input.GetKey("a") && Input.GetKey("d") || pct1 >= 0.5 && pct2 >= 0.5)
+                {
+                    fade = true;
+                }
 
-		if((Input.GetKeyUp("d")|| pct2 <= 0.2) && pressedR)
-		{
-			leftR = false;
-			rightR = true;
-			pressedR = false;
-		}
+                if (Input.GetKeyDown("a") || pct1 >= 0.5)
+                {
+                    pressedL = true;
+                }
 
-		if(leftR)
-		{
-			RotateLeft ();
-		}
+                if (Input.GetKeyDown("d") || pct2 >= 0.5)
+                {
+                    pressedR = true;
+                }
 
-		if(rightR)
-		{
-			RotateRight ();
-		}
+                if ((Input.GetKeyUp("a") || pct1 <= 0.2) && pressedL)
+                {
+                    leftR = true;
+                    rightR = false;
+                    pressedL = false;
+                }
 
-		switch(state)
-		{
-		case 0:
-			selectedcharacter.isGirl();
-			break;
-		case 1:
-			selectedcharacter.isBoy();
-			break;
-		}
-		}
+                if ((Input.GetKeyUp("d") || pct2 <= 0.2) && pressedR)
+                {
+                    leftR = false;
+                    rightR = true;
+                    pressedR = false;
+                }
+
+                if (leftR)
+                {
+                    RotateLeft();
+                }
+
+                if (rightR)
+                {
+                    RotateRight();
+                }
+
+                switch (state)
+                {
+                    case 0:
+                        selectedcharacter.isGirl();
+                        break;
+                    case 1:
+                        selectedcharacter.isBoy();
+                        break;
+                }
+            }
+        }
 	}
 
 	void RotateLeft ()

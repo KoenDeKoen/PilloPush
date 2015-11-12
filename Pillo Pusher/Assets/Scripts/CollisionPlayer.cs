@@ -42,7 +42,7 @@ public class CollisionPlayer : MonoBehaviour {
 		if(col.gameObject.tag == "slow")
 		{
 			//SlowDown();
-			Debug.Log ("slow");
+			//Debug.Log ("slow");
 			Destroy(col.gameObject);
 		}
         
