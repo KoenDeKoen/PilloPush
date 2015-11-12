@@ -55,7 +55,7 @@ public class Mechanic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-        //Debug.Log(animstate);
+        Debug.Log(charactermover.isJumping());
         
         
         if (!gameoverpanel.isGameOver ()) 
@@ -64,7 +64,7 @@ public class Mechanic : MonoBehaviour {
             
             if (animstate != "Idle1" && maleanimator.GetCurrentAnimatorStateInfo(0).IsName(animstate))
             {
-              Debug.Log(animstate);
+              //Debug.Log(animstate);
               maleanimator.SetInteger("State", 0);
               animstate = "Idle1";
             }
@@ -142,7 +142,7 @@ public class Mechanic : MonoBehaviour {
             }
         }
 
-		if((p1pressing && p2pressing))// && !charactermover.isJumping())
+		if((p1pressing && p2pressing) && !charactermover.isJumping())
 		{
 			if(!hasjumped)
 			{
@@ -155,7 +155,7 @@ public class Mechanic : MonoBehaviour {
 			p2pressed = false;
 		}
 
-		if((p1pressed && !p2pressed))// && !charactermover.isJumping())
+		if((p1pressed && !p2pressed) && !charactermover.isJumping())
 		{
 			if(state > 0)
 			{
@@ -178,7 +178,7 @@ public class Mechanic : MonoBehaviour {
 			p1pressed = false;
 		}
 
-		if((p2pressed && !p1pressed))// && !charactermover.isJumping())
+		if((p2pressed && !p1pressed) && !charactermover.isJumping())
 		{
 			if(state < 2)
 			{
@@ -200,12 +200,12 @@ public class Mechanic : MonoBehaviour {
 			}
 			p2pressed = false;
 		}
-       /* if (charactermover.isJumping())
+        if (charactermover.isJumping())
         {
             p1pressed = false;
             p2pressed = false;
             p1pressing = false;
             p2pressing = false;
-        }*/
+        }
 	}
 }

@@ -20,14 +20,14 @@ public class MoveCharacter : MonoBehaviour {
 		jumptimer = 1F;
 	}
 	
-	// Update is called o nce per frame
+	// Update is called once per frame
 	void Update () 
 	{
 		if(jump)
 		{
 			lerptime += Time.deltaTime / 2.5F;
 			jumptimer -= Time.deltaTime;
-			if(jumptimer < 0.25F)
+			if(jumptimer < 0.20F)
 			{
 				pos.y = 0;
 				if(character.transform.position.y <= 0.01)
