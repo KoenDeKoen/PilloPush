@@ -8,6 +8,7 @@ public class TutorialScript : MonoBehaviour {
 	public ObstacleList obl;
 	public ObjectPosistionList objpos;
 	public PowerupList pwl;
+	public FaderIn fadeIn;
 
 	public GameObject parent;
 	public GameObject auto;
@@ -29,6 +30,7 @@ public class TutorialScript : MonoBehaviour {
 		obl.Init();
 		pwl.Init();
 		objpos.Init();
+		CollisionPlayer.tutorial = true;
 
 		startpos = -160f;
 		time = 3.0f;
@@ -74,6 +76,11 @@ public class TutorialScript : MonoBehaviour {
 		{
 			//SpawnTutorialTrip(parent);
 			SpawnTutorialObstacle(parent);
+		}
+
+		if(state == 5)
+		{
+			EndTutorial();
 		}
 	}
 
@@ -175,5 +182,10 @@ public class TutorialScript : MonoBehaviour {
 	public void EndTutorial()
 	{
 
+		if (fadeIn.fadeIn())
+		{
+			CollisionPlayer.tutorial = false;
+			Application.LoadLevel("Menu");
+		}
 	}
 }

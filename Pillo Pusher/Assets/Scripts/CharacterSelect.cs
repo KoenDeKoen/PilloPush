@@ -76,6 +76,13 @@ public class CharacterSelect : MonoBehaviour {
                         Application.LoadLevel("GrannyMode");
                     }
                 }
+				if (modeselect.getMode() == 3)
+				{
+					if (fadein.fadeIn())
+					{
+						Application.LoadLevel("Tutorial");
+					}
+				}
             }
 
             else

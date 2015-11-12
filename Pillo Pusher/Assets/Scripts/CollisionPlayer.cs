@@ -9,6 +9,7 @@ public class CollisionPlayer : MonoBehaviour {
 	private float realTime;
     private Animator charanimator;
     private Mechanic mc;
+	public static bool tutorial = false;
 
     void Start()
     {
@@ -66,17 +67,25 @@ public class CollisionPlayer : MonoBehaviour {
 
 	void LosLife()
 	{
-		lives--;
-		if (lives <= 0)
+		if(!tutorial)
 		{
-            charanimator.SetInteger("State", 6);
-            mc.animstate = "Gameover1";
-			gameoverpanel.displayScore();
-		}
-        else
-        {
+			lives--;
+			if (lives <= 0)
+			{
+            	charanimator.SetInteger("State", 6);
+            	mc.animstate = "Gameover1";
+				gameoverpanel.displayScore();
+			}
+        	else
+       		{
             charanimator.SetInteger("State", 5);
-            mc.animstate = "Hit1";
-        }
+           	mc.animstate = "Hit1";
+        	}
+		}
+		if(tutorial)
+		{
+			charanimator.SetInteger("State", 5);
+			mc.animstate = "Hit1";
+		}
 	}
 }

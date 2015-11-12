@@ -332,6 +332,9 @@ public class MenuControl : MonoBehaviour
             if (turnstate == 1)
             {
                 //tutorial
+				Tutorialbtn.transform.parent.gameObject.SetActive(false);
+				modeselect.setMode(3);
+				Application.LoadLevel("CharacterSelect");
             }
             if (turnstate == 2)
             {
