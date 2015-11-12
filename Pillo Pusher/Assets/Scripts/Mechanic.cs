@@ -55,7 +55,7 @@ public class Mechanic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-        Debug.Log(charactermover.isJumping());
+        //Debug.Log(charactermover.isJumping());
         
         
         if (!gameoverpanel.isGameOver ()) 
