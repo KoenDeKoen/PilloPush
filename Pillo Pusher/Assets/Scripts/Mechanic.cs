@@ -206,6 +206,8 @@ public class Mechanic : MonoBehaviour {
             p2pressed = false;
             p1pressing = false;
             p2pressing = false;
+            speaker2.SetInteger("SwitchState", 0);
+            speaker1.SetInteger("SwitchState", 0);
         }
 	}
 }
