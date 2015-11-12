@@ -68,6 +68,7 @@ public class Mechanic : MonoBehaviour {
               maleanimator.SetInteger("State", 0);
               animstate = "Idle1";
             }
+
             pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
 			pct2 = PilloController.GetSensor (Pillo.PilloID.Pillo2);
 			checkPresses (); 
@@ -83,26 +84,26 @@ public class Mechanic : MonoBehaviour {
 
         if (devmode)
         {
-            if (Input.GetKeyDown("a"))
+            if (Input.GetKeyDown("a"))// && !charactermover.isJumping())
             {
                 p1pressing = true;
                 p1pressed = false;
                 speaker1.SetInteger("SwitchState", 1);
             }
-            if (Input.GetKeyUp("a") && p1pressing)
+            if (Input.GetKeyUp("a"))// && p1pressing && !charactermover.isJumping())
             {
                 p1pressed = true;
                 hasjumped = false;
                 p1pressing = false;
                 speaker1.SetInteger("SwitchState", 0);
             }
-            if (Input.GetKeyDown("d"))
+            if (Input.GetKeyDown("d"))// && !charactermover.isJumping())
             {
                 p2pressing = true;
                 p2pressed = false;
                 speaker2.SetInteger("SwitchState", 1);
             }
-            if (Input.GetKeyUp("d") && p2pressing)
+            if (Input.GetKeyUp("d") && p2pressing)// && !charactermover.isJumping())
             {
                 p2pressed = true;
                 hasjumped = false;
@@ -113,26 +114,26 @@ public class Mechanic : MonoBehaviour {
 
         if (!devmode)
         {
-            if (pct1 >= 0.05)
+            if (pct1 >= 0.05)// && !charactermover.isJumping())
             {
                 p1pressing = true;
                 p1pressed = false;
                 speaker1.SetInteger("SwitchState", 1);
             }
-            if (pct1 <= 0.01 && p1pressing)
+            if (pct1 <= 0.01 && p1pressing)// && !charactermover.isJumping())
             {
                 p1pressed = true;
                 hasjumped = false;
                 p1pressing = false;
                 speaker1.SetInteger("SwitchState", 0);
             }
-            if (pct2 >= 0.05)
+            if (pct2 >= 0.05)// && !charactermover.isJumping())
             {
                 p2pressing = true;
                 p2pressed = false;
                 speaker2.SetInteger("SwitchState", 1);
             }
-            if (pct2 <= 0.01 && p2pressing)
+            if (pct2 <= 0.01 && p2pressing)// && !charactermover.isJumping())
             {
                 p2pressed = true;
                 hasjumped = false;
@@ -141,7 +142,7 @@ public class Mechanic : MonoBehaviour {
             }
         }
 
-		if(p1pressing && p2pressing)// && !charactermover.isJumping())
+		if((p1pressing && p2pressing))// && !charactermover.isJumping())
 		{
 			if(!hasjumped)
 			{
@@ -199,5 +200,12 @@ public class Mechanic : MonoBehaviour {
 			}
 			p2pressed = false;
 		}
+       /* if (charactermover.isJumping())
+        {
+            p1pressed = false;
+            p2pressed = false;
+            p1pressing = false;
+            p2pressing = false;
+        }*/
 	}
 }
