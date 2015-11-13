@@ -9,7 +9,9 @@ public class CollisionPlayer : MonoBehaviour {
 	public float realTime;
     private Animator charanimator;
     private Mechanic mc;
+
 	public static bool tutorial = false;
+	public static bool activeSlow;
 	public bool slowdown;
 
     void Start()
@@ -19,13 +21,27 @@ public class CollisionPlayer : MonoBehaviour {
         lives = 3;
 		realTime = 0f;
 		slowdown = false;
+		activeSlow = false;
     }
 
 	void Update()
 	{
 		if(slowdown)
 		{
-			SlowMotion();
+			realTime += Time.deltaTime;
+			
+			if(Time.timeScale >= 1.0f)
+			{
+				Time.timeScale = 0.5f;
+			}
+			
+			if(realTime >= 6.0f)
+			{
+				Time.timeScale = 1.0f;
+				realTime = 0f;
+				activeSlow = false;
+				slowdown = false;
+			}
 		}
 	}
 
@@ -53,27 +69,9 @@ public class CollisionPlayer : MonoBehaviour {
 
 		if(col.gameObject.tag == "slow")
 		{
+			activeSlow = true;
 			slowdown = true;
 			Destroy(col.gameObject);
-		}
-        
-        
-	}
-
-	public void SlowMotion()
-	{
-		realTime += Time.deltaTime;
-
-		if(Time.timeScale >= 1.0f)
-		{
-			Time.timeScale = 0.5f;
-		}
-
-		if(realTime >= 6.0f)
-		{
-			Time.timeScale = 1.0f;
-			realTime = 0f;
-			slowdown = false;
 		}
 	}
 
