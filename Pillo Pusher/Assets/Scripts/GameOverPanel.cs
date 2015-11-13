@@ -12,21 +12,37 @@ public class GameOverPanel : MonoBehaviour {
 	private bool gameover;
 	public GameObject inputtext;
     public GameObject infotext;
+    private ModeSelect ms;
+
+    private Lives lifescript;
 
 	public Leaderboard lb;
 	public Text score1;
 	public Text score2;
 	public Text score3;
+    public Image life1;
+    public Image life2;
+    public Image life3;
+    public Sprite lifesprite;
+    public Sprite lifelesssprite;
 	private int place;
+    private int previouslifes;
 
 	void Start () 
 	{
+        ms = gameObject.AddComponent<ModeSelect>();
+        lifescript = gameObject.AddComponent<Lives>();
+        life1.sprite = lifesprite;
+        life2.sprite = lifesprite;
+        life3.sprite = lifesprite;
+        previouslifes = lifescript.returnLives();
 		gameover = false;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+        displayLives();
 		if((gameover && place == 0) || (gameover && lb.getNameDone()))
 		{
             panel.SetActive(true);
@@ -63,6 +79,28 @@ public class GameOverPanel : MonoBehaviour {
 		gameover = true;
 	}
 
+    public void displayLives()
+    {
+        if (previouslifes != lifescript.returnLives())
+        {
+            previouslifes = lifescript.returnLives();
+            switch (previouslifes)
+            {
+                case 2:
+                    life3.sprite = lifelesssprite;
+                    break;
+
+                case 1:
+                    life2.sprite = lifelesssprite;
+                    break;
+
+                case 0:
+                    life1.sprite = lifelesssprite;
+                    break;
+            }
+        }
+    }
+
 	private void checkForRetry()
 	{
 		float pct1 = PilloController.GetSensor (Pillo.PilloID.Pillo1);
@@ -70,7 +108,14 @@ public class GameOverPanel : MonoBehaviour {
 
 		if((pct1 >= 0.5F || pct2 >= 0.5F) || (Input.GetKeyDown("a")))
 		{
-			Application.LoadLevel("Game");
+            if (ms.getMode() == 1)
+            {
+                Application.LoadLevel("Game");
+            }
+            if (ms.getMode() == 2)
+            {
+                Application.LoadLevel("GrannyMode");
+            }
 		}
 	}
 

@@ -9,11 +9,27 @@ public class CollisionPlayer : MonoBehaviour {
 	private float realTime;
     private Animator charanimator;
     private Mechanic mc;
+    private GrannyMechanic gmc;
+    private ModeSelect ms;
+    private Lives lifescript;
+
+
+
 	public static bool tutorial = false;
 
     void Start()
     {
-        mc = FindObjectOfType<Mechanic>();
+        lifescript = gameObject.AddComponent<Lives>();
+        //gameoverpanel.Init();
+        ms = gameObject.AddComponent<ModeSelect>();
+        if (ms.getMode() == 1)
+        {
+            mc = FindObjectOfType<Mechanic>();
+        }
+        if (ms.getMode() == 2)
+        {
+            gmc = FindObjectOfType<GrannyMechanic>();
+        }
         charanimator = FindObjectOfType<CollisionPlayer>().gameObject.GetComponentInChildren<Animator>();
         lives = 3;
     }
@@ -72,20 +88,44 @@ public class CollisionPlayer : MonoBehaviour {
 			lives--;
 			if (lives <= 0)
 			{
-            	charanimator.SetInteger("State", 6);
-            	mc.animstate = "Gameover1";
+                if (ms.getMode() == 1)
+                {
+                    mc.animstate = "Gameover1";
+                }
+                if (ms.getMode() == 2)
+                {
+                    gmc.animstate = "Gameover1";
+                }
+                charanimator.SetInteger("State", 6);
 				gameoverpanel.displayScore();
 			}
         	else
        		{
-            charanimator.SetInteger("State", 5);
-           	mc.animstate = "Hit1";
+                if (ms.getMode() == 1)
+                {
+                    mc.animstate = "Hit1";
+                }
+                if (ms.getMode() == 2)
+                {
+                    gmc.animstate = "Hit1";
+                }
+                charanimator.SetInteger("State", 5);
         	}
+            lifescript.setLives(lives);
+
 		}
 		if(tutorial)
 		{
-			charanimator.SetInteger("State", 5);
-			mc.animstate = "Hit1";
+            if (ms.getMode() == 1)
+            {
+                mc.animstate = "Hit1";
+            }
+            if (ms.getMode() == 2)
+            {
+                gmc.animstate = "Hit1";
+            }
+            charanimator.SetInteger("State", 5);
+			//mc.animstate = "Hit1";
 		}
 	}
 }

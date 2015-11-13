@@ -15,6 +15,7 @@ public class GrannyMechanic : MonoBehaviour
 
     public Animator speaker1;
     public Animator speaker2;
+    private Animator charanimator;
 
     //private bool p1pressing;
     //private bool p2pressing;
@@ -22,6 +23,7 @@ public class GrannyMechanic : MonoBehaviour
     private bool p2pressed;
     // private bool hasjumped;
     private bool devmode;
+    public string animstate;
 
     //public GameObject pillo1feedback;
     //public GameObject pillo2feedback;
@@ -33,6 +35,10 @@ public class GrannyMechanic : MonoBehaviour
     {
         //  p1pressing = false;
         //   p2pressing = false;
+        charactermover.Init();
+        animstate = "Idle1";
+        charanimator = FindObjectOfType<CollisionPlayer>().gameObject.GetComponentInChildren<Animator>();
+        charanimator.SetInteger("State", 0);
         devmode = false;
         p1pressed = false;
         p2pressed = false;
@@ -52,6 +58,12 @@ public class GrannyMechanic : MonoBehaviour
     {
         if (!gameoverpanel.isGameOver())
         {
+            if (animstate != "Idle1" && charanimator.GetCurrentAnimatorStateInfo(0).IsName(animstate))
+            {
+                //Debug.Log(animstate);
+                charanimator.SetInteger("State", 0);
+                animstate = "Idle1";
+            }
             pct1 = PilloController.GetSensor(Pillo.PilloID.Pillo1);
             pct2 = PilloController.GetSensor(Pillo.PilloID.Pillo2);
             checkPresses();
@@ -112,6 +124,8 @@ public class GrannyMechanic : MonoBehaviour
         {
             if (state > 0)
             {
+                animstate = "Dash_L1";
+                charanimator.SetInteger("State", 4);
                 state--;
             }
             switch (state)
@@ -133,6 +147,8 @@ public class GrannyMechanic : MonoBehaviour
         {
             if (state < 2)
             {
+                animstate = "Dash_R1";
+                charanimator.SetInteger("State", 2);
                 state++;
             }
             switch (state)

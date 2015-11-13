@@ -33,6 +33,7 @@ public class Mechanic : MonoBehaviour {
 	
 	void Start () 
 	{
+        charactermover.Init();
         animstate = "Idle1";
         maleanimator = FindObjectOfType<CollisionPlayer>().gameObject.GetComponentInChildren<Animator>();
         maleanimator.SetInteger("State", 0);

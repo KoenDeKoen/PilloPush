@@ -23,10 +23,12 @@ public class ObstacleSpawn : MonoBehaviour {
 	public PowerupList pwl;
 	public ObjectPosistionList objpos;
 	public Score scoreTracker;
+    public ModeSelect ms;
 	
 	// Use this for initialization
 	void Start () 
 	{
+        ms = gameObject.AddComponent<ModeSelect>();
 		obl.Init();
 		pwl.Init();
 		objpos.Init();
@@ -115,7 +117,11 @@ public class ObstacleSpawn : MonoBehaviour {
 
 		timeObject -= Time.deltaTime;
 		timePowerup -= Time.deltaTime;
-		timeCar -= Time.deltaTime;
+        if (ms.getMode() == 1)
+        {
+            timeCar -= Time.deltaTime;
+        }
+        
 
 		if(timeCar <= 0)
 		{
