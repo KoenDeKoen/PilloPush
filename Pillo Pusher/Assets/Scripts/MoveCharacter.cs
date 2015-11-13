@@ -11,7 +11,7 @@ public class MoveCharacter : MonoBehaviour {
 	private float jumptimer;
 	public SpawnCharacter spawnedcharacter;
 
-	void Start () 
+	public void Init () 
 	{
 		spawnedcharacter.Init ();
 		character = spawnedcharacter.returnCharacter ();
