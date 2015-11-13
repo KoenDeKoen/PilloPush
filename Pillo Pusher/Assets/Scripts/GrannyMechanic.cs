@@ -21,6 +21,8 @@ public class GrannyMechanic : MonoBehaviour
     //private bool p2pressing;
     private bool p1pressed;
     private bool p2pressed;
+    private bool p1released;
+    private bool p2released;
     // private bool hasjumped;
     private bool devmode;
     public string animstate;
@@ -42,6 +44,8 @@ public class GrannyMechanic : MonoBehaviour
         devmode = false;
         p1pressed = false;
         p2pressed = false;
+        p1released = true;
+        p2released = true;
       //  hasjumped = false;
         state = 1;
         nextpos = new Vector3(40, 0, 0);
@@ -100,22 +104,26 @@ public class GrannyMechanic : MonoBehaviour
         }
         if (!devmode)
         {
-            if (pct1 >= 0.05)
+            if (pct1 >= 0.05 && p1released)
             {
                 p1pressed = true;
+                p1released = true;
                 speaker1.SetInteger("SwitchState", 1);
             }
-            if (pct1 <= 0.01)
+            if (pct1 <= 0)
             {
+                p1released = true;
                 speaker1.SetInteger("SwitchState", 0);
             }
-            if (pct2 >= 0.05)
+            if (pct2 >= 0.05 && p2released)
             {
                 p2pressed = true;
+                p2released = false;
                 speaker2.SetInteger("SwitchState", 1);
             }
-            if (pct2 <= 0.01)
+            if (pct2 <= 0)
             {
+                p2released = true;
                 speaker2.SetInteger("SwitchState", 0);
             }
         }

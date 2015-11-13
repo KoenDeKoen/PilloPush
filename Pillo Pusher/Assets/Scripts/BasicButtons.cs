@@ -23,7 +23,7 @@ public class BasicButtons : MonoBehaviour {
 
 		if(Input.GetKeyDown(KeyCode.Escape))
 		{
-			Application.LoadLevel("CharacterSelect");
+			Application.LoadLevel("Menu");
 		}
 	}
 }
