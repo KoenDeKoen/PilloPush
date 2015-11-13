@@ -107,7 +107,7 @@ public class GrannyMechanic : MonoBehaviour
             if (pct1 >= 0.05 && p1released)
             {
                 p1pressed = true;
-                p1released = true;
+                p1released = false;
                 speaker1.SetInteger("SwitchState", 1);
             }
             if (pct1 <= 0)
