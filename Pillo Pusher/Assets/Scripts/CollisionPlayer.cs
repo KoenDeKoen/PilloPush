@@ -6,17 +6,28 @@ public class CollisionPlayer : MonoBehaviour {
 	public GameOverPanel gameoverpanel;
 
     private int lives;
-	private float realTime;
+	public float realTime;
     private Animator charanimator;
     private Mechanic mc;
 	public static bool tutorial = false;
+	public bool slowdown;
 
     void Start()
     {
         mc = FindObjectOfType<Mechanic>();
         charanimator = FindObjectOfType<CollisionPlayer>().gameObject.GetComponentInChildren<Animator>();
         lives = 3;
+		realTime = 0f;
+		slowdown = false;
     }
+
+	void Update()
+	{
+		if(slowdown)
+		{
+			SlowMotion();
+		}
+	}
 
 	void OnCollisionEnter(Collision col)
 	{
@@ -42,26 +53,27 @@ public class CollisionPlayer : MonoBehaviour {
 
 		if(col.gameObject.tag == "slow")
 		{
-			//SlowDown();
-			//Debug.Log ("slow");
+			slowdown = true;
 			Destroy(col.gameObject);
 		}
         
         
 	}
 
-	void SlowDown()
+	public void SlowMotion()
 	{
-		realTime -= Time.deltaTime;
+		realTime += Time.deltaTime;
 
-		if(Time.timeScale == 1.0f)
+		if(Time.timeScale >= 1.0f)
 		{
 			Time.timeScale = 0.5f;
 		}
 
-		if(realTime >= 5.0f)
+		if(realTime >= 6.0f)
 		{
 			Time.timeScale = 1.0f;
+			realTime = 0f;
+			slowdown = false;
 		}
 	}
 
