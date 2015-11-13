@@ -36,7 +36,9 @@ public class CharacterSelect : MonoBehaviour {
 	{
         cancontinue = false;
         presscounter = 0;
-        GameObject.Find("MaleAnimatedPrefab").GetComponentInChildren<Animator>().SetInteger("State", 1);
+        boy.GetComponentInChildren<Animator>().SetInteger("State", 1);
+        girl.GetComponentInChildren<Animator>().SetInteger("State", 1);
+        //GameObject.Find("MaleAnimatedPrefab").GetComponentInChildren<Animator>().SetInteger("State", 1);
        // maleanimator.SetInteger("State", 1);
 		leftR = false;
 		rightR = false;
