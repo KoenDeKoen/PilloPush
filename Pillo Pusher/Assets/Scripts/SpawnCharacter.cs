@@ -20,7 +20,8 @@ public class SpawnCharacter : MonoBehaviour
         
 		//character = selectedcharacter.getCharacter ();
 		//character.transform.position = new Vector3 (40, 0, 0);
-		maincamera.transform.SetParent(character.transform);
+		maincamera.transform.SetParent(character.transform); // DEZE TRUG ZETTE AUB
+		//maincamera.transform.SetParent(null);
 		//maincamera.transform.localPosition = new Vector3 (4.5f, maincamera.transform.localPosition.y, maincamera.transform.localPosition.z);
 	}
 	
