@@ -13,6 +13,7 @@ public class MoveGround : MonoBehaviour {
 	float speed;
 	float scoreinterval;
 	float multi;
+	float slowdown;
 
 	void Start () 
 	{
@@ -22,11 +23,22 @@ public class MoveGround : MonoBehaviour {
 		speed = 0.4f;
 		scoreinterval = 25f;
 		multi = 1f;
+		slowdown = 1f;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		if(!CollisionPlayer.activeSlow)
+		{
+			slowdown = 1f;
+		}
+
+		if(CollisionPlayer.activeSlow)
+		{
+			slowdown = 2f;
+		}
+
 		if(scoreTracker.returnScore() >= scoreinterval * multi)
 		{
 			speed += 0.2f;
@@ -35,7 +47,7 @@ public class MoveGround : MonoBehaviour {
 
 		if(hastolerp && !gameoverpanel.isGameOver())
 		{
-			nextpos.x += speed;
+			nextpos.x += speed / slowdown;
 			parent.transform.position = Vector3.Lerp(parent.transform.position, nextpos, speed);                                                                      
 		}
 	}
