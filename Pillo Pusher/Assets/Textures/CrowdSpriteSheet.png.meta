@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 71fa221d9c919d54196edb8f66102673
+timeCreated: 1447676437
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CrowdSpriteSheet_0
+    21300002: CrowdSpriteSheet_1
+    21300004: CrowdSpriteSheet_2
+    21300006: CrowdSpriteSheet_3
+    21300008: CrowdSpriteSheet_4
+    21300010: CrowdSpriteSheet_5
+    21300012: CrowdSpriteSheet_6
+    21300014: CrowdSpriteSheet_7
+    21300016: CrowdSpriteSheet_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CrowdSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 2046
+        width: 896
+        height: 1022
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CrowdSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 2048
+        width: 896
+        height: 1022
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CrowdSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 2105
+        y: 2048
+        width: 896
+        height: 1022
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CrowdSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1025
+        width: 896
+        height: 1022
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CrowdSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1024
+        width: 896
+        height: 1022
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CrowdSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2105
+        y: 1024
+        width: 896
+        height: 1022
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CrowdSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 896
+        height: 1022
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CrowdSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 0
+        width: 896
+        height: 1022
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CrowdSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 2105
+        y: 0
+        width: 896
+        height: 1022
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
