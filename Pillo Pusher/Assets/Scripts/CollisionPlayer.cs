@@ -14,6 +14,8 @@ public class CollisionPlayer : MonoBehaviour {
 			
 	public static bool tutorial = false;
 	public static bool activeSlow;
+	public static bool activeTrip;
+	public bool badtrip;
 	public bool slowdown;
 		
 	void Start()		
@@ -36,7 +38,9 @@ public class CollisionPlayer : MonoBehaviour {
 		lives = 3;
 		realTime = 0f;
 		slowdown = false;
+		badtrip = false;
 		activeSlow = false;
+		activeTrip = false;
 	}
 
 	void Update()
@@ -44,6 +48,11 @@ public class CollisionPlayer : MonoBehaviour {
 		if(slowdown)
 		{
 			SlowMotion();
+		}
+
+		if(badtrip)
+		{
+			BadTrip();
 		}
 	}
 
@@ -75,6 +84,13 @@ public class CollisionPlayer : MonoBehaviour {
 			activeSlow = true;
 			Destroy(col.gameObject);
 		}
+
+		if(col.gameObject.tag == "trip")
+		{
+			badtrip = true;
+			activeTrip = true;
+			Destroy(col.gameObject);
+		}
 	}
 
 	public void SlowMotion()	
@@ -92,6 +108,18 @@ public class CollisionPlayer : MonoBehaviour {
 			realTime = 0f;
 			slowdown = false;
 			activeSlow = false;
+		}
+	}
+
+	public void BadTrip()	
+	{
+		realTime += Time.deltaTime;
+
+		if(realTime >= 12.0f)
+		{
+			realTime = 0f;
+			badtrip = false;
+			activeTrip = false;
 		}
 	}
 

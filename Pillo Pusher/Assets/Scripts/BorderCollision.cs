@@ -34,5 +34,10 @@ public class BorderCollision : MonoBehaviour
 		{
 			Destroy(col.gameObject);
 		}
+
+		if(col.gameObject.tag == "trip")
+		{
+			Destroy(col.gameObject);
+		}
 	}
 }

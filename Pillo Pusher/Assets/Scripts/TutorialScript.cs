@@ -74,7 +74,7 @@ public class TutorialScript : MonoBehaviour {
 		//
 		if(state == 4)
 		{
-			//SpawnTutorialTrip(parent);
+			SpawnTutorialTrip(parent);
 			SpawnTutorialObstacle(parent);
 		}
 
@@ -155,29 +155,29 @@ public class TutorialScript : MonoBehaviour {
 		}
 	}
 
-	//	public void SpawnTutorialTrip(GameObject parentground)
-//	{
-//		int typernd = 1;
-//		int posrnd = Random.Range(0, objpos.returnPosObjects().Count);
-//		
-//		Vector3 pos = new Vector3(startpos, obl.returnObstacles()[typernd].transform.position.y, objpos.returnPosObjects()[posrnd]);
-//		
-//		timePower -= Time.deltaTime;
-//		
-//		if(timePower <= 0f)
-//		{
-//			ritmePower = true;
-//		}
-//		
-//		if(ritmePower){
-//			GameObject slow = Instantiate(pwl.returnPowerups()[typernd]) as GameObject;
-//			slow.transform.position = pos;
-//			slow.transform.parent = parentground.transform;
-//			
-//			timePower = 5.0f;
-//			ritmePower = false;
-//		}
-//	}
+		public void SpawnTutorialTrip(GameObject parentground)
+	{
+		int typernd = 1;
+		int posrnd = Random.Range(0, objpos.returnPosObjects().Count);
+		
+		Vector3 pos = new Vector3(startpos, obl.returnObstacles()[typernd].transform.position.y, objpos.returnPosObjects()[posrnd]);
+		
+		timePower -= Time.deltaTime;
+		
+		if(timePower <= 0f)
+		{
+			ritmePower = true;
+		}
+		
+		if(ritmePower){
+			GameObject slow = Instantiate(pwl.returnPowerups()[typernd]) as GameObject;
+			slow.transform.position = pos;
+			slow.transform.parent = parentground.transform;
+			
+			timePower = 5.0f;
+			ritmePower = false;
+		}
+	}
 
 	public void EndTutorial()
 	{
