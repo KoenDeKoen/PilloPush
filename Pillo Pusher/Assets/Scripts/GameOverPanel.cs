@@ -43,21 +43,38 @@ public class GameOverPanel : MonoBehaviour {
 	void Update () 
 	{
         displayLives();
-		if((gameover && place == 0) || (gameover && lb.getNameDone()))
-		{
-            panel.SetActive(true);
-            lb.inputName(place, lb.getName());
-            inputtext.SetActive(false);
-            infotext.SetActive(false);
-            lb.updateScoreText(score1, score2, score3);
-            checkForRetry ();
-		}
-		if(gameover && place > 0 && !lb.getNameDone())
-		{
-            panel.SetActive(true);
-            infotext.SetActive(true);
-            inputtext.SetActive(true);
-		}
+        if (ms.getMode() == 1)
+        {
+            if ((gameover && place == 0) || (gameover && lb.getNameDone()))
+            {
+                panel.SetActive(true);
+                lb.inputName(place, lb.getName());
+                inputtext.SetActive(false);
+                infotext.SetActive(false);
+                lb.updateScoreText(score1, score2, score3);
+                checkForRetry();
+            }
+            if (gameover && place > 0 && !lb.getNameDone())
+            {
+                panel.SetActive(true);
+                score1.gameObject.SetActive(true);
+                score2.gameObject.SetActive(true);
+                score3.gameObject.SetActive(true);
+                infotext.SetActive(true);
+                inputtext.SetActive(true);
+            }
+        }
+        if (ms.getMode() == 2)
+        {
+            if (gameover)
+            {
+                panel.SetActive(true);
+                score1.gameObject.SetActive(false);
+                score2.gameObject.SetActive(false);
+                score3.gameObject.SetActive(false);
+                checkForRetry();
+            }
+        }
 	}
 
     void OnGUI()
