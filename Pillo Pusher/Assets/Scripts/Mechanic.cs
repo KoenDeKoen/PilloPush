@@ -7,6 +7,8 @@ public class Mechanic : MonoBehaviour {
 	// Use this for initialization
 	private int state;
 	private Vector3 nextpos;
+	private Vector3 blastleft;
+	private Vector3 blastright;
 
 	public MoveCharacter charactermover;
 	public GameOverPanel gameoverpanel;
@@ -28,6 +30,10 @@ public class Mechanic : MonoBehaviour {
 	//public GameObject pillo1feedback;
 	//public GameObject pillo2feedback;
 
+	public GameObject shockwave;
+	public GameObject speakerLeft;
+	public GameObject speakerRight;
+
 	float pct1;
 	float pct2;
 	
@@ -45,6 +51,9 @@ public class Mechanic : MonoBehaviour {
 		hasjumped = false;
 		state = 1;
 		nextpos = new Vector3 (40, 0, 0);
+
+		blastleft = new Vector3 (speaker1.transform.position.x, speaker1.transform.position.y + 1f, speaker1.transform.position.z);
+		blastright = new Vector3 (speaker2.transform.position.x, speaker2.transform.position.y + 1f, speaker2.transform.position.z);
 
 		//speakerFeedback.SpeakerLeftIdle();
 		//speakerFeedback.SpeakerRightIdle();
@@ -98,6 +107,8 @@ public class Mechanic : MonoBehaviour {
                 hasjumped = false;
                 p1pressing = false;
                 speaker1.SetInteger("SwitchState", 0);
+				BlastLeft(blastleft);
+
             }
             if (Input.GetKeyDown("d"))// && !charactermover.isJumping())
             {
@@ -111,6 +122,7 @@ public class Mechanic : MonoBehaviour {
                 hasjumped = false;
                 p2pressing = false;
                 speaker2.SetInteger("SwitchState", 0);
+				BlastRight(blastright);
             }
         }
 
@@ -128,6 +140,7 @@ public class Mechanic : MonoBehaviour {
                 hasjumped = false;
                 p1pressing = false;
                 speaker1.SetInteger("SwitchState", 0);
+				BlastLeft(blastleft);
             }
             if (pct2 >= 0.05)// && !charactermover.isJumping())
             {
@@ -141,6 +154,7 @@ public class Mechanic : MonoBehaviour {
                 hasjumped = false;
                 p2pressing = false;
                 speaker2.SetInteger("SwitchState", 0);
+				BlastRight(blastright);
             }
         }
 
@@ -218,4 +232,16 @@ public class Mechanic : MonoBehaviour {
         PilloSender.SensorMin = min;
         PilloSender.SensorMax = max;
     }
+
+	public void BlastRight(Vector3 pos)
+	{
+		GameObject blast = Instantiate(shockwave, pos, Quaternion.identity) as GameObject;
+		Destroy(blast, 2f);
+	}
+
+	public void BlastLeft(Vector3 pos)
+	{
+		GameObject blast = Instantiate(shockwave, pos, Quaternion.Euler(new Vector3(0, 180, 0))) as GameObject;
+		Destroy(blast, 2f);
+	}
 }
