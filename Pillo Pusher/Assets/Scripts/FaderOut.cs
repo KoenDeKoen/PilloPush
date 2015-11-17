@@ -15,7 +15,7 @@ public class FaderOut : MonoBehaviour {
 		done = false;
 		alpha = 1.0f;
 		time = 0f;
-		delay = 3.0f;
+		delay = 5.0f;
 	}
 
 	void Update()
