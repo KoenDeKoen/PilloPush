@@ -9,7 +9,7 @@ public class MoveGround : MonoBehaviour {
 	private Vector3 nextpos;
 	public GameOverPanel gameoverpanel;
 	public Score scoreTracker;
-
+    public float speedMultiplier;
 	float speed;
 	float scoreinterval;
 	float multi;
@@ -47,7 +47,7 @@ public class MoveGround : MonoBehaviour {
 
 		if(hastolerp && !gameoverpanel.isGameOver())
 		{
-			nextpos.x += speed / slowdown;
+			nextpos.x += (speed / slowdown)*Time.deltaTime* speedMultiplier; //KOEN!!! set deze in de editor (ong 40 is wel okay) xxjes Ruud
 			parent.transform.position = Vector3.Lerp(parent.transform.position, nextpos, speed);                                                                      
 		}
 	}

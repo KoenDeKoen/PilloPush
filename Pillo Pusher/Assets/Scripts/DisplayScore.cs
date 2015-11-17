@@ -9,10 +9,12 @@ public class DisplayScore : MonoBehaviour {
 	public Score scorekeeper;
 	public Text textbox;
 	private List<Color> colors;
+    private ModeSelect ms;
 	private float time;
 	private int index;
 	void Start () 
 	{
+        ms = gameObject.GetComponent<ModeSelect>();
 		time = 0f;
 		index = 0;
 		colors = new List<Color> ();
@@ -32,17 +34,24 @@ public class DisplayScore : MonoBehaviour {
 
 	private void updateScore()
 	{
-		time += Time.deltaTime;
-		textbox.text = "Score: " + ((int)scorekeeper.returnScore () * 10).ToString ();
-		if(time >= 0.5F)
-		{
-			time = 0f;
-			if(index >= colors.Count)
-			{
-				index = 0;
-			}
-			textbox.GetComponent<Text>().color = colors[index];
-			index++;
-		}
+        if (ms.getMode() == 1)
+        {
+            time += Time.deltaTime;
+            textbox.text = "Score: " + ((int)scorekeeper.returnScore() * 10).ToString();
+            if (time >= 0.5F)
+            {
+                time = 0f;
+                if (index >= colors.Count)
+                {
+                    index = 0;
+                }
+                textbox.GetComponent<Text>().color = colors[index];
+                index++;
+            }
+        }
+        else
+        {
+            textbox.gameObject.SetActive(false);
+        }
 	}
 }
