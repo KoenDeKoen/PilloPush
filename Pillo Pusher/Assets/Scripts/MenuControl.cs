@@ -327,7 +327,7 @@ public class MenuControl : MonoBehaviour
             waitupyo = true;
             if (turnstate == 0)
             {
-                //here be calibration
+                Application.LoadLevel("Calibration");
             }
             if (turnstate == 1)
             {
