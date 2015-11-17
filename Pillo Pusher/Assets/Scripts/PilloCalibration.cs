@@ -83,7 +83,7 @@ public class PilloCalibration : MonoBehaviour {
 
     private void calibrationTime()
     {
-        if (instructionstate != 2)
+        if (instructionstate != 3)
         {
             instructionstate = 1;
         }
@@ -156,7 +156,7 @@ public class PilloCalibration : MonoBehaviour {
                 break;
 
             case 2:
-                instructiontext.text = "Keep pressing for: " + passedtime + " seconds!";
+                instructiontext.text = "Keep pressing for: " + (int)passedtime + " seconds!";
                 break;
 
             case 3:
@@ -164,7 +164,7 @@ public class PilloCalibration : MonoBehaviour {
                 break;
 
             case 4:
-                instructiontext.text = "The Pillos are now calibrated! Going back to the menu in " + passedtime + " seconds";
+                instructiontext.text = "The Pillos are now calibrated! Going back to the menu in " + (int)passedtime + " seconds";
                 break;
         }
         
