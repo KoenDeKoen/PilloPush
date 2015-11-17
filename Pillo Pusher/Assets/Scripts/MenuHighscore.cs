@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using Pillo;
 
 public class MenuHighscore : MonoBehaviour {
 
@@ -15,6 +16,7 @@ public class MenuHighscore : MonoBehaviour {
     {
         presscounter = 0;
         leaderboard.updateScoreText(text1, text2, text3);
+        ConfigureSensorRange(0x50, 0x6f);
     }
 	
 	// Update is called once per frame
@@ -42,5 +44,11 @@ public class MenuHighscore : MonoBehaviour {
         {
             presscounter++;
         }
+    }
+
+    public static void ConfigureSensorRange(int min, int max)
+    {
+        PilloSender.SensorMin = min;
+        PilloSender.SensorMax = max;
     }
 }

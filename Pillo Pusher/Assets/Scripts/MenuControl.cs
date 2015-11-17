@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Pillo;
 
 public class MenuControl : MonoBehaviour
 {
@@ -63,9 +64,9 @@ public class MenuControl : MonoBehaviour
         position.y = -135;
         position.z = zstep * 3;
         Quitbtn.transform.localPosition = position;
+        ConfigureSensorRange(0x50, 0x6f);
 
-
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -361,5 +362,10 @@ public class MenuControl : MonoBehaviour
             }
         }
         
+    }
+    public static void ConfigureSensorRange(int min, int max)
+    {
+        PilloSender.SensorMin = min;
+        PilloSender.SensorMax = max;
     }
 }

@@ -37,6 +37,7 @@ public class GameOverPanel : MonoBehaviour {
         life3.sprite = lifesprite;
         previouslifes = lifescript.returnLives();
 		gameover = false;
+
 	}
 	
 	// Update is called once per frame

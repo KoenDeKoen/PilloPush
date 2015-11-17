@@ -24,6 +24,8 @@ public class PilloCalibration : MonoBehaviour {
         passedtime = 3;
         instartsequence = true;
         instructiontext.text = "Press either Pillo to start calibrating that Pillo";
+        ConfigureSensorRange(0x50, 0x6f);
+        
 	}
 	
 	// Update is called once per frame
@@ -47,7 +49,7 @@ public class PilloCalibration : MonoBehaviour {
         {
             instructionstate = 4;
             passedtime -= Time.deltaTime;
-            if (passedtime <= 2)
+            if (passedtime <= 0)
             {
                 SaveCalibrationValues();
                 Application.LoadLevel("Menu");
@@ -168,5 +170,10 @@ public class PilloCalibration : MonoBehaviour {
                 break;
         }
         
+    }
+    public static void ConfigureSensorRange(int min, int max)
+    {
+        PilloSender.SensorMin = min;
+        PilloSender.SensorMax = max;
     }
 }

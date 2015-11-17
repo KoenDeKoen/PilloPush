@@ -51,7 +51,8 @@ public class Mechanic : MonoBehaviour {
 
 		speaker1.SetInteger("SwitchState", 0);
 		speaker2.SetInteger("SwitchState", 0);
-	}
+        ConfigureSensorRange(0x50, 0x6f);
+    }
 	
 	// Update is called once per frame
 	void Update () 
@@ -211,4 +212,10 @@ public class Mechanic : MonoBehaviour {
             speaker1.SetInteger("SwitchState", 0);
         }
 	}
+
+    public static void ConfigureSensorRange(int min, int max)
+    {
+        PilloSender.SensorMin = min;
+        PilloSender.SensorMax = max;
+    }
 }

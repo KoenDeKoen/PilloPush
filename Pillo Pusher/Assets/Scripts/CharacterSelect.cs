@@ -43,7 +43,8 @@ public class CharacterSelect : MonoBehaviour {
 		leftR = false;
 		rightR = false;
 		fade = false;
-	}
+        ConfigureSensorRange(0x50, 0x6f);
+    }
 	
 	// Update is called once per frame
 	void Update (){
@@ -182,4 +183,10 @@ public class CharacterSelect : MonoBehaviour {
 			state = 1;
 		}
 	}
+
+    public static void ConfigureSensorRange(int min, int max)
+    {
+        PilloSender.SensorMin = min;
+        PilloSender.SensorMax = max;
+    }
 }
