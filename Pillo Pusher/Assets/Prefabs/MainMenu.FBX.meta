@@ -1,0 +1,1040 @@
+fileFormatVersion: 2
+guid: 46ef3983d14418a4daaa3084076652f0
+timeCreated: 1447934533
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: armExport:HeadJ
+    100002: armExport:HeadTipJ
+    100004: armExport:JawJ
+    100006: armExport:JawTipJ
+    100008: armExport:lAnkleJ
+    100010: armExport:lBallJ
+    100012: armExport:lClavicleJ
+    100014: armExport:lElbowJ
+    100016: armExport:lForearmJ
+    100018: armExport:lHipJ
+    100020: armExport:lIndex1J
+    100022: armExport:lIndex2J
+    100024: armExport:lIndex3J
+    100026: armExport:lIndexTipJ
+    100028: armExport:lKneeJ
+    100030: armExport:lMiddle1J
+    100032: armExport:lMiddle2J
+    100034: armExport:lMiddle3J
+    100036: armExport:lMiddleTipJ
+    100038: armExport:lPinkie1J
+    100040: armExport:lPinkie2J
+    100042: armExport:lPinkie3J
+    100044: armExport:lPinkieTipJ
+    100046: armExport:lRing1J
+    100048: armExport:lRing2J
+    100050: armExport:lRing3J
+    100052: armExport:lRingTipJ
+    100054: armExport:lShoulderJ
+    100056: armExport:lThumb1J
+    100058: armExport:lThumb2J
+    100060: armExport:lThumb3J
+    100062: armExport:lThumbTipJ
+    100064: armExport:lToeJ
+    100066: armExport:lWristJ
+    100068: armExport:MainC
+    100070: armExport:MainHipJ
+    100072: armExport:Male1
+    100074: armExport:Male1 1
+    100076: armExport:NeckJ
+    100078: armExport:rAnkleJ
+    100080: armExport:rBallJ
+    100082: armExport:rClavicleJ
+    100084: armExport:rElbowJ
+    100086: armExport:rForearmJ
+    100088: armExport:rHipJ
+    100090: armExport:rIndex1J
+    100092: armExport:rIndex2J
+    100094: armExport:rIndex3J
+    100096: armExport:rIndexTipJ
+    100098: armExport:rKneeJ
+    100100: armExport:rMiddle1J
+    100102: armExport:rMiddle2J
+    100104: armExport:rMiddle3J
+    100106: armExport:rMiddleTipJ
+    100108: armExport:ROOTJ
+    100110: armExport:rPinkie1J
+    100112: armExport:rPinkie2J
+    100114: armExport:rPinkie3J
+    100116: armExport:rPinkieTipJ
+    100118: armExport:rRing1J
+    100120: armExport:rRing2J
+    100122: armExport:rRing3J
+    100124: armExport:rRingTipJ
+    100126: armExport:rShoulderJ
+    100128: armExport:rThumb1J
+    100130: armExport:rThumb2J
+    100132: armExport:rThumb3J
+    100134: armExport:rThumbTipJ
+    100136: armExport:rToeJ
+    100138: armExport:rWristJ
+    100140: armExport:Spine01J
+    100142: armExport:Spine02J
+    100144: armExport:Spine03J
+    100146: armExport:Spine04J
+    100148: coin
+    100150: coinJNT
+    100152: DownJNT
+    100154: GoJNT
+    100156: joint2
+    100158: JukeBoxJNT
+    100160: kast1
+    100162: knop beneden
+    100164: knop midden
+    100166: knop omhoog
+    100168: //RootNode
+    400000: armExport:HeadJ
+    400002: armExport:HeadTipJ
+    400004: armExport:JawJ
+    400006: armExport:JawTipJ
+    400008: armExport:lAnkleJ
+    400010: armExport:lBallJ
+    400012: armExport:lClavicleJ
+    400014: armExport:lElbowJ
+    400016: armExport:lForearmJ
+    400018: armExport:lHipJ
+    400020: armExport:lIndex1J
+    400022: armExport:lIndex2J
+    400024: armExport:lIndex3J
+    400026: armExport:lIndexTipJ
+    400028: armExport:lKneeJ
+    400030: armExport:lMiddle1J
+    400032: armExport:lMiddle2J
+    400034: armExport:lMiddle3J
+    400036: armExport:lMiddleTipJ
+    400038: armExport:lPinkie1J
+    400040: armExport:lPinkie2J
+    400042: armExport:lPinkie3J
+    400044: armExport:lPinkieTipJ
+    400046: armExport:lRing1J
+    400048: armExport:lRing2J
+    400050: armExport:lRing3J
+    400052: armExport:lRingTipJ
+    400054: armExport:lShoulderJ
+    400056: armExport:lThumb1J
+    400058: armExport:lThumb2J
+    400060: armExport:lThumb3J
+    400062: armExport:lThumbTipJ
+    400064: armExport:lToeJ
+    400066: armExport:lWristJ
+    400068: armExport:MainC
+    400070: armExport:MainHipJ
+    400072: armExport:Male1
+    400074: armExport:Male1 1
+    400076: armExport:NeckJ
+    400078: armExport:rAnkleJ
+    400080: armExport:rBallJ
+    400082: armExport:rClavicleJ
+    400084: armExport:rElbowJ
+    400086: armExport:rForearmJ
+    400088: armExport:rHipJ
+    400090: armExport:rIndex1J
+    400092: armExport:rIndex2J
+    400094: armExport:rIndex3J
+    400096: armExport:rIndexTipJ
+    400098: armExport:rKneeJ
+    400100: armExport:rMiddle1J
+    400102: armExport:rMiddle2J
+    400104: armExport:rMiddle3J
+    400106: armExport:rMiddleTipJ
+    400108: armExport:ROOTJ
+    400110: armExport:rPinkie1J
+    400112: armExport:rPinkie2J
+    400114: armExport:rPinkie3J
+    400116: armExport:rPinkieTipJ
+    400118: armExport:rRing1J
+    400120: armExport:rRing2J
+    400122: armExport:rRing3J
+    400124: armExport:rRingTipJ
+    400126: armExport:rShoulderJ
+    400128: armExport:rThumb1J
+    400130: armExport:rThumb2J
+    400132: armExport:rThumb3J
+    400134: armExport:rThumbTipJ
+    400136: armExport:rToeJ
+    400138: armExport:rWristJ
+    400140: armExport:Spine01J
+    400142: armExport:Spine02J
+    400144: armExport:Spine03J
+    400146: armExport:Spine04J
+    400148: coin
+    400150: coinJNT
+    400152: DownJNT
+    400154: GoJNT
+    400156: joint2
+    400158: JukeBoxJNT
+    400160: kast1
+    400162: knop beneden
+    400164: knop midden
+    400166: knop omhoog
+    400168: //RootNode
+    4300000: knop beneden
+    4300002: knop omhoog
+    4300004: knop midden
+    4300006: armExport:Male1
+    4300008: coin
+    4300010: kast1
+    7400000: SelectEnter
+    7400002: SelectUp
+    7400004: SelectDown
+    7400006: Idle
+    9500000: //RootNode
+    13700000: armExport:Male1 1
+    13700002: coin
+    13700004: kast1
+    13700006: knop beneden
+    13700008: knop midden
+    13700010: knop omhoog
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: SelectEnter
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 115
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: armExport:MainC
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ/armExport:lBallJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ/armExport:lBallJ/armExport:lToeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ/armExport:rBallJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ/armExport:rBallJ/armExport:rToeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lForearmJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J/armExport:lIndex3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J/armExport:lIndex3J/armExport:lIndexTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J/armExport:lMiddle3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J/armExport:lMiddle3J/armExport:lMiddleTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J/armExport:lPinkie3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J/armExport:lPinkie3J/armExport:lPinkieTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J/armExport:lRing3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J/armExport:lRing3J/armExport:lRingTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J/armExport:lThumb3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J/armExport:lThumb3J/armExport:lThumbTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:HeadTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:JawJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:JawJ/armExport:JawTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rForearmJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J/armExport:rIndex3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J/armExport:rIndex3J/armExport:rIndexTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J/armExport:rMiddle3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J/armExport:rMiddle3J/armExport:rMiddleTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J/armExport:rPinkie3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J/armExport:rPinkie3J/armExport:rPinkieTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J/armExport:rRing3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J/armExport:rRing3J/armExport:rRingTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J/armExport:rThumb3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J/armExport:rThumb3J/armExport:rThumbTipJ
+        weight: 1
+      - path: armExport:Male1
+        weight: 1
+      - path: armExport:Male1/armExport:Male1 1
+        weight: 1
+      - path: coin
+        weight: 1
+      - path: coinJNT
+        weight: 1
+      - path: DownJNT
+        weight: 1
+      - path: GoJNT
+        weight: 1
+      - path: joint2
+        weight: 1
+      - path: JukeBoxJNT
+        weight: 1
+      - path: kast1
+        weight: 1
+      - path: knop beneden
+        weight: 1
+      - path: knop midden
+        weight: 1
+      - path: knop omhoog
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: SelectUp
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 36
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: armExport:MainC
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ/armExport:lBallJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ/armExport:lBallJ/armExport:lToeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ/armExport:rBallJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ/armExport:rBallJ/armExport:rToeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lForearmJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J/armExport:lIndex3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J/armExport:lIndex3J/armExport:lIndexTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J/armExport:lMiddle3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J/armExport:lMiddle3J/armExport:lMiddleTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J/armExport:lPinkie3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J/armExport:lPinkie3J/armExport:lPinkieTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J/armExport:lRing3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J/armExport:lRing3J/armExport:lRingTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J/armExport:lThumb3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J/armExport:lThumb3J/armExport:lThumbTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:HeadTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:JawJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:JawJ/armExport:JawTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rForearmJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J/armExport:rIndex3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J/armExport:rIndex3J/armExport:rIndexTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J/armExport:rMiddle3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J/armExport:rMiddle3J/armExport:rMiddleTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J/armExport:rPinkie3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J/armExport:rPinkie3J/armExport:rPinkieTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J/armExport:rRing3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J/armExport:rRing3J/armExport:rRingTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J/armExport:rThumb3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J/armExport:rThumb3J/armExport:rThumbTipJ
+        weight: 1
+      - path: armExport:Male1
+        weight: 1
+      - path: armExport:Male1/armExport:Male1 1
+        weight: 1
+      - path: coin
+        weight: 1
+      - path: coinJNT
+        weight: 1
+      - path: DownJNT
+        weight: 1
+      - path: GoJNT
+        weight: 1
+      - path: joint2
+        weight: 1
+      - path: JukeBoxJNT
+        weight: 1
+      - path: kast1
+        weight: 1
+      - path: knop beneden
+        weight: 1
+      - path: knop midden
+        weight: 1
+      - path: knop omhoog
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: SelectDown
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: armExport:MainC
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ/armExport:lBallJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ/armExport:lBallJ/armExport:lToeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ/armExport:rBallJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ/armExport:rBallJ/armExport:rToeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lForearmJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J/armExport:lIndex3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J/armExport:lIndex3J/armExport:lIndexTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J/armExport:lMiddle3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J/armExport:lMiddle3J/armExport:lMiddleTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J/armExport:lPinkie3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J/armExport:lPinkie3J/armExport:lPinkieTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J/armExport:lRing3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J/armExport:lRing3J/armExport:lRingTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J/armExport:lThumb3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J/armExport:lThumb3J/armExport:lThumbTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:HeadTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:JawJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:JawJ/armExport:JawTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rForearmJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J/armExport:rIndex3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J/armExport:rIndex3J/armExport:rIndexTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J/armExport:rMiddle3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J/armExport:rMiddle3J/armExport:rMiddleTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J/armExport:rPinkie3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J/armExport:rPinkie3J/armExport:rPinkieTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J/armExport:rRing3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J/armExport:rRing3J/armExport:rRingTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J/armExport:rThumb3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J/armExport:rThumb3J/armExport:rThumbTipJ
+        weight: 1
+      - path: armExport:Male1
+        weight: 1
+      - path: armExport:Male1/armExport:Male1 1
+        weight: 1
+      - path: coin
+        weight: 1
+      - path: coinJNT
+        weight: 1
+      - path: DownJNT
+        weight: 1
+      - path: GoJNT
+        weight: 1
+      - path: joint2
+        weight: 1
+      - path: JukeBoxJNT
+        weight: 1
+      - path: kast1
+        weight: 1
+      - path: knop beneden
+        weight: 1
+      - path: knop midden
+        weight: 1
+      - path: knop omhoog
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 36
+      lastFrame: 36
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: armExport:MainC
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ/armExport:lBallJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:lHipJ/armExport:lKneeJ/armExport:lAnkleJ/armExport:lBallJ/armExport:lToeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ/armExport:rBallJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:MainHipJ/armExport:rHipJ/armExport:rKneeJ/armExport:rAnkleJ/armExport:rBallJ/armExport:rToeJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lForearmJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J/armExport:lIndex3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lIndex1J/armExport:lIndex2J/armExport:lIndex3J/armExport:lIndexTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J/armExport:lMiddle3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lMiddle1J/armExport:lMiddle2J/armExport:lMiddle3J/armExport:lMiddleTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J/armExport:lPinkie3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lPinkie1J/armExport:lPinkie2J/armExport:lPinkie3J/armExport:lPinkieTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J/armExport:lRing3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lRing1J/armExport:lRing2J/armExport:lRing3J/armExport:lRingTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J/armExport:lThumb3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:lClavicleJ/armExport:lShoulderJ/armExport:lElbowJ/armExport:lWristJ/armExport:lThumb1J/armExport:lThumb2J/armExport:lThumb3J/armExport:lThumbTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:HeadTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:JawJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:NeckJ/armExport:HeadJ/armExport:JawJ/armExport:JawTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rForearmJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J/armExport:rIndex3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rIndex1J/armExport:rIndex2J/armExport:rIndex3J/armExport:rIndexTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J/armExport:rMiddle3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rMiddle1J/armExport:rMiddle2J/armExport:rMiddle3J/armExport:rMiddleTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J/armExport:rPinkie3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rPinkie1J/armExport:rPinkie2J/armExport:rPinkie3J/armExport:rPinkieTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J/armExport:rRing3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rRing1J/armExport:rRing2J/armExport:rRing3J/armExport:rRingTipJ
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J/armExport:rThumb3J
+        weight: 1
+      - path: armExport:MainC/armExport:ROOTJ/armExport:Spine01J/armExport:Spine02J/armExport:Spine03J/armExport:Spine04J/armExport:rClavicleJ/armExport:rShoulderJ/armExport:rElbowJ/armExport:rWristJ/armExport:rThumb1J/armExport:rThumb2J/armExport:rThumb3J/armExport:rThumbTipJ
+        weight: 1
+      - path: armExport:Male1
+        weight: 1
+      - path: armExport:Male1/armExport:Male1 1
+        weight: 1
+      - path: coin
+        weight: 1
+      - path: coinJNT
+        weight: 1
+      - path: DownJNT
+        weight: 1
+      - path: GoJNT
+        weight: 1
+      - path: joint2
+        weight: 1
+      - path: JukeBoxJNT
+        weight: 1
+      - path: kast1
+        weight: 1
+      - path: knop beneden
+        weight: 1
+      - path: knop midden
+        weight: 1
+      - path: knop omhoog
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
