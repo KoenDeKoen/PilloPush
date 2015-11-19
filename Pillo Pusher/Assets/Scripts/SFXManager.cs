@@ -8,16 +8,6 @@ public class SFXManager : MonoBehaviour
     public AudioSource sfxplayer;
     public AudioClip sfxpowerup;
     public AudioClip sfxpowerdown;
-	void Start ()
-    {
-	    
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-	
-	}
 
     public void playPowerUp()
     {
