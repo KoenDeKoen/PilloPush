@@ -100,7 +100,6 @@ public class MenuControl : MonoBehaviour
             }
             if ((oneispressing || waitupyo) && Input.GetKeyUp("a"))
             {
-				menu.SetInteger("State",1);
                 waitupyo = false;
                 haspressed1 = true;
                 oneispressing = false;
@@ -108,7 +107,6 @@ public class MenuControl : MonoBehaviour
             }
             if ((twoispressing || waitupyo) && Input.GetKeyUp("d"))
             {
-				menu.SetInteger("State",2);
                 waitupyo = false;
                 haspressed2 = true;
                 twoispressing = false;
@@ -131,7 +129,6 @@ public class MenuControl : MonoBehaviour
             }
             if((oneispressing || waitupyo) && pct1 <= 0)
             {
-				menu.SetInteger("State",1);
                 waitupyo = false;
                 haspressed1 = true;
                 oneispressing = false;
@@ -139,7 +136,6 @@ public class MenuControl : MonoBehaviour
             }
             if ((twoispressing || waitupyo) && pct2 <= 0)
             {
-				menu.SetInteger("State",2);
                 waitupyo = false;
                 haspressed2 = true;
                 twoispressing = false;
@@ -150,25 +146,25 @@ public class MenuControl : MonoBehaviour
         if (oneispressing && twoispressing)
         {
             time -= Time.deltaTime;
+			menu.Play("SelectEnter");
             if (time <= 0)
             {
-				menu.SetInteger("State",3);
                 selectButton();
             }
         }
 
         else if (haspressed1)
         {
-            
-            turnButtonsDown();
+			menu.Play("SelectUp");
+			turnButtonsDown();
             changePosition();
             haspressed1 = false;
             haspressed2 = false;
         }
         else if (haspressed2)
         {
-            
-            turnButtonsUp();
+			menu.Play("SelectDown");
+			turnButtonsUp();
             changePosition();
             haspressed1 = false;
             haspressed2 = false;
