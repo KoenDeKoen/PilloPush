@@ -11,6 +11,8 @@ public class CollisionPlayer : MonoBehaviour {
 	private GrannyMechanic gmc;
 	private ModeSelect ms;
 	private Lives lifescript;
+    private SFXManager sfxm;
+    private GameObject audiom;
 			
 	public static bool tutorial = false;
 	public static bool activeSlow;
@@ -35,6 +37,8 @@ public class CollisionPlayer : MonoBehaviour {
 		}
 		
 		charanimator = FindObjectOfType<CollisionPlayer>().gameObject.GetComponentInChildren<Animator>();
+        sfxm = FindObjectOfType<SFXManager>().GetComponent<SFXManager>();
+        audiom = FindObjectOfType<AudioRegulator>().gameObject;
 		lives = 3;
 		realTime = 0f;
 		slowdown = false;
@@ -82,6 +86,8 @@ public class CollisionPlayer : MonoBehaviour {
 		{
 			slowdown = true;
 			activeSlow = true;
+            audiom.GetComponent<AudioSource>().pitch = 0.8F;
+            sfxm.playPowerUp();
 			Destroy(col.gameObject);
 		}
 
@@ -89,7 +95,8 @@ public class CollisionPlayer : MonoBehaviour {
 		{
 			badtrip = true;
 			activeTrip = true;
-			Destroy(col.gameObject);
+            sfxm.playPowerDown();
+            Destroy(col.gameObject);
 		}
 	}
 
@@ -108,7 +115,8 @@ public class CollisionPlayer : MonoBehaviour {
 			realTime = 0f;
 			slowdown = false;
 			activeSlow = false;
-		}
+            audiom.GetComponent<AudioSource>().pitch = audiom.GetComponent<AudioRegulator>().returnPitch(); ;
+        }
 	}
 
 	public void BadTrip()	

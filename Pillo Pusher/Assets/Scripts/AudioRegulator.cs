@@ -40,4 +40,9 @@ public class AudioRegulator : MonoBehaviour {
 			maxpitchreached = true;
 		}
 	}
+
+    public float returnPitch()
+    {
+        return pitch;
+    }
 }

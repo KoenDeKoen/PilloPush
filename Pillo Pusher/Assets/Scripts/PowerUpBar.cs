@@ -17,7 +17,8 @@ public class PowerUpBar : MonoBehaviour {
 	float direction;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		timeBar = bar.GetComponent<RectTransform>();
 
 		height = 0.4f;
