@@ -7,17 +7,17 @@ public class Mechanic : MonoBehaviour {
 	// Use this for initialization
 	private int state;
 	private Vector3 nextpos;
-	private Vector3 blastleft;
-	private Vector3 blastright;
+	private Vector3 blastleftdown;
+	private Vector3 blastrightdown;
+	private Vector3 blastleftup;
+	private Vector3 blastrightup;
 
 	public MoveCharacter charactermover;
 	public GameOverPanel gameoverpanel;
-	//public SpeakerFeedback speakerFeedback;
 
 	public Animator speaker1;
 	public Animator speaker2;
     private Animator maleanimator;
-
 
 	private bool p1pressing;
 	private bool p2pressing;
@@ -27,10 +27,8 @@ public class Mechanic : MonoBehaviour {
     private bool devmode;
     public string animstate;
 
-	//public GameObject pillo1feedback;
-	//public GameObject pillo2feedback;
-
-	public GameObject shockwave;
+	public GameObject shockwave1;
+	public GameObject shockwave2;
 	public GameObject speakerLeft;
 	public GameObject speakerRight;
 
@@ -52,11 +50,11 @@ public class Mechanic : MonoBehaviour {
 		state = 1;
 		nextpos = new Vector3 (40, 0, 0);
 
-		blastleft = new Vector3 (speaker1.transform.position.x, speaker1.transform.position.y + 1f, speaker1.transform.position.z);
-		blastright = new Vector3 (speaker2.transform.position.x, speaker2.transform.position.y + 1f, speaker2.transform.position.z);
+		blastleftdown = new Vector3 (speaker1.transform.position.x, speaker1.transform.position.y + 1f, speaker1.transform.position.z);
+		blastrightdown = new Vector3 (speaker2.transform.position.x, speaker2.transform.position.y + 1f, speaker2.transform.position.z);
 
-		//speakerFeedback.SpeakerLeftIdle();
-		//speakerFeedback.SpeakerRightIdle();
+		blastleftup = new Vector3 (speaker1.transform.position.x, speaker1.transform.position.y + 2f, speaker1.transform.position.z);
+		blastrightup = new Vector3 (speaker2.transform.position.x, speaker2.transform.position.y + 2f, speaker2.transform.position.z);;
 
 		speaker1.SetInteger("SwitchState", 0);
 		speaker2.SetInteger("SwitchState", 0);
@@ -67,8 +65,6 @@ public class Mechanic : MonoBehaviour {
 	void Update () 
 	{
         //Debug.Log(charactermover.isJumping());
-        
-        
         if (!gameoverpanel.isGameOver ()) 
 		{
             //maleanimator.SetInteger("State", 0);
@@ -101,28 +97,31 @@ public class Mechanic : MonoBehaviour {
                 p1pressed = false;
                 speaker1.SetInteger("SwitchState", 1);
             }
+
             if (Input.GetKeyUp("a"))// && p1pressing && !charactermover.isJumping())
             {
                 p1pressed = true;
                 hasjumped = false;
                 p1pressing = false;
                 speaker1.SetInteger("SwitchState", 0);
-				BlastLeft(blastleft);
+				BlastLeft(blastleftdown, blastleftup);
 
             }
+
             if (Input.GetKeyDown("d"))// && !charactermover.isJumping())
             {
                 p2pressing = true;
                 p2pressed = false;
                 speaker2.SetInteger("SwitchState", 1);
             }
+
             if (Input.GetKeyUp("d") && p2pressing)// && !charactermover.isJumping())
             {
                 p2pressed = true;
                 hasjumped = false;
                 p2pressing = false;
                 speaker2.SetInteger("SwitchState", 0);
-				BlastRight(blastright);
+				BlastRight(blastrightdown, blastrightup);
             }
         }
 
@@ -134,27 +133,30 @@ public class Mechanic : MonoBehaviour {
                 p1pressed = false;
                 speaker1.SetInteger("SwitchState", 1);
             }
+
             if (pct1 <= 0.01 && p1pressing)// && !charactermover.isJumping())
             {
                 p1pressed = true;
                 hasjumped = false;
                 p1pressing = false;
                 speaker1.SetInteger("SwitchState", 0);
-				BlastLeft(blastleft);
+				BlastLeft(blastleftdown, blastleftup);
             }
+
             if (pct2 >= 0.05)// && !charactermover.isJumping())
             {
                 p2pressing = true;
                 p2pressed = false;
                 speaker2.SetInteger("SwitchState", 1);
             }
+
             if (pct2 <= 0.01 && p2pressing)// && !charactermover.isJumping())
             {
                 p2pressed = true;
                 hasjumped = false;
                 p2pressing = false;
                 speaker2.SetInteger("SwitchState", 0);
-				BlastRight(blastright);
+				BlastRight(blastrightdown, blastrightup);
             }
         }
 
@@ -166,6 +168,8 @@ public class Mechanic : MonoBehaviour {
                 animstate = "Dash_Jump1";
                 maleanimator.SetInteger("State", 3);
                 hasjumped = true;
+				BlastLeft(blastleftdown, blastleftup);
+				BlastRight(blastrightdown, blastrightup);
 			}
 			p1pressed = false;
 			p2pressed = false;
@@ -216,6 +220,7 @@ public class Mechanic : MonoBehaviour {
 			}
 			p2pressed = false;
 		}
+
         if (charactermover.isJumping())
         {
             p1pressed = false;
@@ -233,15 +238,21 @@ public class Mechanic : MonoBehaviour {
         PilloSender.SensorMax = max;
     }
 
-	public void BlastRight(Vector3 pos)
+	public void BlastRight(Vector3 pos, Vector3 pos2)
 	{
-		GameObject blast = Instantiate(shockwave, pos, Quaternion.identity) as GameObject;
-		Destroy(blast, 2f);
+		GameObject blast1 = Instantiate(shockwave2, pos, Quaternion.identity) as GameObject;
+		GameObject blast2 = Instantiate(shockwave2, pos2, Quaternion.identity) as GameObject;
+
+		Destroy(blast1, 2f);
+		Destroy(blast2, 2f);
 	}
 
-	public void BlastLeft(Vector3 pos)
+	public void BlastLeft(Vector3 pos, Vector3 pos2)
 	{
-		GameObject blast = Instantiate(shockwave, pos, Quaternion.Euler(new Vector3(0, 180, 0))) as GameObject;
-		Destroy(blast, 2f);
+		GameObject blast1 = Instantiate(shockwave1, pos, Quaternion.Euler(new Vector3(0,180,0))) as GameObject;
+		GameObject blast2 = Instantiate(shockwave1, pos2, Quaternion.Euler(new Vector3(0,180,0))) as GameObject;
+
+		Destroy(blast1, 2f);
+		Destroy(blast2, 2f);
 	}
 }
