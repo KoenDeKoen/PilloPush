@@ -115,7 +115,7 @@ public class CollisionPlayer : MonoBehaviour {
 			realTime = 0f;
 			slowdown = false;
 			activeSlow = false;
-            audiom.GetComponent<AudioSource>().pitch = audiom.GetComponent<AudioRegulator>().returnPitch(); ;
+            audiom.GetComponent<AudioSource>().pitch = audiom.GetComponent<AudioRegulator>().returnPitch();
         }
 	}
 
