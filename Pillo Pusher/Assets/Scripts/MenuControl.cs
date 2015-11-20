@@ -30,11 +30,15 @@ public class MenuControl : MonoBehaviour
     private bool inmodeselect;
     private bool waitupyo;
     private bool devmode;
+	private bool animationfinishedplaying;
+	private string pressstate;
    //private bool inhighscore;
     // Use this for initialization
     void Start ()
     {
         // inhighscore = false;
+		pressstate = "";
+		animationfinishedplaying = true;
         devmode = false;
         waitupyo = false;
         inmodeselect = false;
@@ -80,6 +84,32 @@ public class MenuControl : MonoBehaviour
         
         float pct1 = PilloController.GetSensor(Pillo.PilloID.Pillo1);
         float pct2 = PilloController.GetSensor(Pillo.PilloID.Pillo2);
+
+		if(menu.GetCurrentAnimatorStateInfo(0).IsName("Idle") && !animationfinishedplaying)
+		{
+			switch(pressstate)
+			{
+			case "Confirm":
+				selectButton();
+				break;
+
+			case "Down":
+				turnButtonsDown();
+				changePosition();
+				haspressed1 = false;
+				haspressed2 = false;
+				animationfinishedplaying = true;
+				break;
+
+			case "Up":
+				turnButtonsUp();
+				changePosition();
+				haspressed1 = false;
+				haspressed2 = false;
+				animationfinishedplaying = true;
+				break;
+			}
+		}
 
         if (Input.GetKey("d") && Input.GetKey("e") && Input.GetKey("v"))
         {
@@ -145,29 +175,26 @@ public class MenuControl : MonoBehaviour
 
         if (oneispressing && twoispressing)
         {
-            time -= Time.deltaTime;
+            
 			menu.Play("SelectEnter");
-            if (time <= 0)
-            {
-                selectButton();
-            }
+			animationfinishedplaying = false;
+			pressstate = "Confirm";
+
         }
 
         else if (haspressed1)
         {
 			menu.Play("SelectUp");
-			turnButtonsDown();
-            changePosition();
-            haspressed1 = false;
-            haspressed2 = false;
+			animationfinishedplaying = false;
+			pressstate = "Down";
+
         }
         else if (haspressed2)
         {
 			menu.Play("SelectDown");
-			turnButtonsUp();
-            changePosition();
-            haspressed1 = false;
-            haspressed2 = false;
+			animationfinishedplaying = false;
+			pressstate = "Up";
+
         }
     }
 
@@ -342,6 +369,7 @@ public class MenuControl : MonoBehaviour
             if (turnstate == 2)
             {
                 //start
+				animationfinishedplaying = true;
                 inmodeselect = true;
                 Normalmodebtn.transform.parent.gameObject.SetActive(true);
                 Startbtn.transform.parent.gameObject.SetActive(false);
