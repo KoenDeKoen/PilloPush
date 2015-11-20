@@ -24,7 +24,6 @@ public class MenuControl : MonoBehaviour
     private int turnstate;
     private int ystep;
     private int zstep;
-    private float time;
     private bool oneispressing;
     private bool twoispressing;
     private bool inmodeselect;
@@ -42,7 +41,6 @@ public class MenuControl : MonoBehaviour
         devmode = false;
         waitupyo = false;
         inmodeselect = false;
-        time = 1;
         ystep = 45;
         zstep = 40;
         turnstate = 2;
@@ -133,14 +131,12 @@ public class MenuControl : MonoBehaviour
                 waitupyo = false;
                 haspressed1 = true;
                 oneispressing = false;
-                time = 1;
             }
             if ((twoispressing || waitupyo) && Input.GetKeyUp("d"))
             {
                 waitupyo = false;
                 haspressed2 = true;
                 twoispressing = false;
-                time = 1;
             }
         }
 
@@ -162,14 +158,12 @@ public class MenuControl : MonoBehaviour
                 waitupyo = false;
                 haspressed1 = true;
                 oneispressing = false;
-                time = 1;
             }
             if ((twoispressing || waitupyo) && pct2 <= 0)
             {
                 waitupyo = false;
                 haspressed2 = true;
                 twoispressing = false;
-                time = 1;
             }
         }
 
@@ -336,7 +330,6 @@ public class MenuControl : MonoBehaviour
     {
         oneispressing = false;
         twoispressing = false;
-        time = 1;
         //oneispressing = false;
         //twoispressing = false;
         if (inmodeselect)
