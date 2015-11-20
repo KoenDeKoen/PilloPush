@@ -13,6 +13,8 @@ public class TutorialScript : MonoBehaviour {
 	public GameObject parent;
 	public GameObject auto;
 
+	public Animator balloon;
+
 	float time;
 	float timePower;
 	float startpos;
@@ -68,18 +70,21 @@ public class TutorialScript : MonoBehaviour {
 		//
 		if(state == 3)
 		{
+			balloon.SetInteger("State", 1);
 			SpawnTutorialSlow(parent);
 			SpawnTutorialObstacle(parent);
 		}
 		//
 		if(state == 4)
 		{
+			balloon.SetInteger("State", 2);
 			SpawnTutorialTrip(parent);
 			SpawnTutorialObstacle(parent);
 		}
 
 		if(state == 5)
 		{
+			balloon.SetInteger("State", 3);
 			EndTutorial();
 		}
 	}
