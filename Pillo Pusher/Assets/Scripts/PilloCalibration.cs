@@ -15,9 +15,11 @@ public class PilloCalibration : MonoBehaviour {
     private int instructionstate;
     private int pilloscallibrated;
     private bool done;
+    private int presscounter;
 
 	void Start ()
     {
+        presscounter = 0;
         done = false;
         pilloscallibrated = 0;
         instructionstate = 0;
@@ -33,26 +35,32 @@ public class PilloCalibration : MonoBehaviour {
     {
         pct1 = PilloController.GetSensor(Pillo.PilloID.Pillo1);
         pct2 = PilloController.GetSensor(Pillo.PilloID.Pillo2);
-
-        if (!done)
+        if (pct1 <= 0 && pct2 <= 0)
         {
-            if (instartsequence)
+            presscounter++;
+        }
+        if (presscounter >= 2)
+        {
+            if (!done)
             {
-                startSequence();
+                if (instartsequence)
+                {
+                    startSequence();
+                }
+                else
+                {
+                    calibrationTime();
+                }
             }
             else
             {
-                calibrationTime();
-            }
-        }
-        else
-        {
-            instructionstate = 4;
-            passedtime -= Time.deltaTime;
-            if (passedtime <= 0)
-            {
-                SaveCalibrationValues();
-                Application.LoadLevel("Menu");
+                instructionstate = 4;
+                passedtime -= Time.deltaTime;
+                if (passedtime <= 0)
+                {
+                    SaveCalibrationValues();
+                    Application.LoadLevel("Menu");
+                }
             }
         }
 
@@ -115,6 +123,10 @@ public class PilloCalibration : MonoBehaviour {
             {
                 passedtime = 3;
             }
+        }
+        if (instructionstate != 3)
+        {
+            instructionstate = 1;
         }
         if (startingpillo == 2)
         {
