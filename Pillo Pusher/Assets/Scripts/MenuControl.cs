@@ -105,7 +105,7 @@ public class MenuControl : MonoBehaviour
 				haspressed1 = false;
 				haspressed2 = false;
 				animationfinishedplaying = true;
-				break;
+                break;
 			}
 		}
 

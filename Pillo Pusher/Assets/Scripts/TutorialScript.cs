@@ -13,8 +13,12 @@ public class TutorialScript : MonoBehaviour {
 	public GameObject parent;
 	public GameObject auto;
 
+	public Animator balloon;
+
 	float time;
 	float timePower;
+	float timeSlow;
+	float timeTrip;
 	float startpos;
 	float timeState;
 	float interval;
@@ -35,6 +39,8 @@ public class TutorialScript : MonoBehaviour {
 		startpos = -160f;
 		time = 3.0f;
 		timeState = 0.0f;
+		timeSlow = 10.0f;
+		timeTrip = 10.0f;
 		interval = 20f;
 		multi = 1f;
 		timePower = 6f;
@@ -68,18 +74,31 @@ public class TutorialScript : MonoBehaviour {
 		//
 		if(state == 3)
 		{
+			timeSlow -= Time.deltaTime;
+			if(timeSlow <= 0.0f)
+			{
+				balloon.SetInteger("State", 1);
+				timeSlow = -1f;
+			}
 			SpawnTutorialSlow(parent);
 			SpawnTutorialObstacle(parent);
 		}
 		//
 		if(state == 4)
 		{
+			timeTrip -= Time.deltaTime;
+			if(timeTrip <= 0.0f)
+			{
+				balloon.SetInteger("State", 2);
+				timeTrip = -1f;
+			}
 			SpawnTutorialTrip(parent);
 			SpawnTutorialObstacle(parent);
 		}
 
 		if(state == 5)
 		{
+			balloon.SetInteger("State", 3);
 			EndTutorial();
 		}
 	}
@@ -136,7 +155,7 @@ public class TutorialScript : MonoBehaviour {
 		int typernd = 0;
 		int posrnd = Random.Range(0, objpos.returnPosObjects().Count);
 
-		Vector3 pos = new Vector3(startpos, obl.returnObstacles()[typernd].transform.position.y, objpos.returnPosObjects()[posrnd]);
+		Vector3 pos = new Vector3(startpos, obl.returnObstacles()[typernd].transform.position.y + 1.5f, objpos.returnPosObjects()[posrnd]);
 		
 		timePower -= Time.deltaTime;
 		
