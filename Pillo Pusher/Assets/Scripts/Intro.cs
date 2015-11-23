@@ -15,7 +15,7 @@ public class Intro : MonoBehaviour {
         time += Time.deltaTime;
         if (time > 2)
         {
-            Application.LoadLevel("Menu");
+            Application.LoadLevel("PilloIntro");
         }
 	}
 }
