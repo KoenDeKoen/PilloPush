@@ -8,6 +8,8 @@ public class SFXManager : MonoBehaviour
     public AudioSource sfxplayer;
     public AudioClip sfxpowerup;
     public AudioClip sfxpowerdown;
+    public AudioClip sfxbuttonpress;
+    public AudioClip sfxcoin;
 
     public void playPowerUp()
     {
@@ -18,6 +20,18 @@ public class SFXManager : MonoBehaviour
     public void playPowerDown()
     {
         sfxplayer.clip = sfxpowerdown;
+        sfxplayer.Play();
+    }
+
+    public void playButtonPress()
+    {
+        sfxplayer.clip = sfxbuttonpress;
+        sfxplayer.Play();
+    }
+
+    public void playCoin()
+    {
+        sfxplayer.clip = sfxcoin;
         sfxplayer.Play();
     }
 }
