@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class ChangeFloorColors : MonoBehaviour {
 
 	// Use this for initialization
-	public Material texture1;
+	/*public Material texture1;
 	public Material texture2;
 	public Material texture3;
 	public Material texture4;
@@ -52,5 +52,5 @@ public class ChangeFloorColors : MonoBehaviour {
 				floors.returnFloors()[i].GetComponent<Renderer>().material = textures[number];
 			}
 		}
-	}
+	}*/
 }

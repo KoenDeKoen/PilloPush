@@ -31,18 +31,19 @@ public class SpawnFloor : MonoBehaviour {
 	private void spawnFloor(Vector3 pos)
 	{
 		GameObject floor;
-		floor = Instantiate (floorprefab, new Vector3 (pos.x, -0.50F, 0), Quaternion.identity) as GameObject;
+		floor = Instantiate (floorprefab, new Vector3 (pos.x, -0.35F, 0), Quaternion.identity) as GameObject;
 		floor.transform.parent = parent.transform;
-		floor.GetComponent<Renderer> ().material = spawnmat;
+		//floor.GetComponent<Renderer> ().material = spawnmat;
 		floors.addFloor (floor);
 		lastspawnedfloor = floor;
 	}
 
 	private void checkForNextSpawn()
 	{
+        Debug.Log(lastspawnedfloor.transform.position.x);
 		if(lastspawnedfloor.transform.position.x >= -250F)
 		{
-			spawnFloor(new Vector3(lastspawnedfloor.transform.position.x-lastspawnedfloor.GetComponent<Renderer>().bounds.size.x,0,0));
+			spawnFloor(new Vector3(lastspawnedfloor.transform.position.x-lastspawnedfloor.GetComponentInChildren<Renderer>().bounds.size.x,0.1F,0));
 		}
 	}
 }

@@ -25,7 +25,7 @@ public class DespawnFloor : MonoBehaviour
 	{
 		for(int i = 0; i < floors.returnFloors().Count; i++)
 		{
-			if(floors.returnFloors()[i].transform.position.x >= 45 + floors.returnFloors()[i].GetComponent<Renderer>().bounds.size.x / 2)
+			if(floors.returnFloors()[i].transform.position.x >= 45 + floors.returnFloors()[i].GetComponentInChildren<Renderer>().bounds.size.x / 2)
 			{
 				GameObject toremove = floors.returnFloors()[i];
 				floors.removeFloor(toremove);
