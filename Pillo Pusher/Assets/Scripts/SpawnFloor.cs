@@ -40,7 +40,7 @@ public class SpawnFloor : MonoBehaviour {
 
 	private void checkForNextSpawn()
 	{
-        Debug.Log(lastspawnedfloor.transform.position.x);
+        //Debug.Log(lastspawnedfloor.transform.position.x);
 		if(lastspawnedfloor.transform.position.x >= -250F)
 		{
 			spawnFloor(new Vector3(lastspawnedfloor.transform.position.x-lastspawnedfloor.GetComponentInChildren<Renderer>().bounds.size.x,0.1F,0));
