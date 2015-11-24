@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class TutorialScript : MonoBehaviour {
-	
-	//public Animator textBaloon;
+
 	public ObstacleList obl;
 	public ObjectPosistionList objpos;
 	public PowerupList pwl;
 	public FaderIn fadeIn;
+	public TutorialText tuttext;
 
 	public GameObject parent;
 	public GameObject auto;
@@ -23,6 +23,7 @@ public class TutorialScript : MonoBehaviour {
 	float timeState;
 	float interval;
 	float multi;
+	float startTime;
 
 	int state;
 
@@ -44,8 +45,8 @@ public class TutorialScript : MonoBehaviour {
 		interval = 20f;
 		multi = 1f;
 		timePower = 6f;
-
-		state = 1;
+		startTime = 2f;
+		state = 0;
 
 		ritme = false;
 		ritmePower = false;
@@ -53,6 +54,7 @@ public class TutorialScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		timeState += Time.deltaTime;
 
 		if(timeState >= interval * multi)
@@ -64,11 +66,13 @@ public class TutorialScript : MonoBehaviour {
 		//avoide obstacles
 		if(state == 1)
 		{
+			tuttext.IntroTextTutorial();
 			SpawnTutorialObstacle(parent);
 		}
 		//jump obstacles
 		if(state == 2)
 		{
+			tuttext.JumpTextTutorial();
 			SpawnTutorialCar(parent);
 		}
 		//
@@ -77,6 +81,7 @@ public class TutorialScript : MonoBehaviour {
 			timeSlow -= Time.deltaTime;
 			if(timeSlow <= 0.0f)
 			{
+				tuttext.SlowTextTutorial();
 				balloon.SetInteger("State", 1);
 				timeSlow = -1f;
 			}
@@ -89,6 +94,7 @@ public class TutorialScript : MonoBehaviour {
 			timeTrip -= Time.deltaTime;
 			if(timeTrip <= 0.0f)
 			{
+				tuttext.TripTextTutorial();
 				balloon.SetInteger("State", 2);
 				timeTrip = -1f;
 			}
@@ -174,7 +180,7 @@ public class TutorialScript : MonoBehaviour {
 		}
 	}
 
-		public void SpawnTutorialTrip(GameObject parentground)
+	public void SpawnTutorialTrip(GameObject parentground)
 	{
 		int typernd = 1;
 		int posrnd = Random.Range(0, objpos.returnPosObjects().Count);
@@ -200,7 +206,6 @@ public class TutorialScript : MonoBehaviour {
 
 	public void EndTutorial()
 	{
-
 		if (fadeIn.fadeIn())
 		{
 			CollisionPlayer.tutorial = false;
