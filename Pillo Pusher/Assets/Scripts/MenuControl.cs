@@ -31,10 +31,12 @@ public class MenuControl : MonoBehaviour
     private bool devmode;
 	private bool animationfinishedplaying;
 	private string pressstate;
+    private int presscounter;
    //private bool inhighscore;
     // Use this for initialization
     void Start ()
     {
+        presscounter = 0;
         // inhighscore = false;
 		pressstate = "";
 		animationfinishedplaying = true;
@@ -83,7 +85,12 @@ public class MenuControl : MonoBehaviour
         float pct1 = PilloController.GetSensor(Pillo.PilloID.Pillo1);
         float pct2 = PilloController.GetSensor(Pillo.PilloID.Pillo2);
 
-		if(menu.GetCurrentAnimatorStateInfo(0).IsName("Idle") && !animationfinishedplaying)
+        if ((pct1 <= 0 && pct2 <= 0) || (Input.GetKeyUp("a") || Input.GetKeyUp("d")) && presscounter <2)
+        {
+            presscounter++;
+        }
+
+        if (menu.GetCurrentAnimatorStateInfo(0).IsName("Idle") && !animationfinishedplaying)
 		{
 			switch(pressstate)
 			{
@@ -114,7 +121,7 @@ public class MenuControl : MonoBehaviour
             devmode = true;
         }
 
-        if (devmode)
+        if (devmode && presscounter >= 2)
         {
             if (!waitupyo && (pct1 >= 0.05 || Input.GetKey("a")))
             {
@@ -140,7 +147,7 @@ public class MenuControl : MonoBehaviour
             }
         }
 
-        if (!devmode)
+        if (!devmode && presscounter >= 2)
         {
             //Debug.Log(pct1);
             if (!haspressed1 && !oneispressing && !waitupyo && pct1 >= 0.05)
