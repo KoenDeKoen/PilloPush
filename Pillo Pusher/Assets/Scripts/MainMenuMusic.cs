@@ -20,6 +20,7 @@ public class MainMenuMusic : MonoBehaviour {
 	{
 		musicplayer = GameObject.Find ("MainMenuMusic");
 		musicplayer.GetComponent<AudioSource> ().Play ();
+
 	}
 
 	public void stopMusic()
