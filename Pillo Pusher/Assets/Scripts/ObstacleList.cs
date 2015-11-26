@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class ObstacleList : MonoBehaviour {
 
 	private List<GameObject> obstacles;
-	private List<float> posObstacles;
-	private List<float> startPos;
+//	private List<float> posObstacles;
+//	private List<float> startPos;
 
 	public GameObject obj1;
 	public GameObject obj2;
@@ -16,8 +16,8 @@ public class ObstacleList : MonoBehaviour {
 	//private float pos2 = 0f;
 	//private float pos3 = -3f;
 
-	private float start1 = -160f;
-	private float start2 = 50f;
+//	private float start1 = -160f;
+//	private float start2 = 50f;
 	
 	// Use this for initialization
 	public void Init()
@@ -32,9 +32,9 @@ public class ObstacleList : MonoBehaviour {
 		//posObstacles.Add (pos2);
 		//posObstacles.Add (pos3);
 
-		startPos = new List<float> ();
-		startPos.Add (start1);
-		startPos.Add (start2);
+//		startPos = new List<float> ();
+//		startPos.Add (start1);
+//		startPos.Add (start2);
 	}
 	
 	public List<GameObject> returnObstacles()
@@ -47,10 +47,10 @@ public class ObstacleList : MonoBehaviour {
 	//	return posObstacles;
 	//}
 
-	public List<float> returnStartPos()
-	{
-		return startPos;
-	}
+//	public List<float> returnStartPos()
+//	{
+//		return startPos;
+//	}
 
 	/*public void removeObstacle(GameObject obs)
 	{

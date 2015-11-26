@@ -17,6 +17,7 @@ public class ObstacleSpawn : MonoBehaviour {
 	
 	public GameObject parent;
 	public GameObject car;
+	public GameObject bench;
 
 	public GameOverPanel gameoverpanel;
 	public ObstacleList obl;
@@ -61,19 +62,12 @@ public class ObstacleSpawn : MonoBehaviour {
 
 		int objPlacePos1 = Random.Range (0, objpos.returnPosObjects().Count);
 		int objPlacePos2 = 0;
+		int objPlacePos3 = Random.Range (0, objpos.returnPosBench().Count);
 
 		int pwlType = Random.Range (0, pwl.returnPowerups ().Count);
 		int pwlPlacePos = 0;
 
-		int newStartPos = Random.Range(0, obl.returnStartPos().Count);
-
-		/*for(int i = 0; i < objpos.returnPosObjects().Count; i++)
-		{
-			if(i != objPlacePos1)
-			{
-				objPlacePos2 = i;
-			}
-		}*/
+		int state = Random.Range(1,2);
 
 		if(objPlacePos1 == objPlacePos2)
 		{
@@ -96,13 +90,14 @@ public class ObstacleSpawn : MonoBehaviour {
 
 		Vector3 pos1 = new Vector3(startPos, obl.returnObstacles()[typeObstacle1].transform.position.y, objpos.returnPosObjects()[objPlacePos1]);
 
-		Vector3 pos2 = new Vector3(obl.returnStartPos()[newStartPos], obl.returnObstacles()[typeObstacle2].transform.position.y, objpos.returnPosObjects()[objPlacePos2]);
+		Vector3 pos2 = new Vector3(startPos, obl.returnObstacles()[typeObstacle2].transform.position.y, objpos.returnPosObjects()[objPlacePos2]);
 
 		Vector3 pos3 = new Vector3(startPos, pwl.returnPowerups()[pwlType].transform.position.y, objpos.returnPosObjects()[pwlPlacePos]);
 
 		Vector3 pos4 = new Vector3(startPos, -0.45f, 0f);
 
-
+		Vector3 pos5 = new Vector3(startPos, -0.45f, objpos.returnPosBench()[objPlacePos3]);
+		
 		if(scoreTracker.returnScore() >= round * multi)
 		{
 			speed += 0.35f;
@@ -121,7 +116,6 @@ public class ObstacleSpawn : MonoBehaviour {
         {
             timeCar -= Time.deltaTime;
         }
-        
 
 		if(timeCar <= 0)
 		{
@@ -148,9 +142,20 @@ public class ObstacleSpawn : MonoBehaviour {
 			}
 
 			if(placeCar){
-				GameObject obstacle3 = Instantiate(car) as GameObject;
-				obstacle3.transform.position = pos4;
-				obstacle3.transform.parent = parentground.transform;
+				switch(state)
+				{
+				case 1:
+					GameObject obstacle3 = Instantiate(car) as GameObject;
+					obstacle3.transform.position = pos4;
+					obstacle3.transform.parent = parentground.transform;
+					break;
+
+				case 2:
+					GameObject obstacle4 = Instantiate(bench) as GameObject;
+					obstacle4.transform.position = pos5;
+					obstacle4.transform.parent = parentground.transform;
+					break;
+				}
 
 				timeCar = 20f - speed;
 				timeObject = 2.5f - speed;
