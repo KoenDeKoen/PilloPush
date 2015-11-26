@@ -11,6 +11,7 @@ public class MenuControl : MonoBehaviour
     public GameObject Quitbtn;
     public GameObject Tutorialbtn;
     public GameObject Highscorebtn;
+    public MainMenuMusic mmm;
 
     public GameObject Normalmodebtn;
     public GameObject Easymodebtn;
@@ -36,6 +37,7 @@ public class MenuControl : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        mmm.resumeMusic();
         presscounter = 0;
         // inhighscore = false;
 		pressstate = "";
