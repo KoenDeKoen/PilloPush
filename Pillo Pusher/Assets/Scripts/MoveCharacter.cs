@@ -11,6 +11,8 @@ public class MoveCharacter : MonoBehaviour {
 	private float jumptimer;
 	public SpawnCharacter spawnedcharacter;
 
+	public Camera maincamera;
+
 	public void Init () 
 	{
 		spawnedcharacter.Init ();
@@ -25,6 +27,8 @@ public class MoveCharacter : MonoBehaviour {
 	{
 		if(jump)
 		{
+			maincamera.transform.SetParent(character.transform);//camera
+
 			lerptime += Time.deltaTime / 2.5F;
 			jumptimer -= Time.deltaTime;
 			if(jumptimer < 0.20F)
@@ -32,6 +36,8 @@ public class MoveCharacter : MonoBehaviour {
 				pos.y = 0;
 				if(character.transform.position.y <= 0.01)
 				{
+					maincamera.transform.SetParent(null);//camera
+					maincamera.transform.position = new Vector3(45.0f, 3.0f, 0.0f);
 					jump = false;
 				}
 			}

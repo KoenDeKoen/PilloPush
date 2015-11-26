@@ -32,6 +32,8 @@ public class Mechanic : MonoBehaviour {
 	public GameObject speakerLeft;
 	public GameObject speakerRight;
 
+
+
 	float pct1;
 	float pct2;
 	
