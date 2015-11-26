@@ -67,7 +67,7 @@ public class ObstacleSpawn : MonoBehaviour {
 		int pwlType = Random.Range (0, pwl.returnPowerups ().Count);
 		int pwlPlacePos = 0;
 
-		int state = Random.Range(1,2);
+		int state = Random.Range(0, pwl.returnPowerups ().Count);
 
 		if(objPlacePos1 == objPlacePos2)
 		{
@@ -97,7 +97,7 @@ public class ObstacleSpawn : MonoBehaviour {
 		Vector3 pos4 = new Vector3(startPos, -0.45f, 0f);
 
 		Vector3 pos5 = new Vector3(startPos, -0.45f, objpos.returnPosBench()[objPlacePos3]);
-		
+
 		if(scoreTracker.returnScore() >= round * multi)
 		{
 			speed += 0.35f;
@@ -144,13 +144,13 @@ public class ObstacleSpawn : MonoBehaviour {
 			if(placeCar){
 				switch(state)
 				{
-				case 1:
+				case 0:
 					GameObject obstacle3 = Instantiate(car) as GameObject;
 					obstacle3.transform.position = pos4;
 					obstacle3.transform.parent = parentground.transform;
 					break;
 
-				case 2:
+				case 1:
 					GameObject obstacle4 = Instantiate(bench) as GameObject;
 					obstacle4.transform.position = pos5;
 					obstacle4.transform.parent = parentground.transform;
