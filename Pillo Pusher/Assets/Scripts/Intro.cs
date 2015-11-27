@@ -4,9 +4,11 @@ using System.Collections;
 public class Intro : MonoBehaviour {
 
     // Use this for initialization
+    public Settings settings;
     private float time;
-	void Start () {
-	
+	void Start ()
+    {
+        settings.setAudioState(true);
 	}
 	
 	// Update is called once per frame

@@ -46,6 +46,7 @@ public class PilloIntro : MonoBehaviour {
             pillo2image.GetComponent<Image>().sprite = pillo2notpressed;
             state = 2;
             countdown = false;
+            timer = 3;
         }
         else if (pct2 >= 0.05 && pct1 == 0 && state != 3)
         {
@@ -53,6 +54,7 @@ public class PilloIntro : MonoBehaviour {
             pillo2image.GetComponent<Image>().sprite = pillo2pressed;
             state = 3;
             countdown = false;
+            timer = 3;
         }
         else if (pct1 == 0 && pct2 == 0 && state != 4)
         {
@@ -60,6 +62,7 @@ public class PilloIntro : MonoBehaviour {
             pillo2image.GetComponent<Image>().sprite = pillo2notpressed;
             state = 4;
             countdown = false;
+            timer = 3;
         }
         if (countdown)
         {

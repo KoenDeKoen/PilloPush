@@ -10,6 +10,19 @@ public class SFXManager : MonoBehaviour
     public AudioClip sfxpowerdown;
     public AudioClip sfxbuttonpress;
     public AudioClip sfxcoin;
+    public Settings settings;
+
+    void Start()
+    {
+        if (settings.returnAudioState())
+        {
+            sfxplayer.volume = 1;
+        }
+        else
+        {
+            sfxplayer.volume = 0;
+        }
+    }
 
     public void playPowerUp()
     {

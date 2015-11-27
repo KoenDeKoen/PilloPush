@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class AudioRegulator : MonoBehaviour {
-	
+
+    public Settings settings;
 	public AudioSource audioplayer;
 	public Score scorekeeper;
 	private float scoreinterval;
@@ -12,6 +13,14 @@ public class AudioRegulator : MonoBehaviour {
 
 	void Start () 
 	{
+        if (settings.returnAudioState())
+        {
+            audioplayer.volume = 1;
+        }
+        else
+        {
+            audioplayer.volume = 0F;
+        }
 		maxpitchreached = false;
 		multiplier = 1f;
 		scoreinterval = 25f;
