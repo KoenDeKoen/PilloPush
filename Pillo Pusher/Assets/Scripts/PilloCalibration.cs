@@ -93,7 +93,7 @@ public class PilloCalibration : MonoBehaviour {
 
     private void calibrationTime()
     {
-        if (instructionstate != 3)
+        if (instructionstate != 3 && instructionstate != 2)
         {
             instructionstate = 1;
         }
@@ -124,7 +124,7 @@ public class PilloCalibration : MonoBehaviour {
                 passedtime = 3;
             }
         }
-        if (instructionstate != 3)
+        if (instructionstate != 3 && instructionstate != 2)
         {
             instructionstate = 1;
         }
