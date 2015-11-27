@@ -22,7 +22,7 @@ public class ObjectPosistionList : MonoBehaviour {
 		posObjects.Add (pos3);
 
 		posBench = new List<float>();
-		posBench.Add (pos4);
+		//posBench.Add (pos4);
 		posBench.Add (pos5);
 	}
 
