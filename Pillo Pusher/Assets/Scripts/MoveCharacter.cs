@@ -20,6 +20,7 @@ public class MoveCharacter : MonoBehaviour {
 		pos = new Vector3 (40, spawnedcharacter.returnCharacter().transform.position.y, spawnedcharacter.returnCharacter().transform.position.z);
 		jump = false;
 		jumptimer = 1F;
+		maincamera.transform.position = new Vector3(46.87f,4.83f, 0.0f);
 	}
 	
 	// Update is called once per frame
@@ -37,7 +38,7 @@ public class MoveCharacter : MonoBehaviour {
 				if(character.transform.position.y <= 0.01)
 				{
 					maincamera.transform.SetParent(null);//camera
-					maincamera.transform.position = new Vector3(45.0f, 3.0f, 0.0f);
+					maincamera.transform.position = new Vector3(46.87f,4.83f, 0.0f);
 					jump = false;
 				}
 			}
