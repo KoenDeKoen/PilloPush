@@ -10,6 +10,7 @@ public class FaderOut : MonoBehaviour {
 	public float alpha;
 	public float delay;
 	public bool done;
+
 	void Start () 
 	{
 		done = false;
@@ -20,7 +21,6 @@ public class FaderOut : MonoBehaviour {
 
 	void Update()
 	{
-
 		if(!done)
 		{
 			fadeOut();

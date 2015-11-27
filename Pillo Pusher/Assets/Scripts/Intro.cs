@@ -1,23 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Intro : MonoBehaviour {
 
-    // Use this for initialization
-    public Settings settings;
-    private float time;
+	public Settings settings;
+
 	void Start ()
-    {
-        settings.setAudioState(true);
+	{
+		settings.setAudioState(true);
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        time += Time.deltaTime;
-        if (time > 2)
-        {
-            Application.LoadLevel("PilloIntro");
-        }
+
+	}
+
+	public void NextScene()
+	{
+		Application.LoadLevel("PilloIntro");
 	}
 }
