@@ -37,6 +37,10 @@ public class MenuControl : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        if (!mmm.returnPlayer().GetComponent<AudioSource>().isPlaying)
+        {
+            mmm.resumeMusic();
+        }
         presscounter = 0;
         // inhighscore = false;
 		pressstate = "";

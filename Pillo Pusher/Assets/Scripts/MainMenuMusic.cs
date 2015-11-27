@@ -10,6 +10,7 @@ public class MainMenuMusic : MonoBehaviour {
 	void Start () 
 	{
 		musicplayer = GameObject.Find ("MainMenuMusic");
+        Debug.Log(settings.returnAudioState());
         if (settings.returnAudioState())
         {
             musicplayer.GetComponent<AudioSource>().volume = 1;
@@ -42,5 +43,11 @@ public class MainMenuMusic : MonoBehaviour {
     public void setVolume(float volume)
     {
         musicplayer.GetComponent<AudioSource>().volume = volume;
+    }
+
+    public GameObject returnPlayer()
+    {
+        musicplayer = GameObject.Find("MainMenuMusic");
+        return musicplayer;
     }
 }

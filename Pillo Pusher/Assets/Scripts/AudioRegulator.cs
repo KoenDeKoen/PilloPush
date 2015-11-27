@@ -5,6 +5,7 @@ public class AudioRegulator : MonoBehaviour {
 
     public Settings settings;
 	public AudioSource audioplayer;
+    
 	public Score scorekeeper;
 	private float scoreinterval;
 	private float pitch;
