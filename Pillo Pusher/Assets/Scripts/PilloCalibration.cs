@@ -170,7 +170,7 @@ public class PilloCalibration : MonoBehaviour {
                 break;
 
             case 2:
-                instructiontext.text = "Keep pressing for: " + (int)passedtime + " seconds!";
+                instructiontext.text = "Keep pressing for: " + ((int)passedtime+1) + " seconds!";
                 break;
 
             case 3:
@@ -178,7 +178,7 @@ public class PilloCalibration : MonoBehaviour {
                 break;
 
             case 4:
-                instructiontext.text = "The Pillos are now calibrated! Going back to the menu in " + (int)passedtime + " seconds";
+                instructiontext.text = "The Pillos are now calibrated! Going back to the menu in " + ((int)passedtime+1) + " seconds";
                 break;
         }
         

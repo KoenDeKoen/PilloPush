@@ -37,7 +37,10 @@ public class MenuControl : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        mmm.resumeMusic();
+        if (!mmm.returnPlayer().GetComponent<AudioSource>().isPlaying)
+        {
+            mmm.resumeMusic();
+        }
         presscounter = 0;
         // inhighscore = false;
 		pressstate = "";
@@ -379,7 +382,7 @@ public class MenuControl : MonoBehaviour
             }
             if (turnstate == 3)
             {
-                //options
+                Application.LoadLevel("Options");
             }
             if (turnstate == 4)
             {
